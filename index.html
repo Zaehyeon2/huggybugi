@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>허기부기</title>
+    <meta name="description" content="친구 캐릭터가 화면 아래를 걸어 다니는 데스크톱 메신저" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/galmuri/dist/galmuri.css" />
+    <link rel="stylesheet" href="./site.css" />
+    <script type="module" src="./main.js"></script>
+  </head>
+  <body class="bg-sky font-sans text-ink">
+    <header class="mx-auto max-w-5xl px-6 pt-20">
+      <h1 class="font-pixel text-[clamp(64px,14vw,168px)] leading-none tracking-tight">허기부기</h1>
+      <canvas id="walkers" class="-mt-3 block h-16 w-full" aria-hidden="true"></canvas>
+      <div class="h-1 bg-ink"></div>
+      <div class="mt-10 grid gap-8 md:grid-cols-[3fr_2fr] md:items-end">
+        <p class="max-w-xl text-xl leading-relaxed">친구 캐릭터가 화면 아래를 걸어 다니는 메신저예요. 초대코드를 아는 친구끼리만 써요.</p>
+        <div class="flex flex-col gap-2">
+          <div id="primary-download" class="[&>a]:block [&>a]:rounded-xl [&>a]:border-2 [&>a]:border-ink [&>a]:bg-sun [&>a]:px-5 [&>a]:py-3 [&>a]:text-center [&>a]:text-lg [&>a]:font-bold [&>a]:shadow-[4px_4px_0_var(--color-ink)] [&>a:active]:translate-x-1 [&>a:active]:translate-y-1 [&>a:active]:shadow-none"><a data-download="mac-arm64" href="https://github.com/Zaehyeon2/huggybugi/releases/latest/download/Huggybugi-mac-arm64.dmg">Mac (Apple 칩) 받기</a></div>
+          <div class="grid grid-cols-2 gap-2 [&>a]:rounded-xl [&>a]:border-2 [&>a]:border-ink [&>a]:bg-white [&>a]:px-4 [&>a]:py-2 [&>a]:text-center [&>a]:font-semibold">
+            <a data-download="mac-x64" href="https://github.com/Zaehyeon2/huggybugi/releases/latest/download/Huggybugi-mac-x64.dmg">Mac (Intel)</a>
+            <a data-download="win" href="https://github.com/Zaehyeon2/huggybugi/releases/latest/download/Huggybugi-setup.exe">Windows</a>
+          </div>
+          <p class="text-sm text-dim">무료예요. 처음 한 번 실행 허용이 필요해요.</p>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="mx-auto max-w-5xl px-6 py-24">
+        <h2 class="font-pixel text-3xl">할 수 있는 것</h2>
+        <div class="mt-10 grid gap-x-10 gap-y-14 sm:grid-cols-2">
+          <article>
+            <img class="aspect-video w-full rounded-2xl border-2 border-ink bg-white object-cover" src="./assets/feature-chat.png" alt="캐릭터 머리 위에 뜬 말풍선" />
+            <h3 class="mt-4 text-lg font-bold">말풍선으로 대화</h3>
+            <p class="mt-1 text-dim">단축키로 입력창을 열어 쓰면 내 캐릭터 머리 위에 말풍선이 떠요.</p>
+          </article>
+          <article class="sm:mt-16">
+            <img class="aspect-video w-full rounded-2xl border-2 border-ink bg-white object-cover" src="./assets/feature-throw.png" alt="친구 캐릭터에게 날아가는 도토리" />
+            <h3 class="mt-4 text-lg font-bold">던지고 피하고 쓰다듬기</h3>
+            <p class="mt-1 text-dim">친구 캐릭터를 누르면 도토리가 날아가요. 먹이를 주거나 집어 던질 수도 있어요.</p>
+          </article>
+          <article>
+            <img class="aspect-video w-full rounded-2xl border-2 border-ink bg-white object-cover" src="./assets/feature-make.png" alt="동작별 그림을 올리는 만들기 창" />
+            <h3 class="mt-4 text-lg font-bold">직접 그린 캐릭터</h3>
+            <p class="mt-1 text-dim">동작별 PNG 를 올리면 친구 화면에도 바로 보여요. 아이템과 효과음도 만들 수 있어요.</p>
+          </article>
+          <article class="sm:mt-16">
+            <img class="aspect-video w-full rounded-2xl border-2 border-ink bg-white object-cover" src="./assets/feature-emote.png" alt="캐릭터 위에 뜬 이모트" />
+            <h3 class="mt-4 text-lg font-bold">나만의 이모트</h3>
+            <p class="mt-1 text-dim">GIF 를 올리면 픽셀 이모트로 바꿔 줘요. 단축키로 바로 띄워요.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="bg-white/60 py-20">
+        <div class="mx-auto grid max-w-5xl gap-12 px-6 md:grid-cols-2">
+          <div>
+            <h2 class="font-pixel text-3xl">시작하기</h2>
+            <ol class="mt-6 space-y-4 [&>li]:flex [&>li]:gap-3 [&_span]:font-pixel [&_span]:text-2xl [&_span]:text-sea [&_p]:pt-1">
+              <li><span>1</span><p>받은 설치 파일을 열어요.</p></li>
+              <li><span>2</span><p>처음 한 번 실행을 허용해요. Mac 은 시스템 설정, 개인정보 보호 및 보안에서 "그래도 열기". Windows 는 "추가 정보"를 누르고 "실행".</p></li>
+              <li><span>3</span><p>이메일로 가입해요.</p></li>
+              <li><span>4</span><p>친구에게 받은 초대코드를 넣어요. 처음이면 "새로 시작".</p></li>
+            </ol>
+          </div>
+          <div>
+            <h2 class="font-pixel text-3xl">조작법</h2>
+            <div class="mt-6 space-y-6 [&_h3]:font-bold [&_dl]:mt-2 [&_dl]:grid [&_dl]:grid-cols-[auto_1fr] [&_dl]:items-baseline [&_dl]:gap-x-3 [&_dl]:gap-y-2 [&_dd]:text-dim [&_kbd]:rounded-md [&_kbd]:border-2 [&_kbd]:border-ink [&_kbd]:bg-white [&_kbd]:px-2 [&_kbd]:text-sm [&_kbd]:font-sans [&_kbd]:whitespace-nowrap">
+              <section>
+                <h3>친구 캐릭터</h3>
+                <dl>
+                  <dt><kbd>클릭</kbd></dt><dd>고른 아이템 던지기. 먹이를 골랐으면 먹이 주기</dd>
+                  <dt><kbd>끌어서 놓기</kbd></dt><dd>집어 던지기</dd>
+                  <dt><kbd>위에서 흔들기</kbd></dt><dd>쓰다듬기. 마우스를 좌우로 빠르게</dd>
+                  <dt><kbd>우클릭</kbd></dt><dd>던질 것·먹이 고르기, 콕 찌르기</dd>
+                </dl>
+              </section>
+              <section>
+                <h3>내 캐릭터</h3>
+                <dl>
+                  <dt><kbd>클릭</kbd></dt><dd>메시지 쓰기. 뭔가 날아오는 중이면 피하기</dd>
+                  <dt><kbd>더블클릭</kbd></dt><dd>커지기</dd>
+                  <dt><kbd>우클릭</kbd></dt><dd>이모트, 상태 설정, 캐릭터 바꾸기</dd>
+                </dl>
+              </section>
+              <section>
+                <h3>키보드 <span class="text-sm font-normal text-dim">Mac / Windows</span></h3>
+                <dl>
+                  <dt><kbd>⌘⇧Space</kbd> <kbd>Ctrl+Shift+Space</kbd></dt><dd>메시지 쓰기</dd>
+                  <dt><kbd>⌘⇧H</kbd> <kbd>Ctrl+Shift+H</kbd></dt><dd>숨기기, 보이기</dd>
+                  <dt><kbd>⌃⌥⌘1~6</kbd> <kbd>Ctrl+Alt+1~6</kbd></dt><dd>이모트</dd>
+                </dl>
+                <p class="mt-2 text-sm text-dim">메시지 단축키는 트레이 메뉴에서 바꿀 수 있어요.</p>
+              </section>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mx-auto max-w-5xl px-6 py-20">
+        <h2 class="font-pixel text-3xl">버전 기록</h2>
+        <div id="releases" class="mt-6 space-y-6 text-dim">불러오는 중…</div>
+        <template id="release-tpl">
+          <article>
+            <p><a data-tag href="https://github.com/Zaehyeon2/huggybugi/releases" class="font-pixel text-xl text-ink underline decoration-2 underline-offset-4">버전</a> <time data-date class="ml-2 text-sm"></time></p>
+            <p data-notes class="mt-1 whitespace-pre-line"></p>
+          </article>
+        </template>
+      </section>
+    </main>
+
+    <footer class="border-t-4 border-ink py-8 text-center text-sm">친구끼리 쓰려고 만든 비상업 프로젝트예요. <a class="underline" href="https://sidey-app.github.io/SIDEY/">SIDEY</a> 에서 영감을 받았어요.</footer>
+  </body>
+</html>
