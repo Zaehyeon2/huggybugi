@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>캐릭터·아이템 만드는 법 - 허기부기</title>
+    <meta name="description" content="허기부기에 내 캐릭터·아이템·이모트를 올리는 방법과 규격" />
+    <meta name="robots" content="noindex" />
+    <meta name="theme-color" content="#dff1ff" />
+    <link rel="icon" type="image/png" href="./assets/favicon.png" />
+    <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/galmuri/dist/galmuri.css" />
+    <link rel="stylesheet" href="./site.css" />
+  </head>
+  <body class="bg-sky font-sans text-ink">
+    <main class="mx-auto max-w-3xl px-6 py-16 leading-relaxed [&_h2]:mt-16 [&_h2]:font-pixel [&_h2]:text-3xl [&_h3]:mt-8 [&_h3]:text-lg [&_h3]:font-bold [&_p]:mt-3 [&_a]:underline [&_a]:decoration-2 [&_a]:underline-offset-4 [&_code]:rounded [&_code]:bg-white [&_code]:px-1 [&_code]:text-sm [&_table]:mt-4 [&_table]:w-full [&_table]:border-2 [&_table]:border-ink [&_table]:bg-white [&_table]:text-sm [&_th]:border-b-2 [&_th]:border-ink [&_th]:px-3 [&_th]:py-2 [&_th]:text-left [&_td]:border-t [&_td]:border-ink/20 [&_td]:px-3 [&_td]:py-2 [&_pre]:mt-3 [&_pre]:overflow-x-auto [&_pre]:rounded-xl [&_pre]:border-2 [&_pre]:border-ink [&_pre]:bg-white [&_pre]:p-4 [&_pre]:text-sm [&_ul]:mt-3 [&_ul]:list-disc [&_ul]:space-y-1 [&_ul]:pl-6 [&_ol]:mt-3 [&_ol]:list-decimal [&_ol]:space-y-1 [&_ol]:pl-6">
+      <a href="./" class="text-sm">허기부기 처음으로</a>
+      <h1 class="mt-6 font-pixel text-5xl leading-tight">캐릭터·아이템 만드는 법</h1>
+      <p class="text-dim">동작마다 PNG 한 장. 프레임을 가로로 이어 붙여요.</p>
+
+      <h2>올리기</h2>
+      <p>트레이 메뉴 "만들기…"에서 캐릭터·아이템·이모트 탭을 고르고 "+ 새로 만들기". 이름을 쓰고 동작마다 PNG 를 골라요. fps 는 권장값이 채워져 있어요. 아이템은 종류(던질 것·먹이)와 효과음 wav 도 고를 수 있어요. 저장하면 내 목록에 생기고, 같은 곳에서 고치거나 지워요.</p>
+      <p>친구 화면에는 친구가 "캐릭터 바꾸기…" 창을 열거나 트레이 "캐릭터 새로 받기"를 누를 때 들어가요. 내가 고른 캐릭터는 바로 보여요.</p>
+      <p>먹이 아이템은 친구를 우클릭해 "먹이"에서 고른 뒤 친구를 클릭하면 날아가요. 다시 "던질 것"을 고를 때까지 클릭마다 먹이를 줘요.</p>
+
+      <h3>이모트</h3>
+      <p>"이모트" 탭에서 GIF·WebP·APNG·PNG·JPG 를 골라요. 앱이 24px 로 줄이고 16프레임까지 골라 원래 속도대로 저장해요(원본 20MB, 가로·세로 2048px 까지). 이름은 그룹 안에서 겹치면 안 돼요.</p>
+      <p>쓰는 곳: 내 캐릭터 우클릭 이모트 메뉴(최근 10개)와 "더보기…"(⌃⌥⌘E, Windows 는 Ctrl+Alt+E) 고르기 창은 머리 위에 띄워요. 메시지에 <code>:</code> 를 치면 이름이 떠서 고르면 말풍선 안에 <code>:이름:</code> 으로 들어가요. 상태·닉네임 창의 이모지 버튼으로 상태에도 넣어요. 같은 그룹 친구만 보여요.</p>
+
+      <h2>규격</h2>
+      <ul>
+        <li>프레임 32×32, 동작당 최대 8프레임 (4프레임이면 128×32)</li>
+        <li>투명 배경, 파일당 200KB 이하 (넘으면 앱이 다시 저장해 줄여요. 효과음 wav 는 50KB)</li>
+        <li>오른쪽을 보게 그려요(왼쪽은 앱이 뒤집어요). 발은 맨 아래 줄에, 가로 가운데</li>
+      </ul>
+
+      <h2>캐릭터 동작</h2>
+      <p><code>idle</code>, <code>walk</code>, <code>sleep</code> 만 있으면 돼요. 나머지는 없으면 대신 쓰는 동작이 있어요. 오프라인이면 앱에 있는 돌로 바뀌어요.</p>
+      <table>
+        <thead><tr><th>동작</th><th>언제</th><th>권장</th><th>없으면</th></tr></thead>
+        <tbody>
+          <tr><td><code>idle</code> 필수</td><td>가만히</td><td>2장, 2fps</td><td></td></tr>
+          <tr><td><code>walk</code> 필수</td><td>걸을 때</td><td>4장, 6fps</td><td></td></tr>
+          <tr><td><code>sleep</code> 필수</td><td>30분 자리 비움 (Zzz 는 앱이 그림)</td><td>2장, 1fps</td><td></td></tr>
+          <tr><td><code>poked</code></td><td>콕 찔림</td><td>2장, 8fps</td><td><code>idle</code></td></tr>
+          <tr><td><code>throw</code></td><td>던질 때</td><td>3장, 10fps</td><td><code>idle</code></td></tr>
+          <tr><td><code>hit</code></td><td>맞았을 때</td><td>2장, 8fps</td><td><code>poked</code></td></tr>
+          <tr><td><code>jump</code></td><td>피할 때, 점프 동작</td><td>2장, 8fps</td><td><code>idle</code></td></tr>
+          <tr><td><code>eat</code></td><td>먹이 받을 때, 냠냠 동작</td><td>3장, 6fps</td><td><code>happy</code></td></tr>
+          <tr><td><code>wave</code></td><td>친구 접속 인사, 안녕 동작</td><td>3장, 6fps</td><td><code>happy</code></td></tr>
+          <tr><td><code>happy</code></td><td>쓰다듬기, 기쁨 동작</td><td>2장, 4fps</td><td><code>idle</code></td></tr>
+        </tbody>
+      </table>
+
+      <h2>아이템 동작</h2>
+      <table>
+        <thead><tr><th>동작</th><th>언제</th><th>권장</th></tr></thead>
+        <tbody>
+          <tr><td><code>fly</code> 필수</td><td>날아가는 동안 (회전이 잘 어울림)</td><td>4~8장, 12fps</td></tr>
+          <tr><td><code>impact</code></td><td>맞는 순간</td><td>3장, 12fps</td></tr>
+        </tbody>
+      </table>
+
+      <h2>예시: 햄찌</h2>
+      <p>앱에 들어 있는 햄찌의 모든 동작이에요. 같은 몸에 포즈만 바꿔 그려서 동작끼리 모양이 어긋나지 않아요.</p>
+      <table class="[&_img]:[image-rendering:pixelated]">
+        <thead><tr><th>동작</th><th>움직임</th><th>올리는 모양 (4배 확대)</th></tr></thead>
+        <tbody>
+          <tr><td><code>idle</code><br><span class="text-dim">가만히</span></td><td><img src="./assets/guide/hamster-idle.png" alt="햄찌 idle" width="64" /></td><td><img src="./assets/guide/hamster-idle-strip-x4.png" alt="idle 2프레임" /></td></tr>
+          <tr><td><code>walk</code><br><span class="text-dim">걸을 때</span></td><td><img src="./assets/guide/hamster-walk.png" alt="햄찌 walk" width="64" /></td><td><img src="./assets/guide/hamster-walk-strip-x4.png" alt="walk 4프레임" /></td></tr>
+          <tr><td><code>sleep</code><br><span class="text-dim">잠</span></td><td><img src="./assets/guide/hamster-sleep.png" alt="햄찌 sleep" width="64" /></td><td><img src="./assets/guide/hamster-sleep-strip-x4.png" alt="sleep 2프레임" /></td></tr>
+          <tr><td><code>poked</code><br><span class="text-dim">콕 찔림</span></td><td><img src="./assets/guide/hamster-poked.png" alt="햄찌 poked" width="64" /></td><td><img src="./assets/guide/hamster-poked-strip-x4.png" alt="poked 1프레임" /></td></tr>
+          <tr><td><code>throw</code><br><span class="text-dim">던질 때</span></td><td><img src="./assets/guide/hamster-throw.png" alt="햄찌 throw" width="64" /></td><td><img src="./assets/guide/hamster-throw-strip-x4.png" alt="throw 3프레임" /></td></tr>
+          <tr><td><code>hit</code><br><span class="text-dim">맞았을 때</span></td><td><img src="./assets/guide/hamster-hit.png" alt="햄찌 hit" width="64" /></td><td><img src="./assets/guide/hamster-hit-strip-x4.png" alt="hit 1프레임" /></td></tr>
+          <tr><td><code>jump</code><br><span class="text-dim">피할 때·점프</span></td><td><img src="./assets/guide/hamster-jump.png" alt="햄찌 jump" width="64" /></td><td><img src="./assets/guide/hamster-jump-strip-x4.png" alt="jump 2프레임" /></td></tr>
+          <tr><td><code>eat</code><br><span class="text-dim">먹이 받을 때</span></td><td><img src="./assets/guide/hamster-eat.png" alt="햄찌 eat" width="64" /></td><td><img src="./assets/guide/hamster-eat-strip-x4.png" alt="eat 3프레임" /></td></tr>
+          <tr><td><code>wave</code><br><span class="text-dim">인사</span></td><td><img src="./assets/guide/hamster-wave.png" alt="햄찌 wave" width="64" /></td><td><img src="./assets/guide/hamster-wave-strip-x4.png" alt="wave 3프레임" /></td></tr>
+          <tr><td><code>happy</code><br><span class="text-dim">쓰다듬기</span></td><td><img src="./assets/guide/hamster-happy.png" alt="햄찌 happy" width="64" /></td><td><img src="./assets/guide/hamster-happy-strip-x4.png" alt="happy 2프레임" /></td></tr>
+          <tr><td><code>offline</code><br><span class="text-dim">오프라인(앱의 돌)</span></td><td><img src="./assets/guide/hamster-offline.png" alt="햄찌 offline" width="64" /></td><td><img src="./assets/guide/hamster-offline-strip-x4.png" alt="offline 1프레임" /></td></tr>
+        </tbody>
+      </table>
+      <p>실제 크기로 받기: <a href="./assets/guide/hamster-idle-strip.png" download>idle</a>, <a href="./assets/guide/hamster-walk-strip.png" download>walk</a>, <a href="./assets/guide/hamster-sleep-strip.png" download>sleep</a>, <a href="./assets/guide/hamster-poked-strip.png" download>poked</a>, <a href="./assets/guide/hamster-throw-strip.png" download>throw</a>, <a href="./assets/guide/hamster-hit-strip.png" download>hit</a>, <a href="./assets/guide/hamster-jump-strip.png" download>jump</a>, <a href="./assets/guide/hamster-eat-strip.png" download>eat</a>, <a href="./assets/guide/hamster-wave-strip.png" download>wave</a>, <a href="./assets/guide/hamster-happy-strip.png" download>happy</a></p>
+
+      <h2>템플릿</h2>
+      <p>만들기 창의 "템플릿 받기"로 동작마다 햄찌(아이템은 도토리) 예시가 들어간 템플릿을 받을 수 있어요. 빈 템플릿은 여기서: <a href="./assets/guide/template-2frames.png" download>2프레임</a>, <a href="./assets/guide/template-4frames.png" download>4프레임</a>, <a href="./assets/guide/template-8frames.png" download>8프레임</a></p>
+      <p>아래 레이어로 깔고 그린 뒤 <strong>템플릿 레이어는 끄고 저장</strong>해요. 빨간 줄이 발 기준선이에요.</p>
+      <p>그리는 도구: <a href="https://www.piskelapp.com/">Piskel</a>(웹, 무료), <a href="https://libresprite.github.io/">LibreSprite</a>(무료), <a href="https://www.aseprite.org/">Aseprite</a>(유료)</p>
+
+      <h2>AI 로 만들기</h2>
+      <p>이미지 AI 는 32픽셀을 정확히 못 지켜요. 크게 만들고 줄여서 다듬어요.</p>
+      <ol>
+        <li>아래 프롬프트로 생성</li>
+        <li>프레임별로 32×32 로 줄이기. 보간 방식은 꼭 <strong>최근접 이웃</strong>(Nearest Neighbor), 아니면 흐려져요.</li>
+        <li>배경 투명 처리, 프레임 위치 맞추기</li>
+      </ol>
+      <p>설치 없이 브라우저에서:</p>
+      <ul>
+        <li><a href="https://www.photopea.com/">Photopea</a>(무료, 포토샵과 비슷): 줄이기는 "이미지 &gt; 이미지 크기"에서 리샘플을 Nearest Neighbor 로. 배경은 자동 선택 도구(허용치 0, 안티 앨리어스 끔)로 배경을 누르고 Delete, PNG 로 내보내기.</li>
+        <li><a href="https://www.remove.bg/ko">remove.bg</a>(무료): 배경만 지울 때. 가장자리가 흐려질 수 있어 <strong>줄이기 전 큰 이미지</strong>에 써요.</li>
+      </ul>
+
+      <h3>기본 모습</h3>
+      <pre>Pixel art sprite of a cute chubby [animal], chibi, side view facing right, full body,
+32x32 pixel grid, about 8 colors, 1px dark outline, flat shading,
+transparent background, feet on the bottom edge, centered, no text, no shadow</pre>
+
+      <h3>동작 시트 (위 결과를 참고 이미지로 함께)</h3>
+      <pre>Pixel art sprite sheet of the same character, [N] frames in one horizontal row,
+each frame exactly 32x32 pixels, no gaps, facing right, animation: [motion],
+same size and position in every frame, feet on the bottom edge,
+1px dark outline, limited palette, transparent background, no text</pre>
+      <table>
+        <thead><tr><th>동작</th><th>[N]</th><th>[motion]</th></tr></thead>
+        <tbody>
+          <tr><td><code>idle</code></td><td>2</td><td>gentle breathing, body down 1px in frame 2</td></tr>
+          <tr><td><code>walk</code></td><td>4</td><td>walk cycle: left foot forward, body up, right foot forward, body up</td></tr>
+          <tr><td><code>sleep</code></td><td>2</td><td>eyes closed, body rises and falls 1px</td></tr>
+          <tr><td><code>poked</code></td><td>2</td><td>squashed flat, then back to normal</td></tr>
+          <tr><td><code>throw</code></td><td>3</td><td>wind up, then swing one arm forward</td></tr>
+          <tr><td><code>hit</code></td><td>2</td><td>knocked back, dizzy swirl eyes</td></tr>
+          <tr><td><code>jump</code></td><td>2</td><td>crouch, then stretch up</td></tr>
+          <tr><td><code>eat</code></td><td>3</td><td>mouth open, chewing, cheeks puffed</td></tr>
+          <tr><td><code>wave</code></td><td>3</td><td>one paw raised, waving</td></tr>
+          <tr><td><code>happy</code></td><td>2</td><td>smiling closed eyes, tiny heart</td></tr>
+        </tbody>
+      </table>
+
+      <h3>아이템</h3>
+      <pre>Pixel art game item, [item], [N] frames in one horizontal row, each 32x32 pixels,
+no gaps, spinning 360 degrees, 1px dark outline, transparent background, no text</pre>
+
+      <h3>코드를 실행하는 AI (ChatGPT, Claude 등)</h3>
+      <p>격자가 정확히 나와요. 몸·눈·발을 타원 같은 도형으로 정의하고, 포즈 값(몸 높이, 눈 모양, 발 들기)을 받아 한 장을 그리는 함수 하나로 모든 동작을 만들게 하면 동작끼리 모양이 어긋나지 않아요. 사진이나 그림을 같이 주면 색과 생김새를 따라 그려요.</p>
+      <pre>Write and run a Python (Pillow) script that draws a pixel art [animal] (see the attached
+picture) for a 32x32 desktop pet. Build each frame from simple shapes (ellipses for body,
+face, feet) in ONE function draw(pose) that takes pose values like bob, eyes, foot lift,
+so every animation reuses the same shapes. Add a 1px dark outline automatically around
+the filled pixels. Facing right, feet touching row 31, the 4 corner pixels transparent.
+Save one horizontal strip PNG per animation (1x, frames 32x32, no gaps):
+idle 2, walk 4, sleep 2, poked 2, throw 3, hit 2, jump 2, eat 3, wave 3, happy 2.
+Show me an 8x preview, then let me ask for changes.</pre>
+      <p>AI 가 쓰는 코드는 대략 이런 모양이에요(펭귄, idle·walk·sleep).</p>
+      <pre>from PIL import Image, ImageColor
+
+COLORS = {'K': '#3a3640', 'G': '#9a98a3', 'W': '#fbf9f4', 'Y': '#f7c535', 'E': '#2a1c18'}
+
+def oval(x, y, cx, cy, rx, ry):
+    return ((x + .5 - cx) / rx) ** 2 + ((y + .5 - cy) / ry) ** 2 &lt;= 1
+
+# 포즈 값만 받아 한 장을 그린다. 모든 동작이 같은 모양을 쓴다.
+def draw(bob=0, eyes='open', lift=(0, 0)):
+    by = 20 + bob
+    def pixel(x, y):
+        if oval(x, y, 11, 30 - lift[0], 3.5, 2) or oval(x, y, 21, 30 - lift[1], 3.5, 2):
+            return 'Y'
+        if not oval(x, y, 16, by, 12, 9):
+            return '.'
+        if eyes == 'open' and x in (11, 12, 20, 21) and y in (by - 3, by - 2):
+            return 'E'
+        if eyes == 'closed' and x in (11, 12, 13, 20, 21, 22) and y == by - 2:
+            return 'E'
+        if y == by and 15 &lt;= x &lt;= 18:
+            return 'Y'
+        return 'W' if oval(x, y, 16.5, by + 2, 8, 6) else 'G'
+    g = [[pixel(x, y) for x in range(32)] for y in range(32)]
+    solid = lambda x, y: 0 &lt;= x &lt; 32 and 0 &lt;= y &lt; 32 and g[y][x] != '.'
+    edge = lambda x, y: not all(solid(x + a, y + b) for a, b in ((1, 0), (-1, 0), (0, 1), (0, -1)))
+    return [['K' if c != '.' and edge(x, y) else c for x, c in enumerate(row)] for y, row in enumerate(g)]
+
+def save(name, frames):
+    img = Image.new('RGBA', (32 * len(frames), 32))
+    for i, g in enumerate(frames):
+        for y, row in enumerate(g):
+            for x, c in enumerate(row):
+                if c != '.':
+                    img.putpixel((i * 32 + x, y), ImageColor.getrgb(COLORS[c]))
+    img.save(name + '.png')
+
+save('idle', [draw(), draw(bob=1)])
+save('walk', [draw(lift=(1, 0)), draw(bob=-1), draw(lift=(0, 1)), draw(bob=-1)])
+save('sleep', [draw(eyes='closed', bob=1), draw(eyes='closed', bob=2)])</pre>
+
+      <h2>올리기 전 확인</h2>
+      <ul class="list-none! pl-0! [&_li]:before:mr-2 [&_li]:before:content-['☐']">
+        <li>높이 32, 너비 32의 배수, 8프레임 이하</li>
+        <li>배경 투명, 템플릿 선 없음</li>
+        <li>오른쪽을 보고, 발이 맨 아래, 프레임마다 위치 같음</li>
+      </ul>
+    </main>
+    <footer class="border-t-4 border-ink py-8 text-center text-sm"><a class="underline" href="./">허기부기 처음으로</a></footer>
+  </body>
+</html>
