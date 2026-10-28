@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ko" class="dark">
+<head>
+  <meta charset="utf-8">
+  <!-- maximum-scale: iOS Safari 가 16px 미만 입력칸을 누르면 화면을 확대한다(손가락 확대는 그대로 됨). -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#09090b">
+  <title>허기부기 대화</title>
+  <link rel="icon" type="image/png" href="./assets/favicon.png">
+  <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png">
+  <meta name="description" content="PC 없이 폰에서 허기부기 그룹 대화를 읽고 보내요">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hammerturtle.xyz/huggybugi/chat">
+  <meta property="og:title" content="허기부기 대화">
+  <meta property="og:description" content="PC 없이 폰에서 허기부기 그룹 대화를 읽고 보내요">
+  <meta property="og:image" content="https://hammerturtle.xyz/huggybugi/assets/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="ko_KR">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- 홈 화면에 추가하면 주소창 없이 전체 화면으로 열린다. -->
+  <link rel="manifest" href="./assets/chat.webmanifest">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="허기부기">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="stylesheet" href="./ui.css?v=1793182755739">
+  <!-- JS 가 오기 전부터 첫 말을 받을 때까지 대화 화면을 덮는 첫 화면. hideBoot() 가 걷는다. -->
+  <style>
+    #boot { position: fixed; inset: 0; z-index: 100; overflow: hidden; transition: opacity 0.3s; background: #141a3a url(./assets/splash.webp) center bottom / cover; image-rendering: pixelated; color: #fff; text-align: center; }
+    #boot h1 { position: absolute; inset-inline: 0; top: 30%; margin: 0; font-size: 30px; font-weight: 800; text-shadow: 0 2px 0 rgb(0 0 0 / 0.4); }
+    #boot p { position: absolute; inset-inline: 0; top: calc(30% + 48px); margin: 0; font-size: 14px; opacity: 0.75; }
+    /* 그림(474×1024)이 cover 로 늘어난 배율에 맞춰 흙길(아래에서 136px) 위를 걷는다. */
+    #boot .walk { position: absolute; left: 0; bottom: calc(136 * max(100vw / 474, 100dvh / 1024)); display: flex; gap: 8px; animation: boot-across 16s linear -8s infinite; }
+    #boot .walk i { width: 96px; height: 96px; background-size: 384px 96px; animation: boot-step 0.6s steps(4) infinite; }
+    @keyframes boot-step { to { background-position: -384px 0; } }
+    @keyframes boot-across { from { transform: translateX(-100%); } to { transform: translateX(100vw); } }
+  </style>
+</head>
+<body>
+  <div id="root" class="h-[100dvh] pb-[env(safe-area-inset-bottom)]"></div>
+  <div id="boot">
+    <h1>허기부기</h1>
+    <p>불러오는 중</p>
+    <div class="walk">
+      <i style="background-image: url(./assets/cast/boogi-walk.png)"></i>
+      <i style="background-image: url(./assets/cast/ddeoggi-walk.png)"></i>
+      <i style="background-image: url(./assets/cast/kiwi-walk.png)"></i>
+      <i style="background-image: url(./assets/cast/monkey-walk.png)"></i>
+    </div>
+  </div>
+  <script type="module" src="./chat.js?v=1793182755739"></script>
+</body>
+</html>

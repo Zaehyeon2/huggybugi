@@ -1,0 +1,6 @@
+{
+  "name": "huggybugi",
+  "version": "1.0.202610271825",
+  "description": "허기부기 데스크톱 펫에 올릴 48px 픽셀 캐릭터를 그리는 스킬",
+  "skills": "./skills/"
+}
