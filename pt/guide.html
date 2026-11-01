@@ -1,0 +1,487 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Como criar personagens e itens - Huggybugi</title>
+    <meta name="description" content="Como enviar os seus personagens, itens e emotes para o Huggybugi, e as especificações que eles precisam ter" />
+    <meta name="theme-color" content="#dff1ff" />
+    <link rel="icon" type="image/png" href="../assets/favicon.png" />
+    <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://huggybugi.hammerturtle.xyz/pt/guide" />
+    <meta property="og:title" content="Como criar personagens e itens - Huggybugi" />
+    <meta property="og:description" content="Como enviar os seus personagens, itens e emotes para o Huggybugi, e as especificações que eles precisam ter" />
+    <meta property="og:image" content="https://huggybugi.hammerturtle.xyz/assets/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="stylesheet" href="../site.css" />
+    <script type="module" src="../guide.js"></script>
+  <link rel="alternate" hreflang="ko" href="https://huggybugi.hammerturtle.xyz/guide.html" />
+    <link rel="alternate" hreflang="en" href="https://huggybugi.hammerturtle.xyz/en/guide.html" />
+    <link rel="alternate" hreflang="ja" href="https://huggybugi.hammerturtle.xyz/ja/guide.html" />
+    <link rel="alternate" hreflang="zh-Hans" href="https://huggybugi.hammerturtle.xyz/zh-hans/guide.html" />
+    <link rel="alternate" hreflang="zh-Hant" href="https://huggybugi.hammerturtle.xyz/zh-hant/guide.html" />
+    <link rel="alternate" hreflang="es" href="https://huggybugi.hammerturtle.xyz/es/guide.html" />
+    <link rel="alternate" hreflang="pt-BR" href="https://huggybugi.hammerturtle.xyz/pt/guide.html" />
+    <link rel="alternate" hreflang="x-default" href="https://huggybugi.hammerturtle.xyz/guide.html" />
+    </head>
+  <body class="bg-sky font-sans text-ink">
+    <main class="mx-auto max-w-3xl px-6 py-16 leading-relaxed [&_h2]:mt-16 [&_h2]:font-pixel [&_h2]:text-3xl [&_h3]:mt-8 [&_h3]:text-lg [&_h3]:font-bold [&_p]:mt-3 [&_a]:underline [&_a]:decoration-2 [&_a]:underline-offset-4 [&_code]:rounded [&_code]:bg-white [&_code]:px-1 [&_code]:text-sm [&_table]:mt-4 [&_table]:w-full [&_table]:border-2 [&_table]:border-ink [&_table]:bg-white [&_table]:text-sm [&_th]:border-b-2 [&_th]:border-ink [&_th]:px-3 [&_th]:py-2 [&_th]:text-left [&_td]:border-t [&_td]:border-ink/20 [&_td]:px-3 [&_td]:py-2 [&_pre]:mt-3 [&_pre]:overflow-x-auto [&_pre]:rounded-xl [&_pre]:border-2 [&_pre]:border-ink [&_pre]:bg-white [&_pre]:p-4 [&_pre]:text-sm [&_ul]:mt-3 [&_ul]:list-disc [&_ul]:space-y-1 [&_ul]:pl-6 [&_ol]:mt-3 [&_ol]:list-decimal [&_ol]:space-y-1 [&_ol]:pl-6">
+      <div class="flex items-center justify-between gap-3">
+        <a href="./" class="text-sm">Voltar para o Huggybugi</a>
+        <details class="langs"><summary><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="m22 22-5-10-5 10"/><path d="M14 18h6"/></svg><span>Português (Brasil)</span></summary><nav class="langmenu"><a href="/guide.html">한국어</a><a href="/en/guide.html">English</a><a href="/ja/guide.html">日本語</a><a href="/zh-hans/guide.html">简体中文</a><a href="/zh-hant/guide.html">繁體中文</a><a href="/es/guide.html">Español</a><a href="/pt/guide.html" aria-current="page">Português (Brasil)<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></a></nav></details>
+      </div>
+      <h1 class="mt-6 font-pixel text-5xl leading-tight">Como criar personagens e itens</h1>
+      <p class="text-dim">Um PNG por ação, com os quadros emendados em fila na horizontal.</p>
+      <div class="mt-8 grid gap-4 sm:grid-cols-2">
+        <div class="flex flex-col rounded-2xl border-2 border-ink bg-white p-5">
+          <p class="mt-0! font-bold">Criar com a skill <span class="font-normal text-dim">· o mais fácil</span></p>
+          <p class="flex-1 text-sm text-dim">Envie o zip da skill para o Claude, o ChatGPT ou o Gemini junto com uma foto. Ele mostra o desenho, ajusta com você e devolve um zip pronto para usar.</p>
+          <a href="#skill" class="mt-4 self-start rounded-xl border-2 border-ink bg-ink px-4 py-2 text-sm font-bold text-white no-underline! hover:bg-white hover:text-ink">Como pegar e usar a skill</a>
+        </div>
+        <div class="flex flex-col rounded-2xl border-2 border-ink bg-white p-5">
+          <p class="mt-0! font-bold">Copiar a especificação e pedir</p>
+          <p class="flex-1 text-sm text-dim">Copie esta página em markdown, cole no ChatGPT ou no Claude e ele segue a especificação.</p>
+          <button id="copy-md" type="button" class="mt-4 self-start rounded-xl border-2 border-ink bg-white px-4 py-2 text-sm font-bold hover:bg-ink hover:text-white">Copiar em markdown para uma IA</button>
+        </div>
+      </div>
+
+      <h2>Enviar</h2>
+      <p>No menu da bandeja entre em "Personagem > Criar…", escolha a aba Personagens, Itens ou Emotes e clique em "+ Criar novo". Dê um nome (até 20 caracteres) e escolha um PNG para cada ação, ou arraste para a casinha. Os campos de fps já vêm com os valores recomendados. Nos itens você também escolhe o tipo (pra jogar, comida, cocô) e um wav de som. Ao salvar, ele aparece na sua lista, e ali mesmo você edita ou exclui. O cartão <b>+</b> no começo das janelas de trocar personagem, itens e emotes abre o mesmo editor.</p>
+      <p>Chega para os seus amigos quando eles abrem a janela "Personagem > Trocar…" da bandeja ou clicam em "Baixar novos personagens e itens". O personagem que você escolheu aparece na hora.</p>
+      <p>Para a comida, clique com o botão direito em um amigo, escolha uma em "Comida" e depois clique nele para jogar. Cada clique dá comida até você escolher algo "pra jogar" de novo.</p>
+      <p>No cocô, a imagem <code>fly</code> é desenhada como cocô no chão (não é jogada nem serve de comida). O seu personagem faz o cocô que você escolheu quando está cheio. Quem ainda não recebeu o seu cocô vê o cocô padrão até receber.</p>
+
+      <h3>Emotes</h3>
+      <p>Na aba "Emotes" escolha um GIF, WebP, APNG, PNG ou JPG. O app reduz para 64px, pega até 16 quadros e salva na velocidade original (o original, até 20MB e 2048px de lado). O nome vai até 20 caracteres e não pode repetir dentro do grupo. <code>:</code> e espaços não valem porque quebrariam o <code>:nome:</code> dentro da mensagem, e os nomes dos emotes básicos (heart·question·exclamation·angry·lol·note) já estão usados.</p>
+      <p>Onde usar: 'Emotes' no menu que aparece ao clicar no seu personagem (⌃⌥⌘E, Ctrl+Alt+E no Windows) abre a janela sobre a sua cabeça. Digite <code>:</code> na mensagem para ver os nomes, e ao escolher um ele entra como <code>:nome:</code> no balão. Com o botão de emoji da aba 'Status' da janela de status e apelido, ele vai para o seu status. No chat você também reage a uma mensagem com um. Só os amigos do mesmo grupo veem.</p>
+
+      <h2>Especificações</h2>
+      <ul>
+        <li>Quadros de 48×48, até 8 por ação (4 quadros dão 192×48)</li>
+        <li>Fundo transparente, até 200KB por arquivo (se passar, o app salva de novo menor. O wav de som, 50KB)</li>
+        <li>Desenhe olhando para a direita (o app espelha para o outro lado)</li>
+        <li>Os personagens e o cocô encostam na última linha e ficam centralizados. O que é jogado e a comida vão no centro do quadro</li>
+        <li>Preencha bem a grade de 48 (de 800 a 1200 pixels pintados, de 30 a 46 de altura, mais se o corpo for fino). O app não amplia nada, então um desenho pequeno vai parecer pequeno do lado dos personagens dos seus amigos</li>
+      </ul>
+
+      <h2>Ações do personagem</h2>
+      <p>Basta ter <code>idle</code>, <code>walk</code> e <code>sleep</code>. As outras, se faltarem, são substituídas por outra ação. Sem <code>offline</code>, ele vira pedra quando fica offline.</p>
+      <table>
+        <thead><tr><th>Ação</th><th>Quando</th><th>Recomendado</th><th>Se faltar</th></tr></thead>
+        <tbody>
+          <tr><td><code>idle</code> obrigatório</td><td>Parado</td><td>2 quadros, 2fps</td><td></td></tr>
+          <tr><td><code>walk</code> obrigatório</td><td>Andando</td><td>4 quadros, 6fps</td><td></td></tr>
+          <tr><td><code>sleep</code> obrigatório</td><td>30 minutos ausente ou tela bloqueada (o Zzz é o app que desenha)</td><td>2 quadros, 1fps</td><td></td></tr>
+          <tr><td><code>poked</code></td><td>Ao receber um toque</td><td>2 quadros, 8fps</td><td><code>idle</code></td></tr>
+          <tr><td><code>throw</code></td><td>Ao jogar</td><td>3 quadros, 10fps</td><td><code>idle</code></td></tr>
+          <tr><td><code>hit</code></td><td>Ao levar a pancada</td><td>2 quadros, 8fps</td><td><code>poked</code></td></tr>
+          <tr><td><code>jump</code></td><td>Ao desviar, pose de pulo</td><td>2 quadros, 8fps</td><td><code>idle</code></td></tr>
+          <tr><td><code>eat</code></td><td>Ao receber comida, pose de nham</td><td>3 quadros, 6fps</td><td><code>happy</code></td></tr>
+          <tr><td><code>wave</code></td><td>Cumprimento quando um amigo entra, pose de oi</td><td>3 quadros, 6fps</td><td><code>happy</code></td></tr>
+          <tr><td><code>happy</code></td><td>Ao receber carinho, pose de feliz</td><td>2 quadros, 4fps</td><td><code>idle</code></td></tr>
+          <tr><td><code>offline</code></td><td>Offline (caído)</td><td>1 quadro, 1fps</td><td>Pedra</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Ações do item</h2>
+      <table>
+        <thead><tr><th>Ação</th><th>Quando</th><th>Recomendado</th><th>Se faltar</th></tr></thead>
+        <tbody>
+          <tr><td><code>fly</code> obrigatório</td><td>Enquanto voa. Ligue 'Girar ao voar' na janela de criar e o app gira por você (nos novos vem desligado). Com o giro desligado, o que é jogado voa reto olhando para onde vai, então desenhe olhando para a direita; a comida com o giro desligado voa do jeito que você desenhou, então desenhe ela em pé. Dê movimento com vários quadros para não parecer parada (quicando, brilhando). O cocô é desenhado no chão</td><td>1 quadro pra jogar, de 1 a 4 para comida, 12fps (o cocô, 1 quadro)</td><td></td></tr>
+          <tr><td><code>impact</code></td><td>O momento do impacto (só para o que é jogado; a comida é comida na hora)</td><td>3 quadros, 12fps</td><td>A explosão de estrelas que o app desenha</td></tr>
+        </tbody>
+      </table>
+      <p>O wav toca no momento do impacto (no cocô, na hora que cai). Sem ele, o que é jogado e a comida não fazem som, e o cocô usa o 'pum' do app.</p>
+      <h3>Exemplo: martelinho</h3>
+      <p>É um item padrão. O <code>fly</code> é um quadro só, mas gira enquanto voa (a comida não gira).</p>
+      <table class="[&_img]:[image-rendering:pixelated]">
+        <thead><tr><th>Ação</th><th>Movimento</th><th>O que você envia (4x)</th></tr></thead>
+        <tbody>
+          <tr><td><code>fly</code><br><span class="text-dim">Enquanto voa</span></td><td><img src="../assets/guide/hammer-fly.png" alt="Martelinho fly" width="96" /></td><td><img src="../assets/guide/hammer-fly-strip-x4.png" alt="fly 1 quadro" /></td></tr>
+          <tr><td><code>impact</code><br><span class="text-dim">O momento do impacto</span></td><td><img src="../assets/guide/hammer-impact.png" alt="Martelinho impact" width="96" /></td><td><img src="../assets/guide/hammer-impact-strip-x4.png" alt="impact 3 quadros" /></td></tr>
+        </tbody>
+      </table>
+      <p>Baixar no tamanho real: <a href="../assets/guide/hammer-fly-strip.png" download>fly</a>, <a href="../assets/guide/hammer-impact-strip.png" download>impact</a>, <a href="../assets/guide/hammer.zip" download>Baixar tudo (zip)</a></p>
+      <h3>Cocô</h3>
+      <p>Um item de cocô só precisa de um quadro <code>fly</code>. Ele é desenhado no chão, sem girar. O app não reduz nada: desenha a grade de 48×48 do jeito que está, então faça ele pequenininho embaixo no centro (o cocô padrão tem 17 de largura e 12 de altura) e deixe a parte de cima vazia. Não precisa ter cara de cocô. Qualquer coisinha que combine com o seu personagem (uma aboborinha, um caixão, um novelo de lã) serve, desde que caiba na área de 24×24 embaixo no centro. Embaixo está o cocô padrão.</p>
+      <table class="[&_img]:[image-rendering:pixelated]">
+        <thead><tr><th>Ação</th><th>Movimento</th><th>O que você envia (4x)</th></tr></thead>
+        <tbody>
+          <tr><td><code>fly</code><br><span class="text-dim">No chão</span></td><td><img src="../assets/guide/poop-fly.png" alt="Cocô padrão fly" width="96" /></td><td><img src="../assets/guide/poop-fly-strip-x4.png" alt="fly 1 quadro" /></td></tr>
+        </tbody>
+      </table>
+      <p>Baixar no tamanho real: <a href="../assets/guide/poop-fly-strip.png" download>fly</a></p>
+
+      <h2>Exemplo: Ddeoggi</h2>
+      <p>Todas as ações do Ddeoggi, desenhado a partir de um pinguim de pelúcia. Usa a mesma quantidade de quadros da tabela acima e, como todas as poses reaproveitam o mesmo corpo, as ações não ficam desalinhadas entre si.</p>
+      <table class="[&_img]:[image-rendering:pixelated]">
+        <thead><tr><th>Ação</th><th>Movimento</th><th>O que você envia (4x)</th></tr></thead>
+        <tbody>
+          <tr><td><code>idle</code><br><span class="text-dim">Parado</span></td><td><img src="../assets/guide/ddeoggi-idle.png" alt="Ddeoggi idle" width="96" /></td><td><img src="../assets/guide/ddeoggi-idle-strip-x4.png" alt="idle 2 quadros" /></td></tr>
+          <tr><td><code>walk</code><br><span class="text-dim">Andando</span></td><td><img src="../assets/guide/ddeoggi-walk.png" alt="Ddeoggi walk" width="96" /></td><td><img src="../assets/guide/ddeoggi-walk-strip-x4.png" alt="walk 4 quadros" /></td></tr>
+          <tr><td><code>sleep</code><br><span class="text-dim">Dormindo</span></td><td><img src="../assets/guide/ddeoggi-sleep.png" alt="Ddeoggi sleep" width="96" /></td><td><img src="../assets/guide/ddeoggi-sleep-strip-x4.png" alt="sleep 2 quadros" /></td></tr>
+          <tr><td><code>poked</code><br><span class="text-dim">Ao receber um toque</span></td><td><img src="../assets/guide/ddeoggi-poked.png" alt="Ddeoggi poked" width="96" /></td><td><img src="../assets/guide/ddeoggi-poked-strip-x4.png" alt="poked 2 quadros" /></td></tr>
+          <tr><td><code>throw</code><br><span class="text-dim">Ao jogar</span></td><td><img src="../assets/guide/ddeoggi-throw.png" alt="Ddeoggi throw" width="96" /></td><td><img src="../assets/guide/ddeoggi-throw-strip-x4.png" alt="throw 3 quadros" /></td></tr>
+          <tr><td><code>hit</code><br><span class="text-dim">Ao levar a pancada</span></td><td><img src="../assets/guide/ddeoggi-hit.png" alt="Ddeoggi hit" width="96" /></td><td><img src="../assets/guide/ddeoggi-hit-strip-x4.png" alt="hit 2 quadros" /></td></tr>
+          <tr><td><code>jump</code><br><span class="text-dim">Ao desviar e pular</span></td><td><img src="../assets/guide/ddeoggi-jump.png" alt="Ddeoggi jump" width="96" /></td><td><img src="../assets/guide/ddeoggi-jump-strip-x4.png" alt="jump 2 quadros" /></td></tr>
+          <tr><td><code>eat</code><br><span class="text-dim">Ao receber comida</span></td><td><img src="../assets/guide/ddeoggi-eat.png" alt="Ddeoggi eat" width="96" /></td><td><img src="../assets/guide/ddeoggi-eat-strip-x4.png" alt="eat 3 quadros" /></td></tr>
+          <tr><td><code>wave</code><br><span class="text-dim">Cumprimento</span></td><td><img src="../assets/guide/ddeoggi-wave.png" alt="Ddeoggi wave" width="96" /></td><td><img src="../assets/guide/ddeoggi-wave-strip-x4.png" alt="wave 3 quadros" /></td></tr>
+          <tr><td><code>happy</code><br><span class="text-dim">Carinho</span></td><td><img src="../assets/guide/ddeoggi-happy.png" alt="Ddeoggi happy" width="96" /></td><td><img src="../assets/guide/ddeoggi-happy-strip-x4.png" alt="happy 2 quadros" /></td></tr>
+          <tr><td><code>offline</code><br><span class="text-dim">Offline</span></td><td><img src="../assets/guide/ddeoggi-offline.png" alt="Ddeoggi offline" width="96" /></td><td><img src="../assets/guide/ddeoggi-offline-strip-x4.png" alt="offline 1 quadro" /></td></tr>
+        </tbody>
+      </table>
+      <p>Baixar no tamanho real: <a href="../assets/guide/ddeoggi-idle-strip.png" download>idle</a>, <a href="../assets/guide/ddeoggi-walk-strip.png" download>walk</a>, <a href="../assets/guide/ddeoggi-sleep-strip.png" download>sleep</a>, <a href="../assets/guide/ddeoggi-poked-strip.png" download>poked</a>, <a href="../assets/guide/ddeoggi-throw-strip.png" download>throw</a>, <a href="../assets/guide/ddeoggi-hit-strip.png" download>hit</a>, <a href="../assets/guide/ddeoggi-jump-strip.png" download>jump</a>, <a href="../assets/guide/ddeoggi-eat-strip.png" download>eat</a>, <a href="../assets/guide/ddeoggi-wave-strip.png" download>wave</a>, <a href="../assets/guide/ddeoggi-happy-strip.png" download>happy</a>, <a href="../assets/guide/ddeoggi-offline-strip.png" download>offline</a>, <a href="../assets/guide/ddeoggi.zip" download>Baixar tudo (zip)</a></p>
+
+      <h2>Modelos</h2>
+      <p>Com "Baixar modelo" na janela de criar você pega um modelo com o hamster do app desenhado em cada ação (uma castanha nos itens). Os modelos vazios estão aqui: <a href="../assets/guide/template-2frames.png" download>2 quadros</a>, <a href="../assets/guide/template-4frames.png" download>4 quadros</a>, <a href="../assets/guide/template-8frames.png" download>8 quadros</a>, <a href="../assets/guide/templates.zip" download>Baixar tudo (zip)</a></p>
+      <p>Coloque em uma camada de baixo, desenhe por cima e <strong>desligue a camada do modelo antes de salvar</strong>. A linha vermelha marca onde ficam os pés.</p>
+      <p>Programas para desenhar: <a href="https://www.piskelapp.com/">Piskel</a>(web, de graça), <a href="https://libresprite.github.io/">LibreSprite</a>(de graça), <a href="https://www.aseprite.org/">Aseprite</a>(pago)</p>
+
+      <h2>Criar com IA</h2>
+      <p>As IAs de imagem não acertam os 48 pixels na mosca. Gere grande, reduza e depois ajuste.</p>
+      <ol>
+        <li>Gerar com o prompt abaixo</li>
+        <li>Reduzir cada quadro para 48×48. A interpolação tem que ser <strong>vizinho mais próximo</strong> (Nearest Neighbor), senão fica borrado.</li>
+        <li>Deixar o fundo transparente e alinhar os quadros</li>
+      </ol>
+      <p>No navegador, sem instalar nada:</p>
+      <ul>
+        <li><a href="https://www.photopea.com/">Photopea</a>(de graça, parecido com o Photoshop): para reduzir, use "Imagem &gt; Tamanho da imagem" e ponha a reamostragem em Nearest Neighbor. Para o fundo, use a varinha mágica (tolerância 0, sem suavização), clique no fundo, aperte Delete e exporte como PNG.</li>
+        <li><a href="https://www.remove.bg">remove.bg</a>(de graça): só para tirar o fundo. Pode suavizar as bordas, então use na <strong>imagem grande antes de reduzir</strong>.</li>
+      </ul>
+
+      <h3>O visual base</h3>
+      <pre>Pixel art sprite of a cute [animal], side view facing right, full body,
+match the body shape, proportions and features of the attached picture if any
+(otherwise the real proportions of that animal or character),
+on a 48x48 pixel grid, upscaled so one art pixel is a clean 16x16 block
+(768x768 per frame), hard edges, no anti-aliasing, no gradients, no dithering,
+about 8 colors, 1px dark outline, flat shading, transparent background,
+fills most of the grid (about 30-46 pixels tall), feet on the bottom row,
+horizontally centered, nothing touching the top or side edges, no shadow, no text</pre>
+
+      <h3>Folha de ações (mande o resultado acima como imagem de referência)</h3>
+      <pre>Pixel art sprite sheet of the same character, [N] frames in one horizontal row,
+no gaps, facing right, animation: [motion],
+each frame on a 48x48 pixel grid, upscaled so one art pixel is a clean 16x16 block
+(768x768 per frame), hard edges, no anti-aliasing, no gradients, no dithering,
+same palette (about 8 colors) as the reference, 1px dark outline,
+same size and position in every frame, feet on the bottom row,
+transparent background, the 4 corner pixels of every frame transparent,
+nothing touching the top or side edges, no shadow, no text</pre>
+      <table class="[&_img]:[image-rendering:pixelated]">
+        <thead><tr><th>Ação</th><th>[N]</th><th>[motion]</th><th>Ddeoggi</th></tr></thead>
+        <tbody>
+          <tr><td><code>idle</code></td><td>2</td><td>gentle breathing, body down 1px in frame 2</td><td><img src="../assets/guide/ddeoggi-idle.png" alt="Ddeoggi idle" width="96" /></td></tr>
+          <tr><td><code>walk</code></td><td>4</td><td>walk cycle: left foot forward, body up, right foot forward, body up</td><td><img src="../assets/guide/ddeoggi-walk.png" alt="Ddeoggi walk" width="96" /></td></tr>
+          <tr><td><code>sleep</code></td><td>2</td><td>eyes closed, body rises and falls 1px</td><td><img src="../assets/guide/ddeoggi-sleep.png" alt="Ddeoggi sleep" width="96" /></td></tr>
+          <tr><td><code>poked</code></td><td>2</td><td>squashed flat, then back to normal</td><td><img src="../assets/guide/ddeoggi-poked.png" alt="Ddeoggi poked" width="96" /></td></tr>
+          <tr><td><code>throw</code></td><td>3</td><td>wind up, then swing one arm forward</td><td><img src="../assets/guide/ddeoggi-throw.png" alt="Ddeoggi throw" width="96" /></td></tr>
+          <tr><td><code>hit</code></td><td>2</td><td>knocked back, dizzy swirl eyes</td><td><img src="../assets/guide/ddeoggi-hit.png" alt="Ddeoggi hit" width="96" /></td></tr>
+          <tr><td><code>jump</code></td><td>2</td><td>crouch, then stretch up</td><td><img src="../assets/guide/ddeoggi-jump.png" alt="Ddeoggi jump" width="96" /></td></tr>
+          <tr><td><code>eat</code></td><td>3</td><td>mouth open, chewing, cheeks puffed</td><td><img src="../assets/guide/ddeoggi-eat.png" alt="Ddeoggi eat" width="96" /></td></tr>
+          <tr><td><code>wave</code></td><td>3</td><td>one paw raised, waving</td><td><img src="../assets/guide/ddeoggi-wave.png" alt="Ddeoggi wave" width="96" /></td></tr>
+          <tr><td><code>happy</code></td><td>2</td><td>smiling closed eyes, tiny heart</td><td><img src="../assets/guide/ddeoggi-happy.png" alt="Ddeoggi happy" width="96" /></td></tr>
+          <tr><td><code>offline</code></td><td>1</td><td>knocked out, squashed flat on the ground, X eyes</td><td><img src="../assets/guide/ddeoggi-offline.png" alt="Ddeoggi offline" width="96" /></td></tr>
+        </tbody>
+      </table>
+
+      <h3>Itens</h3>
+      <pre>Pixel art game item, [item], one single frame on a 48x48 pixel grid,
+upscaled so one art pixel is a clean 16x16 block (768x768), hard edges,
+no anti-aliasing, no gradients, no dithering, centered in the frame,
+about 8 colors, 1px dark outline, transparent background,
+the 4 corner pixels transparent, no shadow, no text</pre>
+      <p class="[&_img]:inline [&_img]:[image-rendering:pixelated]">Para algo que é jogado, desenhe um único quadro <code>fly</code> como o martelinho e deixe o app girar com 'Girar ao voar'. Se tiver direção, como uma flecha ou uma garra, desligue e desenhe olhando para a direita: <img src="../assets/guide/hammer-fly.png" alt="Martelinho fly" width="96" /> <img src="../assets/guide/hammer-impact.png" alt="Martelinho impact" width="96" /></p>
+      <p>O que é jogado precisa do próprio <code>impact</code> (a comida e o cocô não têm):</p>
+      <pre>Pixel art impact effect sprite sheet, 3 frames in one horizontal row, no gaps,
+a star bursting from the center of the frame and breaking into pieces,
+each frame on a 48x48 pixel grid, upscaled so one art pixel is a clean 16x16 block
+(768x768 per frame), hard edges, no anti-aliasing, no gradients, no dithering,
+centered in every frame, about 8 colors, 1px dark outline, transparent background,
+the 4 corner pixels of every frame transparent, no shadow, no text</pre>
+      <p>Com 'Girar ao voar' desligado, a comida voa reta. Use vários quadros para dar movimento enquanto ela voa:</p>
+      <pre>Pixel art food item, [item], [N] frames in one horizontal row, no gaps,
+upright in every frame (not spinning), gently bobbing up and down with a small sparkle,
+each frame on a 48x48 pixel grid, upscaled so one art pixel is a clean 16x16 block
+(768x768 per frame), hard edges, no anti-aliasing, no gradients, no dithering,
+centered in every frame, about 8 colors, 1px dark outline, transparent background,
+the 4 corner pixels of every frame transparent, no shadow, no text</pre>
+
+      <h3>Cocô</h3>
+      <p><code>[character]</code> é o nome e o visual do seu personagem (por exemplo "Ddeoggi, um pinguim cinza de bico amarelo").</p>
+      <pre>Pixel art of a cute squat swirl poop with a tiny face colored and decorated like
+[character] (one feature such as ears or beak), or a small prop that matches
+[character] (for example a mini pumpkin or a coffin), one single frame on a 48x48 pixel grid,
+upscaled so one art pixel is a clean 16x16 block (768x768), hard edges,
+no anti-aliasing, no gradients, no dithering, small (about 17x12 pixels),
+horizontally centered, sitting on the bottom row, entirely inside the bottom-center
+24x24 area of the grid (x 12-35, y 24-47), about 8 colors, 1px dark outline,
+transparent background, no shadow, no text</pre>
+
+      <h3 id="skill" class="scroll-mt-8">Criar com a skill (o mais fácil)</h3>
+      <p>Baixe o <a class="text-ink underline decoration-2 underline-offset-4" href="../assets/guide/huggybugi-character.zip">huggybugi-character.zip</a>, envie para o Claude, o ChatGPT ou o Gemini junto com uma foto e diga "siga o SKILL.md e crie um personagem do Huggybugi com esta foto". Ele desenha as 11 ações (e também cocô, algo pra jogar ou comida, se você pedir) e devolve um zip pronto para o 'Adicionar em lote' aqui embaixo. A IA precisa poder executar código (no Claude e no ChatGPT, use um modelo que faça isso). Se enviar todas as vezes der trabalho, registre como skill. Depois basta dar uma foto e dizer "crie um personagem do Huggybugi".</p>
+      <ul>
+        <li><b>Claude</b> (web e app): nos ajustes, Capabilities (ou Customize &gt; Skills) → "Upload skill" e mande o zip do jeito que está. Precisa de um plano pago com a execução de código ligada</li>
+        <li><b>ChatGPT</b>: se o seu plano tem Skills, vá em Skills → enviar e mande o zip. Se não, envie o zip em cada conversa</li>
+        <li><b>Gemini</b> (web e app): envie o zip em Skills (conta pessoal)</li>
+        <li><b>Gemini CLI</b>: descompacte o zip e ponha a pasta <code>huggybugi-character</code> em <code>~/.gemini/skills/</code></li>
+      </ul>
+      <p>O <b>Claude Code e o Codex</b> instalam como plugin, sem zip, e as versões novas chegam quando você atualiza o plugin. Esses comandos e a especificação também dá para copiar em "Criar com IA" na janela de criar do app.</p>
+      <pre># Claude Code
+/plugin marketplace add Zaehyeon2/huggybugi
+/plugin install huggybugi@huggybugi
+
+# Codex
+codex plugin marketplace add Zaehyeon2/huggybugi
+codex plugin add huggybugi@huggybugi</pre>
+      <p>Os nomes dos menus mudam de vez em quando. Os detalhes estão no <code>README.md</code> dentro do zip.</p>
+
+      <h3>IA que executa código (ChatGPT, Claude e afins)</h3>
+      <p>A grade sai exata. Defina o corpo, os olhos e os pés com formas simples como elipses, e monte todas as ações com uma única função que receba os valores da pose (altura do corpo, forma do olho, pé levantado) e desenhe um quadro. Assim as ações nunca ficam desalinhadas. Se você der uma foto ou um desenho, ele copia as cores e o visual. Sem foto, peça para ele procurar antes alguns pixel arts fofos desse animal ou item e fica bem melhor.</p>
+      <pre>Write and run a Python (Pillow) script that draws a pixel art [animal] (see the attached
+picture) for a 48x48 desktop pet. Match the picture's body shape, proportions and
+features as closely as the grid allows (no picture: first look up a few cute pixel art references of that animal or item and follow their proportions, without copying any one of them). Build each frame from simple shapes (ellipses for body,
+face, feet) in ONE function draw(pose) that takes pose values like bob, eyes, foot lift,
+so every animation reuses the same shapes. Add a 1px dark outline automatically around
+the filled pixels. Facing right, feet touching row 47, the 4 corner pixels transparent.
+Save one horizontal strip PNG per animation (1x, frames 48x48, no gaps), each file named
+exactly after the animation (idle.png, walk.png, ...):
+idle 2, walk 4, sleep 2, poked 2, throw 3, hit 2, jump 2, eat 3, wave 3, happy 2, offline 1.
+Put all the PNGs in one zip file for download.
+Show me an 8x preview, then let me ask for changes.</pre>
+      <p>Os itens e o cocô têm outras ações, então use isto em vez do prompt de cima. Deixe só a linha do seu tipo, pra jogar ou comida, e apague a outra.</p>
+      <pre>Write and run a Python (Pillow) script that draws a pixel art [item] (see the attached
+picture) for a 48x48 desktop pet app. Build it from simple shapes with a 1px dark outline,
+transparent background, centered in the frame, the 4 corner pixels of every frame
+transparent. Save horizontal strip PNGs (1x, frames 48x48, no gaps), keeping only the
+line for your item kind:
+thrown item: fly 1 facing right (with 'spin while flying' on, the app spins it, so do not draw spin frames)
+and impact 3 (the moment it hits).
+food: fly 1-4 drawn upright (it is not spun), gently bobbing with a small sparkle,
+no impact (food is eaten on arrival). Name the files exactly fly.png and impact.png and
+put them in one zip file. Show me an 8x preview, then let me ask for changes.</pre>
+      <pre>Write and run a Python (Pillow) script that draws a pixel art poop for a 48x48 desktop pet,
+colored and decorated like [character] (one feature such as ears or beak), or a small prop
+that matches [character] instead of a poop. One 48x48 frame
+saved as fly.png: small (about 17x12 pixels), horizontally centered, sitting on the bottom
+row, entirely inside the bottom-center 24x24 area (x 12-35, y 24-47), flat and cute,
+1px dark outline, transparent background. Show me an 8x preview.</pre>
+      <p>O código de um item fica mais ou menos assim (o fly e o impact do martelinho, e o cocô padrão). As imagens do martelinho e do cocô dos exemplos acima saíram deste código. Os arquivos se chamam igual à ação, <code>fly.png</code> e <code>impact.png</code>; o exemplo abaixo desenha dois itens de uma vez, então põe um prefixo no nome.</p>
+      <pre>import math
+
+COLORS = {'K': '#2b2233', 'Y': '#ffd23f', 'R': '#ff5a6e', 'F': '#9a6a48', 'N': '#7a4a24',
+          'E': '#1b1420', 'P': '#ff9fb0'}
+N = 48    # quadros 48x48
+
+def oval(x, y, cx, cy, rx, ry):  # true se o centro do pixel (+0.5) cair dentro da elipse
+    return ((x + 0.5 - cx) / rx) ** 2 + ((y + 0.5 - cy) / ry) ** 2 &lt;= 1
+
+# monta um quadro com uma letra de cor por pixel e troca a borda de fora por uma linha escura de 1px (K).
+def render(fill):
+    g = [[fill(x, y) for x in range(N)] for y in range(N)]
+    solid = lambda x, y: 0 &lt;= x &lt; N and 0 &lt;= y &lt; N and g[y][x] != '.'
+    return [''.join('K' if c != '.' and not (solid(x - 1, y) and solid(x + 1, y)
+                                             and solid(x, y - 1) and solid(x, y + 1)) else c
+                    for x, c in enumerate(row)) for y, row in enumerate(g)]
+
+# martelinho: um quadro fly (com 'girar ao voar' ligado, o app gira)
+def hammer(x, y):
+    if 12 &lt;= x &lt;= 35 and 10 &lt;= y &lt;= 21:
+        return 'Y' if x &lt;= 14 or x &gt;= 33 else 'R'
+    if 21 &lt;= x &lt;= 26 and 22 &lt;= y &lt;= 41:
+        return 'Y'
+    return '.'
+
+# impact: uma estrela cresce e se parte em pedaços (3 quadros)
+def star(r):
+    def fill(x, y):
+        dx, dy = x + 0.5 - 24, y + 0.5 - 24
+        a = math.atan2(dy, dx) + math.pi / 2
+        edge = r * (0.55 + 0.45 * abs(math.cos(a * 5 / 2)))
+        return 'Y' if math.hypot(dx, dy) &lt;= edge else '.'
+    return fill
+
+def burst(color, k, n=6):
+    def fill(x, y):
+        r, s = 10 + k * 5, 4.4 - k * 0.45
+        for i in range(n):
+            a = i / n * math.pi * 2 + k * 0.2
+            if oval(x, y, 24 + math.cos(a) * r, 24 + math.sin(a) * r, s, s):
+                return color
+        return '.'
+    return fill
+
+# cocô: um quadro fly. três rolos que encostam na última linha, com olhos, bochechas e boca no de baixo
+TIERS = [(23.5, 38.8, 3.4, 1.9), (23.5, 41.9, 5.8, 2.2), (23.5, 44.9, 8.1, 3.1)]
+DOTS = {(22, 36): 'F', (23, 36): 'F', (24, 36): 'F', (20, 44): 'E', (26, 44): 'E',
+        (18, 45): 'P', (19, 45): 'P', (27, 45): 'P', (28, 45): 'P',
+        (22, 46): 'N', (23, 46): 'N', (24, 46): 'N'}
+
+def poop(x, y):
+    if (x, y) in DOTS:
+        return DOTS[(x, y)]
+    for i, (cx, cy, rx, ry) in enumerate(TIERS):
+        if oval(x, y, cx, cy, rx, ry):
+            # a parte de baixo de cada rolo é o encaixe que se apoia no rolo de baixo
+            return 'N' if i &lt; len(TIERS) - 1 and y &gt;= cy + ry - 1.1 else 'F'
+    return '.'
+
+ANIMS = {
+    'hammer-fly': [render(hammer)],
+    'hammer-impact': [render(star(9)), render(star(15)), render(burst('Y', 2))],
+    'poop-fly': [render(poop)],
+}
+
+# um PNG em tira horizontal por ação (1x, quadros 48x48)
+def save(name, frames):
+    from PIL import Image, ImageColor
+    img = Image.new('RGBA', (N * len(frames), N))
+    for i, g in enumerate(frames):
+        for y, row in enumerate(g):
+            for x, c in enumerate(row):
+                if c != '.':
+                    img.putpixel((i * N + x, y), ImageColor.getrgb(COLORS[c]))
+    img.save(name + '.png')
+
+if __name__ == '__main__':
+    for name, frames in ANIMS.items():
+        save(name, frames)</pre>
+      <p>O código que uma IA escreve fica mais ou menos assim (o Ddeoggi, as 11 ações). As imagens do Ddeoggi dos exemplos acima saíram deste código. Se você tem o Pillow, basta executar e um PNG é salvo por ação.</p>
+      <pre>import math
+
+COLORS = {'K': '#3a3640', 'G': '#9a98a3', 'g': '#7f7d88', 'W': '#fbf9f4', 'Y': '#f7c535',
+          'y': '#e2a51f', 'E': '#2a1c18', 'P': '#ffb3c0', 'R': '#e8586a'}
+N = 48    # quadros 48x48
+S = 1.5   # passa para 48 as medidas definidas para 32
+
+def rnd(v):  # arredonda 0.5 para cima (o round do python vai para o par, então não se usa)
+    return math.floor(v + .5)
+
+def u(v):  # os deslocamentos da pose, em pixels inteiros da grade de 48
+    return int(math.copysign(rnd(abs(v) * S), v)) if v else 0
+
+def oval(x, y, cx, cy, rx, ry):
+    return ((x + .5 - cx) / rx) ** 2 + ((y + .5 - cy) / ry) ** 2 &lt;= 1
+
+def tri(x, y, a, b, c):
+    px, py = x + .5, y + .5
+    s = lambda p, q: (px - q[0]) * (p[1] - q[1]) - (p[0] - q[0]) * (py - q[1])
+    d = (s(a, b), s(b, c), s(c, a))
+    return not (min(d) &lt; 0 and max(d) &gt; 0)
+
+# um olho (base 3x3). dx, dy contam a partir do canto superior esquerdo do olho
+def eye(dx, dy, kind):
+    if kind == 'open':
+        return ('W' if dx == dy == 0 else 'E') if 0 &lt;= dx &lt;= 2 and 0 &lt;= dy &lt;= 2 else None
+    if kind == 'wide':  # surpresa: 4x4 com um brilho
+        return ('W' if dx == dy == -1 else 'E') if -1 &lt;= dx &lt;= 2 and -1 &lt;= dy &lt;= 2 else None
+    hit = {'closed': (dy == 1 and dx in (-1, 3)) or (dy == 2 and 0 &lt;= dx &lt;= 2),
+           'happy': (dy == 0 and 0 &lt;= dx &lt;= 2) or (dy == 1 and dx in (-1, 3)),
+           'hurt': -1 &lt;= dx &lt;= 3 and -1 &lt;= dy &lt;= 3 and (dx == dy or dx == 2 - dy)}[kind]
+    return 'E' if hit else None
+
+# desenha um quadro só com os valores da pose. todas as ações usam as mesmas formas.
+# squash: + achatado, - comprido. feet: pé levantado. flip: asa levantada. lean: corpo movido para os lados
+def draw(bob=0, squash=0, feet=(0, 0), flip=(0, 0), eyes='open', mouth='', blush=False, lean=0):
+    ry = (9 - squash) * S
+    rx = min((13 + squash * .8) * S, 22.4)  # para o corpo achatado não sair da grade
+    by = (30.4 + min(bob, 1)) * S - ry + max(bob - 1, 0) * S
+    cx = min(max((16 + lean) * S, rx + 1.4), 46.6 - rx)
+    wl, wr = max(cx - rx + .3 * S, 4.5), min(cx + rx - .3 * S, 43.5)
+    fy = by + 1.5 * S
+    ey = rnd(by - 3 * S)
+    shift = 3 + u(lean)  # o rosto olha 3 pixels para a direita
+    gy = rnd((30 + min(bob, 0)) * S) - u(max(feet))
+
+    def foot(fcx, x, y, up):
+        b = 47 - u(up)
+        return b - 2 + min(0, u(bob + up)) &lt;= y &lt;= b and abs(x + .5 - fcx) &lt;= (3.5 if y == b else 4.8)
+
+    def pixel(x, y):
+        body = oval(x, y, cx, by, rx, ry) or tri(
+            x, y, (cx - 3.5 * S, by - ry + 2 * S), (cx + 3.5 * S, by - ry + 2 * S), (cx, by - ry - .8 * S))
+        fin = oval(x, y, wl, fy - flip[0] * S, 2.6 * S, 1.8 * S) or oval(x, y, wr, fy - flip[1] * S, 2.6 * S, 1.8 * S)
+        paw = foot(18.5, x, y, feet[0]) or foot(31.5, x, y, feet[1])
+        # pinta os pés antes do corpo para eles ficarem na frente, como numa pelúcia
+        if paw and y &gt;= gy:
+            return 'Y'
+        if not body:
+            return 'g' if fin else 'Y' if paw else '.'
+        fx = x - shift
+        e = eye(fx - 14, y - ey, eyes) or eye(fx - 31, y - ey, eyes)
+        if e:
+            return e
+        if y in (ey + 2, ey + 3) and 21 &lt;= fx &lt;= 26:  # bico
+            return 'Y'
+        if mouth == 'open':  # ao comer ele abre e dá para ver dentro da boca
+            if ey + 4 &lt;= y &lt;= ey + 5 and 22 &lt;= fx &lt;= 25:
+                return 'R'
+            if y == ey + 6 and 22 &lt;= fx &lt;= 25:
+                return 'Y'
+        elif y == ey + 4 and (21 if mouth == 'chew' else 22) &lt;= fx &lt;= (26 if mouth == 'chew' else 25):
+            return 'y'
+        if blush and y in (ey + 3, ey + 4) and (11 &lt;= fx &lt;= 13 or 34 &lt;= fx &lt;= 36):
+            return 'P'
+        face = (oval(fx, y, 11 * S + .5, by - 2 * S, 3.8 * S, 3.6 * S)
+                or oval(fx, y, 21 * S + .5, by - 2 * S, 3.8 * S, 3.6 * S)
+                or oval(fx, y, 16 * S + .5, by + 3 * S, 8.2 * S, 5.2 * S))
+        return 'W' if face else 'G'
+
+    g = [[pixel(x, y) for x in range(N)] for y in range(N)]
+    solid = lambda x, y: 0 &lt;= x &lt; N and 0 &lt;= y &lt; N and g[y][x] != '.'
+    edge = lambda x, y: not all(solid(x + a, y + b) for a, b in ((1, 0), (-1, 0), (0, 1), (0, -1)))
+    return [''.join('K' if c != '.' and edge(x, y) else c for x, c in enumerate(row)) for y, row in enumerate(g)]
+
+ANIMS = {
+    'idle': [draw(), draw(bob=1)],
+    'walk': [draw(feet=(1, 0), lean=-1), draw(bob=-1), draw(feet=(0, 1), lean=1), draw(bob=-1)],
+    'sleep': [draw(eyes='closed', bob=1, squash=1), draw(eyes='closed', bob=2, squash=1)],
+    'poked': [draw(eyes='wide', squash=3), draw(eyes='wide')],
+    'throw': [draw(flip=(0, 4), lean=-1), draw(flip=(0, 5), lean=-1, bob=-1), draw(flip=(0, -1), lean=1)],
+    'hit': [draw(eyes='hurt', lean=-2, squash=1), draw(eyes='hurt', bob=1)],
+    'jump': [draw(squash=3, flip=(-1, -1)), draw(bob=-3, squash=-1, feet=(2, 2), flip=(3, 3))],
+    'eat': [draw(mouth='open'), draw(mouth='chew', bob=1, squash=1), draw(eyes='happy', blush=True)],
+    'wave': [draw(flip=(0, 3), eyes='happy'), draw(flip=(0, 6), eyes='happy'), draw(flip=(0, 3), eyes='happy')],
+    'happy': [draw(eyes='happy', blush=True, bob=-1), draw(eyes='happy', blush=True)],
+    'offline': [draw(eyes='hurt', squash=3, bob=1, flip=(-1, -1))],
+}
+
+# um PNG em tira horizontal por ação (1x, quadros 48x48)
+def save(name, frames):
+    from PIL import Image, ImageColor
+    img = Image.new('RGBA', (N * len(frames), N))
+    for i, g in enumerate(frames):
+        for y, row in enumerate(g):
+            for x, c in enumerate(row):
+                if c != '.':
+                    img.putpixel((i * N + x, y), ImageColor.getrgb(COLORS[c]))
+    img.save(name + '.png')
+
+if __name__ == '__main__':
+    for name, frames in ANIMS.items():
+        save(name, frames)</pre>
+
+      <h2>Adicionar em lote</h2>
+      <p>Junte os PNG em um zip e arraste para a janela de criar, ou escolha o zip em "Adicionar em lote", e cada casinha é preenchida de uma vez. Se não estiverem em zip, escolha a pasta em "Adicionar em lote". Antes de enviar ele mostra para qual casinha vai cada arquivo, e os que não combinarem no nome você escolhe na mão. Os zip de "Baixar tudo" de cima usam esses nomes, então dá para testar do jeito que estão.</p>
+      <p>Os arquivos se chamam <strong>igual à ação</strong>. Maiúsculas não importam, e pode ter pasta dentro do zip.</p>
+      <ul>
+        <li>Personagens: <code>idle.png</code> <code>walk.png</code> <code>sleep.png</code> <code>poked.png</code> <code>throw.png</code> <code>hit.png</code> <code>jump.png</code> <code>eat.png</code> <code>wave.png</code> <code>happy.png</code> <code>offline.png</code></li>
+        <li>Itens: <code>fly.png</code> <code>impact.png</code>, som <code>sound.wav</code> (o cocô, só <code>fly.png</code>)</li>
+      </ul>
+
+      <h2>Confira antes de enviar</h2>
+      <ul class="list-none! pl-0! [&_li]:before:mr-2 [&_li]:before:content-['☐']">
+        <li>48 de altura, largura múltipla de 48, 8 quadros ou menos</li>
+        <li>Fundo transparente, sem as linhas do modelo</li>
+        <li>Que os quatro cantos do quadro não estejam todos pintados (se estiverem, o app entende que sobrou fundo e recusa)</li>
+        <li>Olhando para a direita, pés na última linha, mesma posição em todos os quadros</li>
+      </ul>
+    </main>
+    <footer class="border-t-4 border-ink py-8 text-center text-sm"><a class="underline" href="./">Voltar para o Huggybugi</a></footer>
+  </body>
+</html>
