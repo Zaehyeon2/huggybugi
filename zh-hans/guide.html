@@ -1,0 +1,488 @@
+<!doctype html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>角色和道具的制作方法 - Huggybugi</title>
+    <meta name="description" content="把自己的角色、道具、表情上传到 Huggybugi 的方法和规格" />
+    <meta name="theme-color" content="#dff1ff" />
+    <link rel="icon" type="image/png" href="../assets/favicon.png" />
+    <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://huggybugi.hammerturtle.xyz/zh-hans/guide" />
+    <meta property="og:title" content="角色和道具的制作方法 - Huggybugi" />
+    <meta property="og:description" content="把自己的角色、道具、表情上传到 Huggybugi 的方法和规格" />
+    <meta property="og:image" content="https://huggybugi.hammerturtle.xyz/assets/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="zh_CN" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="stylesheet" href="../site.css" />
+    <script type="module" src="../guide.js"></script>
+  <link rel="alternate" hreflang="ko" href="https://huggybugi.hammerturtle.xyz/guide.html" />
+    <link rel="alternate" hreflang="en" href="https://huggybugi.hammerturtle.xyz/en/guide.html" />
+    <link rel="alternate" hreflang="ja" href="https://huggybugi.hammerturtle.xyz/ja/guide.html" />
+    <link rel="alternate" hreflang="zh-Hans" href="https://huggybugi.hammerturtle.xyz/zh-hans/guide.html" />
+    <link rel="alternate" hreflang="zh-Hant" href="https://huggybugi.hammerturtle.xyz/zh-hant/guide.html" />
+    <link rel="alternate" hreflang="es" href="https://huggybugi.hammerturtle.xyz/es/guide.html" />
+    <link rel="alternate" hreflang="pt-BR" href="https://huggybugi.hammerturtle.xyz/pt/guide.html" />
+    <link rel="alternate" hreflang="x-default" href="https://huggybugi.hammerturtle.xyz/guide.html" />
+    <style>:root{--body:"Gowun Dodum",Pretendard,"PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",sans-serif;--font-sans:Pretendard,"PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",system-ui,sans-serif}body{font-family:Pretendard,"PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",sans-serif;word-break:normal}</style>
+    </head>
+  <body class="bg-sky font-sans text-ink">
+    <main class="mx-auto max-w-3xl px-6 py-16 leading-relaxed [&_h2]:mt-16 [&_h2]:font-pixel [&_h2]:text-3xl [&_h3]:mt-8 [&_h3]:text-lg [&_h3]:font-bold [&_p]:mt-3 [&_a]:underline [&_a]:decoration-2 [&_a]:underline-offset-4 [&_code]:rounded [&_code]:bg-white [&_code]:px-1 [&_code]:text-sm [&_table]:mt-4 [&_table]:w-full [&_table]:border-2 [&_table]:border-ink [&_table]:bg-white [&_table]:text-sm [&_th]:border-b-2 [&_th]:border-ink [&_th]:px-3 [&_th]:py-2 [&_th]:text-left [&_td]:border-t [&_td]:border-ink/20 [&_td]:px-3 [&_td]:py-2 [&_pre]:mt-3 [&_pre]:overflow-x-auto [&_pre]:rounded-xl [&_pre]:border-2 [&_pre]:border-ink [&_pre]:bg-white [&_pre]:p-4 [&_pre]:text-sm [&_ul]:mt-3 [&_ul]:list-disc [&_ul]:space-y-1 [&_ul]:pl-6 [&_ol]:mt-3 [&_ol]:list-decimal [&_ol]:space-y-1 [&_ol]:pl-6">
+      <div class="flex items-center justify-between gap-3">
+        <a href="./" class="text-sm">回到 Huggybugi 首页</a>
+        <details class="langs"><summary><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="m22 22-5-10-5 10"/><path d="M14 18h6"/></svg><span>简体中文</span></summary><nav class="langmenu"><a href="/guide.html">한국어</a><a href="/en/guide.html">English</a><a href="/ja/guide.html">日本語</a><a href="/zh-hans/guide.html" aria-current="page">简体中文<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></a><a href="/zh-hant/guide.html">繁體中文</a><a href="/es/guide.html">Español</a><a href="/pt/guide.html">Português (Brasil)</a></nav></details>
+      </div>
+      <h1 class="mt-6 font-pixel text-5xl leading-tight">角色和道具的制作方法</h1>
+      <p class="text-dim">每个动作一张 PNG，各帧横向拼在一起。</p>
+      <div class="mt-8 grid gap-4 sm:grid-cols-2">
+        <div class="flex flex-col rounded-2xl border-2 border-ink bg-white p-5">
+          <p class="mt-0! font-bold">用技能做 <span class="font-normal text-dim">· 最简单</span></p>
+          <p class="flex-1 text-sm text-dim">把技能 zip 上传到 Claude、ChatGPT 或 Gemini，再给一张照片，它会把画好的图给你看、跟你一起改，最后给你一个能直接导入的 zip。</p>
+          <a href="#skill" class="mt-4 self-start rounded-xl border-2 border-ink bg-ink px-4 py-2 text-sm font-bold text-white no-underline! hover:bg-white hover:text-ink">下载技能并使用</a>
+        </div>
+        <div class="flex flex-col rounded-2xl border-2 border-ink bg-white p-5">
+          <p class="mt-0! font-bold">复制规格去请 AI</p>
+          <p class="flex-1 text-sm text-dim">把这个页面的规格复制成 Markdown，粘贴给 ChatGPT 或 Claude，它就会照着规格做。</p>
+          <button id="copy-md" type="button" class="mt-4 self-start rounded-xl border-2 border-ink bg-white px-4 py-2 text-sm font-bold hover:bg-ink hover:text-white">复制成给 AI 的 Markdown</button>
+        </div>
+      </div>
+
+      <h2>上传</h2>
+      <p>在托盘菜单里打开“角色 > 制作…”，选角色、道具或表情标签页，然后点“+ 新建”。写上名字（最多 20 个字），每个动作选一张 PNG，或者直接拖到那个格子里。fps 已经填好了推荐值。道具还能选种类（投掷物、食物、便便）和音效 wav。保存后就出现在你的列表里，在同一个地方可以修改或删除。换角色、选道具、选表情窗口最前面的 <b>+</b> 卡片点一下，也会打开对应种类的制作窗口。</p>
+      <p>朋友那边，要等他打开托盘的“角色 > 更换…”窗口，或者点托盘的“获取新角色和道具”时才会收到。你自己选的角色会马上显示。</p>
+      <p>食物道具要右键点朋友，在“食物”里选一个，然后点朋友就飞过去了。在重新选“投掷物”之前，每点一下都是喂食。</p>
+      <p>便便道具的 <code>fly</code> 图会被画成掉在地上的便便（不会被扔出去，也不会当食物）。你的角色吃饱时拉的就是你选的那个便便。朋友还没下载的便便，在下载之前都显示成默认便便。</p>
+
+      <h3>表情</h3>
+      <p>在“表情”标签页里选 GIF、WebP、APNG、PNG 或 JPG。应用会缩成 64px，最多取 16 帧，按原速保存（原文件最大 20MB，长宽各最多 2048px）。名字最多 20 个字，在群里不能重复。<code>:</code> 和空格不能用，会把消息里的 <code>:名字:</code> 断开；默认表情的名字（heart·question·exclamation·angry·lol·note）也不能用。</p>
+      <p>用在哪里：点自己的角色会弹出菜单，里面的“表情”（⌃⌥⌘E，Windows 是 Ctrl+Alt+E）会把选择窗口开在头顶上。在消息里打 <code>:</code> 就会列出名字，选一个就会以 <code>:名字:</code> 进到气泡里。状态和昵称窗口“状态”标签页的表情符号按钮可以把它放进状态。在聊天记录里还能当回应贴在消息上。只有同一个群的朋友能看到。</p>
+
+      <h2>规格</h2>
+      <ul>
+        <li>每帧 48×48，每个动作最多 8 帧（4 帧就是 192×48）</li>
+        <li>透明背景，每个文件 200KB 以内（超了应用会重新保存压小。音效 wav 是 50KB）</li>
+        <li>画成朝右（朝左的方向应用会自己翻转）</li>
+        <li>角色和便便要贴着最下面一行、横向居中。投掷物和食物放在帧的正中间</li>
+        <li>角色要把 48 格画得满一些（涂色的格子 800~1200 个，高 30~46 格，身体细的话画更大）。应用不会放大，画小了站在朋友角色旁边就显得小</li>
+      </ul>
+
+      <h2>角色动作</h2>
+      <p>只要有 <code>idle</code>、<code>walk</code>、<code>sleep</code> 就行。其他动作缺了会用别的动作代替。没有 <code>offline</code> 的话，离线时会变成一块石头。</p>
+      <table>
+        <thead><tr><th>动作</th><th>什么时候</th><th>推荐</th><th>缺了的话</th></tr></thead>
+        <tbody>
+          <tr><td><code>idle</code> 必需</td><td>站着不动</td><td>2 张，2fps</td><td></td></tr>
+          <tr><td><code>walk</code> 必需</td><td>走路时</td><td>4 张，6fps</td><td></td></tr>
+          <tr><td><code>sleep</code> 必需</td><td>离开 30 分钟或锁屏（Zzz 由应用画）</td><td>2 张，1fps</td><td></td></tr>
+          <tr><td><code>poked</code></td><td>被戳</td><td>2 张，8fps</td><td><code>idle</code></td></tr>
+          <tr><td><code>throw</code></td><td>扔东西时</td><td>3 张，10fps</td><td><code>idle</code></td></tr>
+          <tr><td><code>hit</code></td><td>被打中时</td><td>2 张，8fps</td><td><code>poked</code></td></tr>
+          <tr><td><code>jump</code></td><td>躲开时、跳跃动作</td><td>2 张，8fps</td><td><code>idle</code></td></tr>
+          <tr><td><code>eat</code></td><td>被喂时、吃东西动作</td><td>3 张，6fps</td><td><code>happy</code></td></tr>
+          <tr><td><code>wave</code></td><td>跟上线的朋友打招呼、打招呼动作</td><td>3 张，6fps</td><td><code>happy</code></td></tr>
+          <tr><td><code>happy</code></td><td>被摸摸时、开心动作</td><td>2 张，4fps</td><td><code>idle</code></td></tr>
+          <tr><td><code>offline</code></td><td>离线（倒下的样子）</td><td>1 张，1fps</td><td>石头</td></tr>
+        </tbody>
+      </table>
+
+      <h2>道具动作</h2>
+      <table>
+        <thead><tr><th>动作</th><th>什么时候</th><th>推荐</th><th>缺了的话</th></tr></thead>
+        <tbody>
+          <tr><td><code>fly</code> 必需</td><td>飞行途中。在制作窗口打开“飞行时旋转”，应用就帮你转（新建的默认是关的）。关掉旋转的投掷物会朝着飞行方向直飞，所以要画成朝右；关掉旋转的食物会照着你画的样子飞，所以要画成立正的。用多帧给它一点动静，看起来才不像定住了（比如弹跳、闪光）。便便是放在地上的样子</td><td>投掷物 1 张，食物 1~4 张，12fps（便便 1 张）</td><td></td></tr>
+          <tr><td><code>impact</code></td><td>打中的瞬间（只有投掷物，食物一到就吃掉）</td><td>3 张，12fps</td><td>应用画的星星迸裂</td></tr>
+        </tbody>
+      </table>
+      <p>音效 wav 在碰到的瞬间（便便是落地时）响。没有的话，投掷物和食物就没声音，便便会用应用自带的“噗”声。</p>
+      <h3>示例：玩具锤</h3>
+      <p>这是自带道具。<code>fly</code> 只有一张，但飞的时候会转（食物不转）。</p>
+      <table class="[&_img]:[image-rendering:pixelated]">
+        <thead><tr><th>动作</th><th>动起来</th><th>上传的样子（放大 4 倍）</th></tr></thead>
+        <tbody>
+          <tr><td><code>fly</code><br><span class="text-dim">飞行途中</span></td><td><img src="../assets/guide/hammer-fly.png" alt="玩具锤 fly" width="96" /></td><td><img src="../assets/guide/hammer-fly-strip-x4.png" alt="fly 1 帧" /></td></tr>
+          <tr><td><code>impact</code><br><span class="text-dim">打中的瞬间</span></td><td><img src="../assets/guide/hammer-impact.png" alt="玩具锤 impact" width="96" /></td><td><img src="../assets/guide/hammer-impact-strip-x4.png" alt="impact 3 帧" /></td></tr>
+        </tbody>
+      </table>
+      <p>按实际大小下载： <a href="../assets/guide/hammer-fly-strip.png" download>fly</a>, <a href="../assets/guide/hammer-impact-strip.png" download>impact</a>, <a href="../assets/guide/hammer.zip" download>全部下载（zip）</a></p>
+      <h3>便便</h3>
+      <p>便便道具只要一张 <code>fly</code> 就行。画成放在地上的样子，不会旋转。应用不缩放，就按 48×48 格原样画，所以要画在帧的底部中间、小一点（默认便便宽 17 格、高 12 格），上面留空。不一定非得是便便的形状。配合角色的小摆件（迷你南瓜、棺材、毛线球等）也可以，只要装得进底部中间的 24×24 范围。下面是默认便便。</p>
+      <table class="[&_img]:[image-rendering:pixelated]">
+        <thead><tr><th>动作</th><th>动起来</th><th>上传的样子（放大 4 倍）</th></tr></thead>
+        <tbody>
+          <tr><td><code>fly</code><br><span class="text-dim">放在地上的样子</span></td><td><img src="../assets/guide/poop-fly.png" alt="默认便便 fly" width="96" /></td><td><img src="../assets/guide/poop-fly-strip-x4.png" alt="fly 1 帧" /></td></tr>
+        </tbody>
+      </table>
+      <p>按实际大小下载： <a href="../assets/guide/poop-fly-strip.png" download>fly</a></p>
+
+      <h2>示例：多基</h2>
+      <p>这是照着企鹅玩偶做的多基的全部动作。帧数和上面表里的推荐值一样，而且同一个身体只换姿势，所以各动作之间不会走形。</p>
+      <table class="[&_img]:[image-rendering:pixelated]">
+        <thead><tr><th>动作</th><th>动起来</th><th>上传的样子（放大 4 倍）</th></tr></thead>
+        <tbody>
+          <tr><td><code>idle</code><br><span class="text-dim">站着不动</span></td><td><img src="../assets/guide/ddeoggi-idle.png" alt="多基 idle" width="96" /></td><td><img src="../assets/guide/ddeoggi-idle-strip-x4.png" alt="idle 2 帧" /></td></tr>
+          <tr><td><code>walk</code><br><span class="text-dim">走路时</span></td><td><img src="../assets/guide/ddeoggi-walk.png" alt="多基 walk" width="96" /></td><td><img src="../assets/guide/ddeoggi-walk-strip-x4.png" alt="walk 4 帧" /></td></tr>
+          <tr><td><code>sleep</code><br><span class="text-dim">睡觉</span></td><td><img src="../assets/guide/ddeoggi-sleep.png" alt="多基 sleep" width="96" /></td><td><img src="../assets/guide/ddeoggi-sleep-strip-x4.png" alt="sleep 2 帧" /></td></tr>
+          <tr><td><code>poked</code><br><span class="text-dim">被戳</span></td><td><img src="../assets/guide/ddeoggi-poked.png" alt="多基 poked" width="96" /></td><td><img src="../assets/guide/ddeoggi-poked-strip-x4.png" alt="poked 2 帧" /></td></tr>
+          <tr><td><code>throw</code><br><span class="text-dim">扔东西时</span></td><td><img src="../assets/guide/ddeoggi-throw.png" alt="多基 throw" width="96" /></td><td><img src="../assets/guide/ddeoggi-throw-strip-x4.png" alt="throw 3 帧" /></td></tr>
+          <tr><td><code>hit</code><br><span class="text-dim">被打中时</span></td><td><img src="../assets/guide/ddeoggi-hit.png" alt="多基 hit" width="96" /></td><td><img src="../assets/guide/ddeoggi-hit-strip-x4.png" alt="hit 2 帧" /></td></tr>
+          <tr><td><code>jump</code><br><span class="text-dim">躲开、跳跃</span></td><td><img src="../assets/guide/ddeoggi-jump.png" alt="多基 jump" width="96" /></td><td><img src="../assets/guide/ddeoggi-jump-strip-x4.png" alt="jump 2 帧" /></td></tr>
+          <tr><td><code>eat</code><br><span class="text-dim">被喂时</span></td><td><img src="../assets/guide/ddeoggi-eat.png" alt="多基 eat" width="96" /></td><td><img src="../assets/guide/ddeoggi-eat-strip-x4.png" alt="eat 3 帧" /></td></tr>
+          <tr><td><code>wave</code><br><span class="text-dim">打招呼</span></td><td><img src="../assets/guide/ddeoggi-wave.png" alt="多基 wave" width="96" /></td><td><img src="../assets/guide/ddeoggi-wave-strip-x4.png" alt="wave 3 帧" /></td></tr>
+          <tr><td><code>happy</code><br><span class="text-dim">摸摸</span></td><td><img src="../assets/guide/ddeoggi-happy.png" alt="多基 happy" width="96" /></td><td><img src="../assets/guide/ddeoggi-happy-strip-x4.png" alt="happy 2 帧" /></td></tr>
+          <tr><td><code>offline</code><br><span class="text-dim">离线</span></td><td><img src="../assets/guide/ddeoggi-offline.png" alt="多基 offline" width="96" /></td><td><img src="../assets/guide/ddeoggi-offline-strip-x4.png" alt="offline 1 帧" /></td></tr>
+        </tbody>
+      </table>
+      <p>按实际大小下载： <a href="../assets/guide/ddeoggi-idle-strip.png" download>idle</a>, <a href="../assets/guide/ddeoggi-walk-strip.png" download>walk</a>, <a href="../assets/guide/ddeoggi-sleep-strip.png" download>sleep</a>, <a href="../assets/guide/ddeoggi-poked-strip.png" download>poked</a>, <a href="../assets/guide/ddeoggi-throw-strip.png" download>throw</a>, <a href="../assets/guide/ddeoggi-hit-strip.png" download>hit</a>, <a href="../assets/guide/ddeoggi-jump-strip.png" download>jump</a>, <a href="../assets/guide/ddeoggi-eat-strip.png" download>eat</a>, <a href="../assets/guide/ddeoggi-wave-strip.png" download>wave</a>, <a href="../assets/guide/ddeoggi-happy-strip.png" download>happy</a>, <a href="../assets/guide/ddeoggi-offline-strip.png" download>offline</a>, <a href="../assets/guide/ddeoggi.zip" download>全部下载（zip）</a></p>
+
+      <h2>模板</h2>
+      <p>制作窗口里的“下载模板”会给你一份模板，每个动作都画着应用自带的小仓鼠（道具是橡果）做示例。空白模板在这里： <a href="../assets/guide/template-2frames.png" download>2 帧</a>, <a href="../assets/guide/template-4frames.png" download>4 帧</a>, <a href="../assets/guide/template-8frames.png" download>8 帧</a>, <a href="../assets/guide/templates.zip" download>全部下载（zip）</a></p>
+      <p>把它放在下面一层，在上面画，然后<strong>关掉模板图层再保存</strong>。红线是脚的基准线。</p>
+      <p>画图工具： <a href="https://www.piskelapp.com/">Piskel</a>（网页版，免费）, <a href="https://libresprite.github.io/">LibreSprite</a>（免费）, <a href="https://www.aseprite.org/">Aseprite</a>（付费）</p>
+
+      <h2>用 AI 做</h2>
+      <p>图像 AI 做不到正好 48 像素。先画大，再缩小，然后修一修。</p>
+      <ol>
+        <li>用下面的提示词生成</li>
+        <li>每一帧都缩到 48×48。插值方式一定要选<strong>邻近取样</strong>（Nearest Neighbor），不然会糊。</li>
+        <li>把背景抠成透明，再把各帧位置对齐</li>
+      </ol>
+      <p>不用安装，在浏览器里：</p>
+      <ul>
+        <li><a href="https://www.photopea.com/">Photopea</a>（免费，和 Photoshop 差不多）：缩小用“图像 &gt; 图像大小”，把重新采样设成 Nearest Neighbor。背景用魔棒工具（容差 0，关掉抗锯齿）点一下背景，按 Delete，然后导出成 PNG。</li>
+        <li><a href="https://www.remove.bg">remove.bg</a>（免费）：只想去背景的时候用。边缘可能会变模糊，所以要用在<strong>缩小前的大图</strong>上。</li>
+      </ul>
+
+      <h3>基本样子</h3>
+      <pre>Pixel art sprite of a cute [animal], side view facing right, full body,
+match the body shape, proportions and features of the attached picture if any
+(otherwise the real proportions of that animal or character),
+on a 48x48 pixel grid, upscaled so one art pixel is a clean 16x16 block
+(768x768 per frame), hard edges, no anti-aliasing, no gradients, no dithering,
+about 8 colors, 1px dark outline, flat shading, transparent background,
+fills most of the grid (about 30-46 pixels tall), feet on the bottom row,
+horizontally centered, nothing touching the top or side edges, no shadow, no text</pre>
+
+      <h3>动作表（把上一步的结果一起作为参考图）</h3>
+      <pre>Pixel art sprite sheet of the same character, [N] frames in one horizontal row,
+no gaps, facing right, animation: [motion],
+each frame on a 48x48 pixel grid, upscaled so one art pixel is a clean 16x16 block
+(768x768 per frame), hard edges, no anti-aliasing, no gradients, no dithering,
+same palette (about 8 colors) as the reference, 1px dark outline,
+same size and position in every frame, feet on the bottom row,
+transparent background, the 4 corner pixels of every frame transparent,
+nothing touching the top or side edges, no shadow, no text</pre>
+      <table class="[&_img]:[image-rendering:pixelated]">
+        <thead><tr><th>动作</th><th>[N]</th><th>[motion]</th><th>多基</th></tr></thead>
+        <tbody>
+          <tr><td><code>idle</code></td><td>2</td><td>gentle breathing, body down 1px in frame 2</td><td><img src="../assets/guide/ddeoggi-idle.png" alt="多基 idle" width="96" /></td></tr>
+          <tr><td><code>walk</code></td><td>4</td><td>walk cycle: left foot forward, body up, right foot forward, body up</td><td><img src="../assets/guide/ddeoggi-walk.png" alt="多基 walk" width="96" /></td></tr>
+          <tr><td><code>sleep</code></td><td>2</td><td>eyes closed, body rises and falls 1px</td><td><img src="../assets/guide/ddeoggi-sleep.png" alt="多基 sleep" width="96" /></td></tr>
+          <tr><td><code>poked</code></td><td>2</td><td>squashed flat, then back to normal</td><td><img src="../assets/guide/ddeoggi-poked.png" alt="多基 poked" width="96" /></td></tr>
+          <tr><td><code>throw</code></td><td>3</td><td>wind up, then swing one arm forward</td><td><img src="../assets/guide/ddeoggi-throw.png" alt="多基 throw" width="96" /></td></tr>
+          <tr><td><code>hit</code></td><td>2</td><td>knocked back, dizzy swirl eyes</td><td><img src="../assets/guide/ddeoggi-hit.png" alt="多基 hit" width="96" /></td></tr>
+          <tr><td><code>jump</code></td><td>2</td><td>crouch, then stretch up</td><td><img src="../assets/guide/ddeoggi-jump.png" alt="多基 jump" width="96" /></td></tr>
+          <tr><td><code>eat</code></td><td>3</td><td>mouth open, chewing, cheeks puffed</td><td><img src="../assets/guide/ddeoggi-eat.png" alt="多基 eat" width="96" /></td></tr>
+          <tr><td><code>wave</code></td><td>3</td><td>one paw raised, waving</td><td><img src="../assets/guide/ddeoggi-wave.png" alt="多基 wave" width="96" /></td></tr>
+          <tr><td><code>happy</code></td><td>2</td><td>smiling closed eyes, tiny heart</td><td><img src="../assets/guide/ddeoggi-happy.png" alt="多基 happy" width="96" /></td></tr>
+          <tr><td><code>offline</code></td><td>1</td><td>knocked out, squashed flat on the ground, X eyes</td><td><img src="../assets/guide/ddeoggi-offline.png" alt="多基 offline" width="96" /></td></tr>
+        </tbody>
+      </table>
+
+      <h3>道具</h3>
+      <pre>Pixel art game item, [item], one single frame on a 48x48 pixel grid,
+upscaled so one art pixel is a clean 16x16 block (768x768), hard edges,
+no anti-aliasing, no gradients, no dithering, centered in the frame,
+about 8 colors, 1px dark outline, transparent background,
+the 4 corner pixels transparent, no shadow, no text</pre>
+      <p class="[&_img]:inline [&_img]:[image-rendering:pixelated]">投掷物像玩具锤那样只画一张 <code>fly</code>，打开“飞行时旋转”让应用转它就行。箭、爪子这类有方向的要关掉旋转，画成朝右： <img src="../assets/guide/hammer-fly.png" alt="玩具锤 fly" width="96" /> <img src="../assets/guide/hammer-impact.png" alt="玩具锤 impact" width="96" /></p>
+      <p>投掷物的 <code>impact</code> 要另外画（食物和便便没有）：</p>
+      <pre>Pixel art impact effect sprite sheet, 3 frames in one horizontal row, no gaps,
+a star bursting from the center of the frame and breaking into pieces,
+each frame on a 48x48 pixel grid, upscaled so one art pixel is a clean 16x16 block
+(768x768 per frame), hard edges, no anti-aliasing, no gradients, no dithering,
+centered in every frame, about 8 colors, 1px dark outline, transparent background,
+the 4 corner pixels of every frame transparent, no shadow, no text</pre>
+      <p>食物关掉“飞行时旋转”就会立正着飞。想让它飞的时候动起来，就多画几帧：</p>
+      <pre>Pixel art food item, [item], [N] frames in one horizontal row, no gaps,
+upright in every frame (not spinning), gently bobbing up and down with a small sparkle,
+each frame on a 48x48 pixel grid, upscaled so one art pixel is a clean 16x16 block
+(768x768 per frame), hard edges, no anti-aliasing, no gradients, no dithering,
+centered in every frame, about 8 colors, 1px dark outline, transparent background,
+the 4 corner pixels of every frame transparent, no shadow, no text</pre>
+
+      <h3>便便</h3>
+      <p><code>[character]</code> 是你角色的名字和外形（例如“多基，灰色企鹅，黄色的喙”）。</p>
+      <pre>Pixel art of a cute squat swirl poop with a tiny face colored and decorated like
+[character] (one feature such as ears or beak), or a small prop that matches
+[character] (for example a mini pumpkin or a coffin), one single frame on a 48x48 pixel grid,
+upscaled so one art pixel is a clean 16x16 block (768x768), hard edges,
+no anti-aliasing, no gradients, no dithering, small (about 17x12 pixels),
+horizontally centered, sitting on the bottom row, entirely inside the bottom-center
+24x24 area of the grid (x 12-35, y 24-47), about 8 colors, 1px dark outline,
+transparent background, no shadow, no text</pre>
+
+      <h3 id="skill" class="scroll-mt-8">用技能做（最简单）</h3>
+      <p>下载 <a class="text-ink underline decoration-2 underline-offset-4" href="../assets/guide/huggybugi-character.zip">huggybugi-character.zip</a>，连同一张照片上传到 Claude、ChatGPT 或 Gemini，然后说“按 SKILL.md 用这张照片做一个 Huggybugi 角色”，它就会画出 11 个动作（你要的话还有便便、投掷物、食物），并给你一个能用下面的“一次全部导入”直接放进去的 zip。AI 要能运行代码（Claude 和 ChatGPT 要选能跑代码的模型）。每次都上传太麻烦的话，就把它注册成技能。之后只要给张照片说“做个 Huggybugi 角色”就行。</p>
+      <ul>
+        <li><b>Claude</b>（网页和应用）：设置里的 Capabilities（或 Customize &gt; Skills）→ “Upload skill”，直接传 zip。需要开了代码运行的付费套餐</li>
+        <li><b>ChatGPT</b>：套餐能用 Skills 的话，到 Skills → 上传，直接给它 zip。否则每次对话都把 zip 一起上传</li>
+        <li><b>Gemini</b>（网页和应用）：在 Skills 里上传 zip（个人账号）</li>
+        <li><b>Gemini CLI</b>：解压后把 <code>huggybugi-character</code> 文件夹放到 <code>~/.gemini/skills/</code></li>
+      </ul>
+      <p><b>Claude Code 和 Codex</b> 不用 zip，装成插件就行，有新版本时插件更新会一起带过来。应用制作窗口的“用 AI 做”里也能复制这些命令和规格。</p>
+      <pre># Claude Code
+/plugin marketplace add Zaehyeon2/huggybugi
+/plugin install huggybugi@huggybugi
+
+# Codex
+codex plugin marketplace add Zaehyeon2/huggybugi
+codex plugin add huggybugi@huggybugi</pre>
+      <p>菜单名字各家服务偶尔会改。详细说明看 zip 里的 <code>README.md</code>。</p>
+
+      <h3>能运行代码的 AI（ChatGPT、Claude 等）</h3>
+      <p>格子能画得很准。把身体、眼睛、脚定义成椭圆这类简单形状，再用一个接收姿势数值（身体高度、眼睛形状、抬脚）画出单帧的函数来生成所有动作，这样各动作之间就不会走形。一起给它照片或图画，它会照着颜色和外形画。没有照片的话，先让它找几张这种动物或道具的可爱像素画看看再画，效果会好很多。</p>
+      <pre>Write and run a Python (Pillow) script that draws a pixel art [animal] (see the attached
+picture) for a 48x48 desktop pet. Match the picture's body shape, proportions and
+features as closely as the grid allows (no picture: first look up a few cute pixel art references of that animal or item and follow their proportions, without copying any one of them). Build each frame from simple shapes (ellipses for body,
+face, feet) in ONE function draw(pose) that takes pose values like bob, eyes, foot lift,
+so every animation reuses the same shapes. Add a 1px dark outline automatically around
+the filled pixels. Facing right, feet touching row 47, the 4 corner pixels transparent.
+Save one horizontal strip PNG per animation (1x, frames 48x48, no gaps), each file named
+exactly after the animation (idle.png, walk.png, ...):
+idle 2, walk 4, sleep 2, poked 2, throw 3, hit 2, jump 2, eat 3, wave 3, happy 2, offline 1.
+Put all the PNGs in one zip file for download.
+Show me an 8x preview, then let me ask for changes.</pre>
+      <p>道具和便便的动作不一样，所以用这个，别用上面那个提示词。投掷物和食物里只留你那一种，另一行删掉。</p>
+      <pre>Write and run a Python (Pillow) script that draws a pixel art [item] (see the attached
+picture) for a 48x48 desktop pet app. Build it from simple shapes with a 1px dark outline,
+transparent background, centered in the frame, the 4 corner pixels of every frame
+transparent. Save horizontal strip PNGs (1x, frames 48x48, no gaps), keeping only the
+line for your item kind:
+thrown item: fly 1 facing right (with 'spin while flying' on, the app spins it, so do not draw spin frames)
+and impact 3 (the moment it hits).
+food: fly 1-4 drawn upright (it is not spun), gently bobbing with a small sparkle,
+no impact (food is eaten on arrival). Name the files exactly fly.png and impact.png and
+put them in one zip file. Show me an 8x preview, then let me ask for changes.</pre>
+      <pre>Write and run a Python (Pillow) script that draws a pixel art poop for a 48x48 desktop pet,
+colored and decorated like [character] (one feature such as ears or beak), or a small prop
+that matches [character] instead of a poop. One 48x48 frame
+saved as fly.png: small (about 17x12 pixels), horizontally centered, sitting on the bottom
+row, entirely inside the bottom-center 24x24 area (x 12-35, y 24-47), flat and cute,
+1px dark outline, transparent background. Show me an 8x preview.</pre>
+      <p>道具代码大概是这个样子（玩具锤的 fly 和 impact，还有默认便便）。上面示例里的玩具锤和便便图就是这段代码画出来的。文件名就用动作名 <code>fly.png</code>、<code>impact.png</code> 就行，下面的示例因为一次画两个道具，所以在名字前面加了前缀。</p>
+      <pre>import math
+
+COLORS = {'K': '#2b2233', 'Y': '#ffd23f', 'R': '#ff5a6e', 'F': '#9a6a48', 'N': '#7a4a24',
+          'E': '#1b1420', 'P': '#ff9fb0'}
+N = 48    # 48x48 的帧
+
+def oval(x, y, cx, cy, rx, ry):  # 像素中心（+0.5）在椭圆内则为真
+    return ((x + 0.5 - cx) / rx) ** 2 + ((y + 0.5 - cy) / ry) ** 2 &lt;= 1
+
+# 每个像素接收一个颜色字母拼成一帧，再把外轮廓换成 1px 的黑线（K）。
+def render(fill):
+    g = [[fill(x, y) for x in range(N)] for y in range(N)]
+    solid = lambda x, y: 0 &lt;= x &lt; N and 0 &lt;= y &lt; N and g[y][x] != '.'
+    return [''.join('K' if c != '.' and not (solid(x - 1, y) and solid(x + 1, y)
+                                             and solid(x, y - 1) and solid(x, y + 1)) else c
+                    for x, c in enumerate(row)) for y, row in enumerate(g)]
+
+# 玩具锤：一张 fly（打开“飞行时旋转”后应用会转它）
+def hammer(x, y):
+    if 12 &lt;= x &lt;= 35 and 10 &lt;= y &lt;= 21:
+        return 'Y' if x &lt;= 14 or x &gt;= 33 else 'R'
+    if 21 &lt;= x &lt;= 26 and 22 &lt;= y &lt;= 41:
+        return 'Y'
+    return '.'
+
+# impact：星星变大后碎成片散开（3 张）
+def star(r):
+    def fill(x, y):
+        dx, dy = x + 0.5 - 24, y + 0.5 - 24
+        a = math.atan2(dy, dx) + math.pi / 2
+        edge = r * (0.55 + 0.45 * abs(math.cos(a * 5 / 2)))
+        return 'Y' if math.hypot(dx, dy) &lt;= edge else '.'
+    return fill
+
+def burst(color, k, n=6):
+    def fill(x, y):
+        r, s = 10 + k * 5, 4.4 - k * 0.45
+        for i in range(n):
+            a = i / n * math.pi * 2 + k * 0.2
+            if oval(x, y, 24 + math.cos(a) * r, 24 + math.sin(a) * r, s, s):
+                return color
+        return '.'
+    return fill
+
+# 便便：一张 fly。贴着最下面一行的三层盘卷，最下层画眼睛、脸颊和嘴
+TIERS = [(23.5, 38.8, 3.4, 1.9), (23.5, 41.9, 5.8, 2.2), (23.5, 44.9, 8.1, 3.1)]
+DOTS = {(22, 36): 'F', (23, 36): 'F', (24, 36): 'F', (20, 44): 'E', (26, 44): 'E',
+        (18, 45): 'P', (19, 45): 'P', (27, 45): 'P', (28, 45): 'P',
+        (22, 46): 'N', (23, 46): 'N', (24, 46): 'N'}
+
+def poop(x, y):
+    if (x, y) in DOTS:
+        return DOTS[(x, y)]
+    for i, (cx, cy, rx, ry) in enumerate(TIERS):
+        if oval(x, y, cx, cy, rx, ry):
+            # 每层的下沿是搭在下一层上的凹槽
+            return 'N' if i &lt; len(TIERS) - 1 and y &gt;= cy + ry - 1.1 else 'F'
+    return '.'
+
+ANIMS = {
+    'hammer-fly': [render(hammer)],
+    'hammer-impact': [render(star(9)), render(star(15)), render(burst('Y', 2))],
+    'poop-fly': [render(poop)],
+}
+
+# 每个动作一张横向条带 PNG（1 倍，帧 48x48）
+def save(name, frames):
+    from PIL import Image, ImageColor
+    img = Image.new('RGBA', (N * len(frames), N))
+    for i, g in enumerate(frames):
+        for y, row in enumerate(g):
+            for x, c in enumerate(row):
+                if c != '.':
+                    img.putpixel((i * N + x, y), ImageColor.getrgb(COLORS[c]))
+    img.save(name + '.png')
+
+if __name__ == '__main__':
+    for name, frames in ANIMS.items():
+        save(name, frames)</pre>
+      <p>AI 写的代码大概是这个样子（多基，11 个动作全都有）。上面示例里的多基图就是这段代码画出来的。装了 Pillow 的话可以直接跑，每个动作会存一张 PNG。</p>
+      <pre>import math
+
+COLORS = {'K': '#3a3640', 'G': '#9a98a3', 'g': '#7f7d88', 'W': '#fbf9f4', 'Y': '#f7c535',
+          'y': '#e2a51f', 'E': '#2a1c18', 'P': '#ffb3c0', 'R': '#e8586a'}
+N = 48    # 48x48 的帧
+S = 1.5   # 把按 32 格定的尺寸换算到 48 格
+
+def rnd(v):  # 0.5 向上取整（python 的 round 会取偶数，所以不用它）
+    return math.floor(v + .5)
+
+def u(v):  # 姿势偏移量换成 48 格上的整数像素
+    return int(math.copysign(rnd(abs(v) * S), v)) if v else 0
+
+def oval(x, y, cx, cy, rx, ry):
+    return ((x + .5 - cx) / rx) ** 2 + ((y + .5 - cy) / ry) ** 2 &lt;= 1
+
+def tri(x, y, a, b, c):
+    px, py = x + .5, y + .5
+    s = lambda p, q: (px - q[0]) * (p[1] - q[1]) - (p[0] - q[0]) * (py - q[1])
+    d = (s(a, b), s(b, c), s(c, a))
+    return not (min(d) &lt; 0 and max(d) &gt; 0)
+
+# 一只眼睛（以 3x3 为准）。dx、dy 是从眼睛左上角算起的偏移格数
+def eye(dx, dy, kind):
+    if kind == 'open':
+        return ('W' if dx == dy == 0 else 'E') if 0 &lt;= dx &lt;= 2 and 0 &lt;= dy &lt;= 2 else None
+    if kind == 'wide':  # 惊讶：4x4 加高光
+        return ('W' if dx == dy == -1 else 'E') if -1 &lt;= dx &lt;= 2 and -1 &lt;= dy &lt;= 2 else None
+    hit = {'closed': (dy == 1 and dx in (-1, 3)) or (dy == 2 and 0 &lt;= dx &lt;= 2),
+           'happy': (dy == 0 and 0 &lt;= dx &lt;= 2) or (dy == 1 and dx in (-1, 3)),
+           'hurt': -1 &lt;= dx &lt;= 3 and -1 &lt;= dy &lt;= 3 and (dx == dy or dx == 2 - dy)}[kind]
+    return 'E' if hit else None
+
+# 只接收姿势数值画出一帧。所有动作都用同一套形状。
+# squash：+ 扁，- 长。feet：抬脚。flip：抬翅膀。lean：身体左右移动
+def draw(bob=0, squash=0, feet=(0, 0), flip=(0, 0), eyes='open', mouth='', blush=False, lean=0):
+    ry = (9 - squash) * S
+    rx = min((13 + squash * .8) * S, 22.4)  # 别让压扁的身体超出格子
+    by = (30.4 + min(bob, 1)) * S - ry + max(bob - 1, 0) * S
+    cx = min(max((16 + lean) * S, rx + 1.4), 46.6 - rx)
+    wl, wr = max(cx - rx + .3 * S, 4.5), min(cx + rx - .3 * S, 43.5)
+    fy = by + 1.5 * S
+    ey = rnd(by - 3 * S)
+    shift = 3 + u(lean)  # 脸往右偏 3 格
+    gy = rnd((30 + min(bob, 0)) * S) - u(max(feet))
+
+    def foot(fcx, x, y, up):
+        b = 47 - u(up)
+        return b - 2 + min(0, u(bob + up)) &lt;= y &lt;= b and abs(x + .5 - fcx) &lt;= (3.5 if y == b else 4.8)
+
+    def pixel(x, y):
+        body = oval(x, y, cx, by, rx, ry) or tri(
+            x, y, (cx - 3.5 * S, by - ry + 2 * S), (cx + 3.5 * S, by - ry + 2 * S), (cx, by - ry - .8 * S))
+        fin = oval(x, y, wl, fy - flip[0] * S, 2.6 * S, 1.8 * S) or oval(x, y, wr, fy - flip[1] * S, 2.6 * S, 1.8 * S)
+        paw = foot(18.5, x, y, feet[0]) or foot(31.5, x, y, feet[1])
+        # 像玩偶那样让脚看着在身体前面，所以先画脚再画身体
+        if paw and y &gt;= gy:
+            return 'Y'
+        if not body:
+            return 'g' if fin else 'Y' if paw else '.'
+        fx = x - shift
+        e = eye(fx - 14, y - ey, eyes) or eye(fx - 31, y - ey, eyes)
+        if e:
+            return e
+        if y in (ey + 2, ey + 3) and 21 &lt;= fx &lt;= 26:  # 喙
+            return 'Y'
+        if mouth == 'open':  # 吃东西时张开，能看到嘴里
+            if ey + 4 &lt;= y &lt;= ey + 5 and 22 &lt;= fx &lt;= 25:
+                return 'R'
+            if y == ey + 6 and 22 &lt;= fx &lt;= 25:
+                return 'Y'
+        elif y == ey + 4 and (21 if mouth == 'chew' else 22) &lt;= fx &lt;= (26 if mouth == 'chew' else 25):
+            return 'y'
+        if blush and y in (ey + 3, ey + 4) and (11 &lt;= fx &lt;= 13 or 34 &lt;= fx &lt;= 36):
+            return 'P'
+        face = (oval(fx, y, 11 * S + .5, by - 2 * S, 3.8 * S, 3.6 * S)
+                or oval(fx, y, 21 * S + .5, by - 2 * S, 3.8 * S, 3.6 * S)
+                or oval(fx, y, 16 * S + .5, by + 3 * S, 8.2 * S, 5.2 * S))
+        return 'W' if face else 'G'
+
+    g = [[pixel(x, y) for x in range(N)] for y in range(N)]
+    solid = lambda x, y: 0 &lt;= x &lt; N and 0 &lt;= y &lt; N and g[y][x] != '.'
+    edge = lambda x, y: not all(solid(x + a, y + b) for a, b in ((1, 0), (-1, 0), (0, 1), (0, -1)))
+    return [''.join('K' if c != '.' and edge(x, y) else c for x, c in enumerate(row)) for y, row in enumerate(g)]
+
+ANIMS = {
+    'idle': [draw(), draw(bob=1)],
+    'walk': [draw(feet=(1, 0), lean=-1), draw(bob=-1), draw(feet=(0, 1), lean=1), draw(bob=-1)],
+    'sleep': [draw(eyes='closed', bob=1, squash=1), draw(eyes='closed', bob=2, squash=1)],
+    'poked': [draw(eyes='wide', squash=3), draw(eyes='wide')],
+    'throw': [draw(flip=(0, 4), lean=-1), draw(flip=(0, 5), lean=-1, bob=-1), draw(flip=(0, -1), lean=1)],
+    'hit': [draw(eyes='hurt', lean=-2, squash=1), draw(eyes='hurt', bob=1)],
+    'jump': [draw(squash=3, flip=(-1, -1)), draw(bob=-3, squash=-1, feet=(2, 2), flip=(3, 3))],
+    'eat': [draw(mouth='open'), draw(mouth='chew', bob=1, squash=1), draw(eyes='happy', blush=True)],
+    'wave': [draw(flip=(0, 3), eyes='happy'), draw(flip=(0, 6), eyes='happy'), draw(flip=(0, 3), eyes='happy')],
+    'happy': [draw(eyes='happy', blush=True, bob=-1), draw(eyes='happy', blush=True)],
+    'offline': [draw(eyes='hurt', squash=3, bob=1, flip=(-1, -1))],
+}
+
+# 每个动作一张横向条带 PNG（1 倍，帧 48x48）
+def save(name, frames):
+    from PIL import Image, ImageColor
+    img = Image.new('RGBA', (N * len(frames), N))
+    for i, g in enumerate(frames):
+        for y, row in enumerate(g):
+            for x, c in enumerate(row):
+                if c != '.':
+                    img.putpixel((i * N + x, y), ImageColor.getrgb(COLORS[c]))
+    img.save(name + '.png')
+
+if __name__ == '__main__':
+    for name, frames in ANIMS.items():
+        save(name, frames)</pre>
+
+      <h2>一次全部导入</h2>
+      <p>把 PNG 打成一个 zip，拖到制作窗口上，或者在“一次全部导入”里选那个 zip，每个格子就一次性填好了。没打包的文件夹就在“一次全部导入”里选文件夹。导入前会先告诉你每个文件进哪个格子，名字对不上的文件可以自己选格子。上面“全部下载”的 zip 也是这套名字，可以直接拿来试。</p>
+      <p>文件名就是<strong>动作名本身</strong>。大小写无所谓，zip 里有文件夹也没关系。</p>
+      <ul>
+        <li>角色： <code>idle.png</code> <code>walk.png</code> <code>sleep.png</code> <code>poked.png</code> <code>throw.png</code> <code>hit.png</code> <code>jump.png</code> <code>eat.png</code> <code>wave.png</code> <code>happy.png</code> <code>offline.png</code></li>
+        <li>道具：<code>fly.png</code> <code>impact.png</code>，音效 <code>sound.wav</code>（便便只要 <code>fly.png</code>）</li>
+      </ul>
+
+      <h2>上传前检查</h2>
+      <ul class="list-none! pl-0! [&_li]:before:mr-2 [&_li]:before:content-['☐']">
+        <li>高 48，宽是 48 的倍数，不超过 8 帧</li>
+        <li>背景透明，没留下模板线</li>
+        <li>每一帧的四个角不能全被涂满（全涂满会被当成残留背景而拒绝）</li>
+        <li>朝右，脚在最下面一行，每帧位置一致</li>
+      </ul>
+    </main>
+    <footer class="border-t-4 border-ink py-8 text-center text-sm"><a class="underline" href="./">回到 Huggybugi 首页</a></footer>
+  </body>
+</html>

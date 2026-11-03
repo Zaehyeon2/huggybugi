@@ -1,0 +1,1 @@
+function n(t){let r=t.charCodeAt(t.length-1)-44032;return r>=0&&r<11172?r%28:0}var s=t=>`${t}${n(t)?"\uC774\uAC00":"\uAC00"}`,c=t=>`${t}${n(t)?"\uC774":"\uAC00"}`,o=t=>`${t}${n(t)?"\uC744":"\uB97C"}`;export{n as a,s as b,c,o as d};
