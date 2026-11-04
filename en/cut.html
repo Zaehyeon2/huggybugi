@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Make from one picture - Huggybugi</title>
+    <meta name="description" content="Cut one picture from an image AI by action and turn it into files to put into Huggybugi." />
+    <meta name="theme-color" content="#dff1ff" />
+    <link rel="icon" type="image/png" href="../assets/favicon.png" />
+    <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://huggybugi.hammerturtle.xyz/en/cut.html" />
+    <meta property="og:title" content="Make from one picture - Huggybugi" />
+    <meta property="og:description" content="Cut one picture from an image AI by action and turn it into files to put into Huggybugi." />
+    <meta property="og:image" content="https://huggybugi.hammerturtle.xyz/assets/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="en_US" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="stylesheet" href="../site.css" />
+    <script type="module" src="../cut.js"></script>
+  <link rel="alternate" hreflang="ko" href="https://huggybugi.hammerturtle.xyz/cut.html" />
+    <link rel="alternate" hreflang="en" href="https://huggybugi.hammerturtle.xyz/en/cut.html" />
+    <link rel="alternate" hreflang="ja" href="https://huggybugi.hammerturtle.xyz/ja/cut.html" />
+    <link rel="alternate" hreflang="zh-Hans" href="https://huggybugi.hammerturtle.xyz/zh-hans/cut.html" />
+    <link rel="alternate" hreflang="zh-Hant" href="https://huggybugi.hammerturtle.xyz/zh-hant/cut.html" />
+    <link rel="alternate" hreflang="es" href="https://huggybugi.hammerturtle.xyz/es/cut.html" />
+    <link rel="alternate" hreflang="pt-BR" href="https://huggybugi.hammerturtle.xyz/pt/cut.html" />
+    <link rel="alternate" hreflang="x-default" href="https://huggybugi.hammerturtle.xyz/cut.html" />
+    </head>
+  <body class="bg-sky font-sans text-ink">
+    <header class="top">
+      <a class="logo" href="./">Huggybugi</a>
+      <a href="./guide.html">How to make one</a>
+      <a href="./cut.html">From one picture</a>
+      <a class="dl" href="./#download">Download</a>
+      <details class="langs"><summary><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="m22 22-5-10-5 10"/><path d="M14 18h6"/></svg><span>English</span></summary><nav class="langmenu"><a href="/cut.html">한국어</a><a href="/en/cut.html" aria-current="page">English<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></a><a href="/ja/cut.html">日本語</a><a href="/zh-hans/cut.html">简体中文</a><a href="/zh-hant/cut.html">繁體中文</a><a href="/es/cut.html">Español</a><a href="/pt/cut.html">Português (Brasil)</a></nav></details>
+    </header>
+    <div class="pg-phero"><h1>Make from one picture</h1><p>Get a picture from an AI, upload it, and it cuts it by action into files for the app.</p></div>
+    <main class="mx-auto max-w-5xl px-4 pt-5 pb-8">
+            <nav class="flex gap-1 rounded-full border border-line bg-white p-1" aria-label="Step">
+        <button type="button" data-go="1" class="flex-1 rounded-full min-h-11 px-3 py-2 text-sm font-semibold">1 Prompt</button>
+        <button type="button" data-go="2" class="flex-1 rounded-full min-h-11 px-3 py-2 text-sm font-semibold">2 Upload</button>
+        <button id="tab3" type="button" data-go="3" class="flex-1 rounded-full min-h-11 px-3 py-2 text-sm font-semibold disabled:opacity-40" disabled>3 Adjust</button>
+      </nav>
+
+      <section data-step="1" class="mt-5 rounded-3xl border border-line bg-white p-5">
+        <h2 class="font-pixel text-2xl">Ask the AI</h2>
+        <fieldset class="mt-3 grid grid-cols-4 gap-1 rounded-2xl bg-sky p-1" aria-label="Type to make">
+          <button type="button" data-kind="char" class="rounded-xl px-2 py-2 text-sm font-semibold">Character</button>
+          <button type="button" data-kind="throw" class="rounded-xl px-2 py-2 text-sm font-semibold">Throwable</button>
+          <button type="button" data-kind="food" class="rounded-xl px-2 py-2 text-sm font-semibold">Food</button>
+          <button type="button" data-kind="poop" class="rounded-xl px-2 py-2 text-sm font-semibold">Poop</button>
+        </fieldset>
+        <ol class="mt-3 list-decimal space-y-1 pl-5 text-sm text-dim">
+          <li>Copy the prompt and paste it into Gemini or ChatGPT.</li>
+          <li id="kindhint"></li>
+          <li id="kindhint2"></li>
+        </ol>
+        <button id="copy" type="button" class="mt-4 w-full rounded-2xl border-2 border-ink bg-sun px-4 py-3 font-pixel text-lg sm:w-auto">Copy prompt</button>
+        <details class="mt-4">
+          <summary class="cursor-pointer text-sm font-semibold">View prompt</summary>
+          <pre id="prompt" class="mt-2 max-h-72 overflow-auto rounded-xl bg-sky p-3 text-xs whitespace-pre-wrap"></pre>
+        </details>
+        <button type="button" data-next="2" class="mt-4 block text-sm font-semibold text-sea underline">I have the picture, next</button>
+      </section>
+
+      <section data-step="2" hidden class="mt-5 rounded-3xl border border-line bg-white p-5">
+        <h2 class="font-pixel text-2xl">Upload the picture</h2>
+        <p id="kindnow" class="mt-2 text-sm text-dim"></p>
+        <label id="drop" class="mt-3 flex cursor-pointer flex-col items-center gap-3 rounded-2xl border-2 border-dashed border-line p-6 text-center">
+          <img id="inimg" class="hidden h-48 max-w-full rounded-lg border border-line object-contain" alt="Uploaded picture" />
+          <span class="text-sm font-semibold">Click to choose or drag and drop (PNG or JPG)</span>
+          <span class="text-xs text-dim">The picture is processed only on this device and is never sent to a server.</span>
+          <input id="file" type="file" accept="image/png,image/jpeg" class="sr-only" />
+        </label>
+        <p id="uperror" role="alert" class="mt-2 hidden text-sm font-semibold text-red-600"></p>
+        <button id="cut" type="button" class="mt-4 hidden w-full rounded-2xl border-2 border-ink bg-sun px-4 py-3 font-pixel text-lg disabled:opacity-40 sm:w-auto">Cut</button>
+      </section>
+
+      <div data-step="3" hidden class="mt-5 lg:grid lg:grid-cols-[320px_1fr] lg:items-start lg:gap-5">
+        <aside class="rounded-3xl border border-line bg-white p-4 lg:sticky lg:top-4">
+          <div class="flex items-center justify-between gap-2">
+            <p id="count" class="text-sm"></p>
+            <button id="undo" type="button" class="rounded-lg border border-line bg-white px-2 py-1.5 text-xs font-semibold disabled:opacity-30">Undo</button>
+          </div>
+          <div id="charTips" class="mt-3 rounded-2xl bg-sky p-3">
+            <p class="text-sm font-semibold">Check before you download</p>
+            <ul class="mt-2 space-y-2 text-xs leading-relaxed text-dim">
+              <li><b class="text-ink">Are the actions right?</b> The AI may have changed the order. Tap a picture to move it to the right action (on a PC you can drag), or pick an action from the list if a whole row is off.</li>
+              <li><b class="text-ink">Does it face right?</b> It should face front or right. If it faces left, press that row's Flip.</li>
+              <li><b class="text-ink">Is the size OK?</b> Compare with Ddeoggi on each row and adjust with the slider. A body that gets cut off is outlined in red.</li>
+            </ul>
+          </div>
+          <div id="itemTips" class="mt-3 hidden rounded-2xl bg-sky p-3">
+            <p class="text-sm font-semibold">Check before you download</p>
+            <ul class="mt-2 space-y-2 text-xs leading-relaxed text-dim">
+              <li><b class="text-ink">Is the direction right?</b> Things with a direction, like an arrow, should point right. Use Flip or Rotate 90° to fix it.</li>
+              <li><b class="text-ink">Is the size OK?</b> Compare with the default item and adjust with the slider. Anything cut off is outlined in red.</li>
+              <li><b class="text-ink">Is the motion OK?</b> Use "Preview with spin" to see it fly. The real spin setting is chosen in the app's Create window.</li>
+            </ul>
+          </div>
+          <details class="mt-3" open>
+            <summary class="cursor-pointer text-sm font-semibold">Overall adjustments</summary>
+            <div class="mt-2 space-y-2 text-xs font-semibold">
+              <label class="flex items-center gap-2"><span class="w-9 shrink-0">Size</span><input id="zoom" type="range" min="100" max="150" step="25" value="100" class="min-w-0 flex-1 accent-sea" /><span id="zv" class="w-10 text-right">100%</span></label>
+              <p class="font-normal text-dim">100% is the largest size that does not get cut off.</p>
+              <label class="flex items-center gap-2"><span class="w-9 shrink-0">Brightness</span><input id="bri" type="range" min="70" max="130" step="5" value="100" class="min-w-0 flex-1 accent-sea" /><span id="briv" class="w-10 text-right">100%</span></label>
+              <label class="flex items-center gap-2"><span class="w-9 shrink-0">Saturation</span><input id="sat" type="range" min="0" max="200" step="10" value="100" class="min-w-0 flex-1 accent-sea" /><span id="satv" class="w-10 text-right">100%</span></label>
+              <label class="flex items-center gap-2"><span class="w-9 shrink-0">Colors</span><input id="col" type="range" min="0" max="2" step="1" value="1" class="min-w-0 flex-1 accent-sea" /><span id="colv" class="w-10 text-right">32</span></label>
+              <div class="flex flex-wrap gap-x-4 gap-y-1 pt-1">
+                <label class="flex items-center gap-1.5"><input id="fringe" type="checkbox" checked />Remove fringe</label>
+                <label class="flex items-center gap-1.5"><input id="junk" type="checkbox" checked />Remove specks</label>
+              </div>
+            </div>
+          </details>
+          <p id="clipmsg" class="mt-2 hidden text-xs font-semibold text-red-600">Pictures where the body gets cut off show up in red. Try making it smaller.</p>
+          <div id="trash" class="mt-3 hidden rounded-xl border-2 border-dashed border-line p-2 text-center text-xs text-dim lg:block">Drag pictures you do not need here</div>
+          <button type="button" class="zipb mt-3 hidden w-full rounded-2xl border-2 border-ink bg-sun px-4 py-3 font-pixel text-lg disabled:opacity-40 lg:block">Get zip</button>
+          <p id="ziperror" role="alert" class="fixed inset-x-3 bottom-20 z-20 hidden rounded-lg bg-white p-2 text-xs font-semibold text-red-600 shadow lg:static lg:mt-2 lg:p-0 lg:shadow-none"></p>
+          <p id="emptymsg" class="mt-2 hidden text-xs font-semibold text-red-600">Idle, walk and sleep are required.</p>
+          <p class="mt-2 hidden text-xs text-dim lg:block">Drag it into the app Create window and each action goes in.</p>
+          <p class="mt-2 text-xs text-dim lg:hidden">If you got it on your phone, put it into the Create window of the PC app.</p>
+        </aside>
+        <div class="mt-4 min-w-0 space-y-3 lg:mt-0">
+          <section id="removed" class="hidden rounded-2xl border border-dashed border-line bg-white p-3">
+            <p class="text-sm font-semibold">Removed art <span class="font-normal text-dim">Click to go back to the original action.</span></p>
+            <div id="removedList" class="mt-2 flex flex-wrap gap-1.5"></div>
+          </section>
+          <div id="rows" class="space-y-3"></div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="links">
+        <span>Huggybugi</span>
+        <a class="privacy" href="./privacy.html">Privacy Policy</a>
+        <a href="./terms.html">Terms of Service</a>
+        
+        <a href="mailto:support@hammerturtle.xyz">support@hammerturtle.xyz</a>
+      </div>
+      <p class="biz">Hammer Turtle Lab · Kim Jaehyeon · Business registration 794-02-03917</p>
+      <p class="biz">115 Cheonhodae-ro 110-gil, Gwangjin-gu, Seoul, Republic of Korea</p>
+      <p class="biz">Phone 070-5275-5737</p>
+      <p class="biz">Hosting GitHub, Inc. · Server Cloudflare, Inc.</p>
+    </footer>
+    <div id="action" class="fixed inset-x-0 bottom-0 z-20 hidden border-t border-line bg-white p-3 shadow-2xl">
+      <div class="mx-auto flex max-w-5xl flex-wrap items-center gap-2">
+        <p id="actname" class="w-full text-sm font-semibold sm:w-auto"></p>
+        <select id="actmove" class="min-w-0 flex-1 rounded-lg border border-line bg-white p-2 text-sm sm:flex-none" aria-label="Action to move to"></select>
+        <button id="actleft" type="button" class="rounded-lg border border-line px-3 py-2 text-sm disabled:opacity-30" aria-label="Move earlier">←</button>
+        <button id="actright" type="button" class="rounded-lg border border-line px-3 py-2 text-sm disabled:opacity-30" aria-label="Move later">→</button>
+        <button id="actdel" type="button" class="rounded-lg border border-line px-3 py-2 text-sm text-red-600">Remove</button>
+        <button id="actclose" type="button" class="ml-auto rounded-lg px-3 py-2 text-sm text-dim">Close</button>
+      </div>
+    </div>
+    <div data-step="3" hidden class="fixed inset-x-0 bottom-0 z-10 border-t border-line bg-white p-3 lg:hidden">
+      <button type="button" class="zipb w-full rounded-2xl border-2 border-ink bg-sun px-4 py-3 font-pixel text-lg disabled:opacity-40">Get zip</button>
+    </div>
+  </body>
+</html>
