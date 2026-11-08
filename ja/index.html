@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="naver-site-verification" content="1c5b977d209504f6da5d3d5c87104f3a4c1d0f82" />
+    <meta name="jeojat-verify" content="mm-6bf948e538bd85f11dd417e6" />
+    <title>Huggybugi</title>
+    <meta name="description" content="グループチャットの友だちがデスクトップの下を歩き回るメッセンジャー" />
+    <meta name="theme-color" content="#f4f7ff" />
+    <link rel="canonical" href="https://huggybugi.hammerturtle.xyz/ja/" />
+    <link rel="icon" type="image/png" href="../assets/favicon.png" />
+    <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png" />
+    <!-- 카카오톡 등은 상대 경로 이미지를 못 읽어 절대 주소로 둔다. -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://huggybugi.hammerturtle.xyz/ja/" />
+    <meta property="og:title" content="Huggybugi" />
+    <meta property="og:description" content="グループチャットの友だちがデスクトップの下を歩き回るメッセンジャー。Mac、Windows" />
+    <meta property="og:image" content="https://huggybugi.hammerturtle.xyz/assets/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="ja_JP" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preload" href="../assets/fonts/Jua.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="../home.css" />
+    <script type="module" src="../main.js"></script>
+  <link rel="alternate" hreflang="ko" href="https://huggybugi.hammerturtle.xyz/" />
+    <link rel="alternate" hreflang="en" href="https://huggybugi.hammerturtle.xyz/en/" />
+    <link rel="alternate" hreflang="ja" href="https://huggybugi.hammerturtle.xyz/ja/" />
+    <link rel="alternate" hreflang="zh-Hans" href="https://huggybugi.hammerturtle.xyz/zh-hans/" />
+    <link rel="alternate" hreflang="zh-Hant" href="https://huggybugi.hammerturtle.xyz/zh-hant/" />
+    <link rel="alternate" hreflang="es" href="https://huggybugi.hammerturtle.xyz/es/" />
+    <link rel="alternate" hreflang="pt-BR" href="https://huggybugi.hammerturtle.xyz/pt/" />
+    <link rel="alternate" hreflang="x-default" href="https://huggybugi.hammerturtle.xyz/" />
+    <style>:root{--body:"Gowun Dodum",Pretendard,"Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo,sans-serif;--font-sans:Pretendard,"Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo,system-ui,sans-serif}body{font-family:Pretendard,"Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo,sans-serif;word-break:normal}</style>
+    </head>
+  <body>
+    <header class="top">
+      <a class="logo" href="./">Huggybugi</a>
+      <a href="#features">機能</a>
+      <a href="./guide.html">作り方</a>
+      <a href="../chat">ウェブチャット</a>
+      <a href="#faq">よくある質問</a>
+      <a class="dl" data-dl href="#download">ダウンロード</a>
+      <details class="langs"><summary><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="m22 22-5-10-5 10"/><path d="M14 18h6"/></svg><span>日本語</span></summary><nav class="langmenu"><a href="/">한국어</a><a href="/en/">English</a><a href="/ja/" aria-current="page">日本語<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></a><a href="/zh-hans/">简体中文</a><a href="/zh-hant/">繁體中文</a><a href="/es/">Español</a><a href="/pt/">Português (Brasil)</a></nav></details>
+    </header>
+    <div class="news">
+      <div><b data-news-tag>新バージョン</b><span data-news-line>変更点はリリースノートで見られます。</span><a data-news-link href="https://github.com/Zaehyeon2/huggybugi/releases">リリースノート</a></div>
+      <ul data-news-notes hidden><li class="all"><a href="https://github.com/Zaehyeon2/huggybugi/releases">リリースノート</a></li></ul>
+    </div>
+
+    <div class="hero">
+      <div class="copy">
+        <h1 class="brand">Huggybugi</h1>
+        <p>グループチャットの友だちがデスクトップの下に住んでいます。何か言うと、その人の頭の上に吹き出しが浮かびます。</p>
+        <p class="go"><a class="cta" data-dl href="#download">ダウンロード</a> <a data-others href="#download">他の端末</a></p>
+      </div>
+      <!-- 모니터 속 바탕화면. キャラクター는 화면 아래(베젤 바로 위)를 걷는다. -->
+      <div class="mon" aria-hidden="true">
+        <div class="scr">
+          <div class="menubar"><span>Finder</span><span>ファイル 編集 表示</span><span>午後12:30</span></div>
+          <div class="desk">
+            <div class="ico"><svg aria-hidden="true" viewBox="0 0 24 24" fill="#7fb2ff" stroke="#2f6fd6" stroke-width="1.4" stroke-linejoin="round"><path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"/></svg>会議資料</div>
+            <div class="ico"><svg aria-hidden="true" viewBox="0 0 24 24" fill="#7fb2ff" stroke="#2f6fd6" stroke-width="1.4" stroke-linejoin="round"><path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"/></svg>旅行の写真</div>
+            <div class="ico"><svg aria-hidden="true" viewBox="0 0 24 24" fill="#fff" stroke="#5b5f86" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8M16 13H8M16 17H8"/></svg>メモ.txt</div>
+          </div>
+          <div class="doc"><div class="t"><b></b><b></b><b></b><span>週報.docx</span></div><div class="bd"><i style="width:55%;height:12px"></i><i></i><i style="width:88%"></i><i style="width:72%"></i><p><i></i><i></i><i></i><i></i><i></i><i></i></p></div></div>
+          <div class="note">今日やること<br />· 報告書を仕上げる<br />· 3時の会議</div>
+          <div class="chatwin"><div class="bar"><b></b><b></b><b></b><span>みんな</span><span>Aa</span></div><div class="msgs" id="hero-msgs"></div></div>
+          <div class="stage" id="hero-stage"><div class="ground"></div></div>
+        </div>
+        <div class="neck"></div>
+        <div class="foot"></div>
+      </div>
+    </div>
+
+    <main class="wrap">
+      <section class="s" id="features">
+        <h2>話す</h2>
+        <p class="lead">書いた言葉が友だちの画面で自分のキャラの頭上に浮かびます。</p>
+        <div class="bento">
+          <article class="card c4 r2 talk">
+            <div class="k">チャット</div>
+            <h3>言った言葉が頭の上に</h3>
+            <p>チャットに書いた言葉が、友だちの画面にいる自分のキャラの上に吹き出しで浮かびます。返信、リアクション、編集、既読まで。</p>
+            <div class="chatwin" aria-hidden="true"><div class="bar"><b></b><b></b><b></b><span>みんな</span></div><div class="msgs" id="talk-msgs"></div></div>
+            <div class="stage" id="talk-stage" aria-hidden="true"><div class="ground"></div></div>
+          </article>
+          <article class="card c2 pcard">
+            <div class="k">チャット</div>
+            <h3>写真・GIF・リンクカード</h3>
+            <p>チャットに写真を何枚も、GIF検索、リンクのプレビュー。</p>
+            <div class="scene" id="sc-photo" aria-hidden="true"></div>
+          </article>
+          <article class="card c2 tall">
+            <div class="k">表現</div>
+            <h3>らくがきメモ</h3>
+            <p>描いて送るとグループ全員に届きます。送った友だちの耳の横に巻物が現れて、押すと描いた順にもう一度描かれます。</p>
+            <div class="scene" id="sc-doodle" aria-hidden="true"></div>
+          </article>
+          <article class="card c6 dark">
+            <div class="k">安心</div>
+            <h3>ロックして、1日で消える</h3>
+            <p>言葉と写真はロックして送り、24時間後に消えます。広告も分析ツールもありません。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="s">
+        <h2>遊ぶ</h2>
+        <p class="lead">友だちのキャラを押して、引っぱって、なでましょう。</p>
+        <div class="bento">
+          <article class="card c3">
+            <div class="k">遊ぶ</div>
+            <h3>投げたら当たる</h3>
+            <p>友だちのキャラをクリックすると、選んだアイテムが放物線を描いて飛んで当たります。</p>
+            <div class="scene" id="sc-throw" aria-hidden="true"></div>
+          </article>
+          <article class="card c3">
+            <div class="k">遊ぶ</div>
+            <h3>なでる</h3>
+            <p>上でマウスを振るとハートがぽんぽん。</p>
+            <div class="mini"></div>
+            <div class="stage" id="pet-stage" aria-hidden="true"><div class="ground"></div></div>
+          </article>
+          <article class="card c3">
+            <div class="k">遊ぶ</div>
+            <h3>ごはんとうんち</h3>
+            <p>ごはんをあげ続けると少しずつ大きくなって、1分の間に10回くらい食べるとうんちをします。ほうきで掃いて片づけます。</p>
+            <div class="scene" id="sc-eat" aria-hidden="true"></div>
+          </article>
+          <article class="card c3">
+            <div class="k">表現</div>
+            <h3>エモートと動作</h3>
+            <p>:エモート: を言葉に混ぜたり、あいさつ・うれしい・もぐもぐ・ジャンプの動作。</p>
+            <div class="scene" id="sc-pose" aria-hidden="true"></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="s">
+        <h2>かざる</h2>
+        <p class="lead">自分のキャラと吹き出しは自分で選べます。</p>
+        <div class="bento">
+          <article class="card c3">
+            <div class="k">作る</div>
+            <h3>自分のキャラは自分で</h3>
+            <p>画像AIからもらった1枚の絵や自分で描いた絵で、キャラクター・アイテム・エモートを作ります。 <a href="./guide.html">作り方</a></p>
+            <div class="scene" id="sc-make" aria-hidden="true"></div>
+          </article>
+          <article class="card c3">
+            <div class="k">かざる</div>
+            <h3>シーズンテーマと吹き出しのかざり</h3>
+            <p>ハロウィンにはジャックオランタンを押すとキャンディが飛び出し、自分の吹き出しの色とかざりは自分で選びます。</p>
+            <div class="scene" id="sc-season" aria-hidden="true"></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="s">
+        <h2>見守る</h2>
+        <p class="lead">仕事のあいだ、そばで見守ります。</p>
+        <div class="bento">
+          <article class="card c3 pay">
+            <div class="k">見守る</div>
+            <h3>給料タイマー</h3>
+            <p>今日稼いだ額が秒単位で増えていきます。自分のキャラの上にも表示でき、金額はショートカットで隠せます。年収はこの端末にだけ保存します。</p>
+            <img class="shot" src="../assets/shots/salary-ja.webp" width="400" height="370" alt="給料タイマーの画面" loading="lazy" />
+          </article>
+          <article class="card c3 focus">
+            <div class="k">集中</div>
+            <h3>集中タイマー</h3>
+            <p>15・25・50分か終わる時刻を決めると、その間は友だちのキャラを隠します。友だちの画面には「没頭中」と出て、投げると「しーっ！」と言います。</p>
+            <img class="shot" src="../assets/shots/focus-ja.webp" width="360" height="375" alt="集中タイマーの画面" loading="lazy" />
+          </article>
+          <article class="card c3">
+            <div class="k">ステータス</div>
+            <h3>いま何してる?</h3>
+            <p>マウスを乗せるとその友だちのステータスが見えます。離席すると z、長く離れると Zzz、アプリを閉じると薄くなります。</p>
+            <div class="scene" id="sc-status" aria-hidden="true"></div>
+          </article>
+          <article class="card c3">
+            <div class="k">どこでも</div>
+            <h3>スマホはウェブで</h3>
+            <p>インストールなしでスマホのブラウザから同じ部屋へ。スマホから入った友だちは、パソコン画面の体の上に青い魂として浮かびます。</p>
+            <div class="scene" id="sc-web" aria-hidden="true"></div>
+          </article>
+          <article class="card c6">
+            <div class="k">グループ</div>
+            <h3>複数のグループ</h3>
+            <p>会社の友だち、ご近所の友だち。グループを行き来して、チャットは窓ごとに別のグループを見られます。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="s" id="more">
+<h2>こんなこともできます</h2>
+<p class="lead">クリックしたり、ドラッグしたり、言葉で呼んだり、メニューから選んだりするものです。</p>
+<div class="try"><div class="tg"><p class="k">話す</p><ul><li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-4 8"/></svg>@ニックネーム・@みんなで呼ぶ</li><li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 10V9"/><path d="M16.472 15a6 6 0 01-8.943 0"/><path d="M9 10V9"/><circle cx="12" cy="12" r="10"/></svg>:エモート:</li><li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>写真を10枚</li><li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M7 3v18"/><path d="M3 7.5h4"/><path d="M3 12h18"/><path d="M3 16.5h4"/><path d="M17 3v18"/><path d="M17 7.5h4"/><path d="M17 16.5h4"/></svg>GIF検索</li><li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>リンクカード</li><li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 18v-2a4 4 0 0 0-4-4H4"/><path d="m9 17-5-5 5-5"/></svg>返信・リアクション・編集</li><li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 17v5"/><path d="M9 10.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24V16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V7a1 1 0 0 1 1-1 2 2 0 0 0 0-4H8a2 2 0 0 0 0 4 1 1 0 0 1 1 1z"/></svg>メッセージを上に固定</li><li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.268 21a2 2 0 0 0 3.464 0"/><path d="M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326"/></svg>キーワード通知</li><li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"/><circle cx="12" cy="12" r="3"/></svg>既読の友だちの顔</li></ul></div><div class="tg"><p class="k">遊ぶ</p><ul><li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4.1 12 6"/><path d="m5.1 8-2.9-.8"/><path d="m6 12-1.9 2"/><path d="M7.2 2.2 8 5.1"/><path d="M9.037 9.69a.498.498 0 0 1 .653-.653l11 4.5a.5.5 0 0 1-.074.949l-4.349 1.041a1 1 0 0 0-.74.739l-1.04 4.35a.5.5 0 0 1-.95.074z"/></svg>押し続けて投げ続ける</li><li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15.914 4a1.5 1.5 0 00-2.474-1.561l-9 9A1.5 1.5 0 005.5 14h4.002a.5.5 0 01.471.666L8.086 20a1.5 1.5 0 002.475 1.56l9-9A1.5 1.5 0 0018.5 10h-3.997a.5.5 0 01-.472-.667z"/></svg>Shift+クリックで走って叩く</li><li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v20"/><path d="m15 19-3 3-3-3"/><path d="m19 9 3 3-3 3"/><path d="M2 12h20"/><path d="m5 9-3 3 3 3"/><path d="m9 5 3-3 3 3"/></svg>ドラッグでつかんで投げる</li><li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 11V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2"/><path d="M14 10V4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v2"/><path d="M10 10.5V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2v8"/><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/></svg>上で振ってなでる</li><li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"/><path d="m21 3-7 7"/><path d="m3 21 7-7"/><path d="M9 21H3v-6"/></svg>ダブルクリックで大きくなる</li><li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m11 10 3 3"/><path d="M6.5 21A3.5 3.5 0 1 0 3 17.5a2.62 2.62 0 0 1-.708 1.792A1 1 0 0 0 3 21z"/><path d="M9.969 17.031 21.378 5.624a1 1 0 0 0-3.002-3.002L6.967 14.031"/></svg>うんちを片づける</li><li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 16v-2.38C4 11.5 2.97 10.5 3 8c.03-2.72 1.49-6 4.5-6C9.37 2 10 3.8 10 5.5c0 3.11-2 5.66-2 8.68V16a2 2 0 1 1-4 0Z"/><path d="M20 20v-2.38c0-2.12 1.03-3.12 1-5.62-.03-2.72-1.49-6-4.5-6C14.63 6 14 7.8 14 9.5c0 3.11 2 5.66 2 8.68V20a2 2 0 1 0 4 0Z"/><path d="M16 17h4"/><path d="M4 13h4"/></svg>踏みつけとハイタッチ</li><li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"/><path d="M20 2v4"/><path d="M22 4h-4"/><circle cx="4" cy="20" r="2"/></svg>ワックスぷにぷに</li></ul></div><div class="tg"><p class="k">かざる</p><ul><li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 12h-5"/><path d="M15 8h-5"/><path d="M19 17V5a2 2 0 0 0-2-2H4"/><path d="M8 21h12a2 2 0 0 0 2-2v-1a1 1 0 0 0-1-1H11a1 1 0 0 0-1 1v1a2 2 0 1 1-4 0V5a2 2 0 1 0-4 0v2a1 1 0 0 0 1 1h3"/></svg>らくがきメモ</li><li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z"/></svg>吹き出しのかざり</li><li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21.64 3.64-1.28-1.28a1.21 1.21 0 0 0-1.72 0L2.36 18.64a1.21 1.21 0 0 0 0 1.72l1.28 1.28a1.2 1.2 0 0 0 1.72 0L21.64 5.36a1.2 1.2 0 0 0 0-1.72"/><path d="m14 7 3 3"/><path d="M5 6v4"/><path d="M19 14v4"/><path d="M10 2v2"/><path d="M7 8H3"/><path d="M21 16h-4"/><path d="M11 3H9"/></svg>自分のエモート(GIF)</li><li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="5" r="1"/><path d="m9 20 3-6 3 6"/><path d="m6 8 6 2 6-2"/><path d="M12 10v4"/></svg>AI でキャラを作る</li><li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="6" r="3"/><path d="M8.12 8.12 12 12"/><path d="M20 4 8.12 15.88"/><circle cx="6" cy="18" r="3"/><path d="M14.8 14.8 20 20"/></svg>1枚の絵からキャラを作る</li><li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m10 20-1.25-2.5L6 18"/><path d="M10 4 8.75 6.5 6 6"/><path d="m14 20 1.25-2.5L18 18"/><path d="m14 4 1.25 2.5L18 6"/><path d="m17 21-3-6h-4"/><path d="m17 3-3 6 1.5 3"/><path d="M2 12h6.5L10 9"/><path d="m20 10-1.5 2 1.5 2"/><path d="M22 12h-6.5L14 15"/><path d="m4 10 1.5 2L4 14"/><path d="m7 21 3-6-1.5-3"/><path d="m7 3 3 6h4"/></svg>シーズンテーマ</li><li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22a1 1 0 0 1 0-20 10 9 0 0 1 10 9 5 5 0 0 1-5 5h-2.25a1.75 1.75 0 0 0-1.4 2.8l.3.4a1.75 1.75 0 0 1-1.4 2.8z"/><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/></svg>チャットの見た目4種、ライトとダーク</li></ul></div><div class="tg"><p class="k">見守る</p><ul><li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13.267 2.08a10 10 0 108.653 8.653"/><path d="M15 10V9"/><path d="M16 5h6"/><path d="M16.472 15a6 6 0 01-8.943 0"/><path d="M19 2v6"/><path d="M9 10V9"/></svg>ステータスと絵文字</li><li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.733 5.076a10.744 10.744 0 0 1 11.205 6.575 1 1 0 0 1 0 .696 10.747 10.747 0 0 1-1.444 2.49"/><path d="M14.084 14.158a3 3 0 0 1-4.242-4.242"/><path d="M17.479 17.499a10.75 10.75 0 0 1-15.417-5.151 1 1 0 0 1 0-.696 10.75 10.75 0 0 1 4.446-5.143"/><path d="m2 2 20 20"/></svg>隠す(友だちには「集中」)</li><li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 21a8 8 0 0 0-16 0"/><circle cx="10" cy="8" r="5"/><path d="M22 20c0-3.37-2-6.5-4-8a5 5 0 0 0-.45-8.3"/></svg>複数のグループ</li><li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>招待リンク</li><li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>一緒にいた時間</li><li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="6"/><path d="M18.09 10.37A6 6 0 1 1 10.34 18"/><path d="M7 6h1v4"/><path d="m16.71 13.88.7.71-2.82 2.82"/></svg>給料タイマー</li><li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="10" x2="14" y1="2" y2="2"/><line x1="12" x2="15" y1="14" y2="11"/><circle cx="12" cy="14" r="8"/></svg>集中タイマー</li><li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg>スマホのウェブチャットと通知</li><li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 5a2 2 0 0 1 2 2v8.526a2 2 0 0 0 .212.897l1.068 2.127a1 1 0 0 1-.9 1.45H3.62a1 1 0 0 1-.9-1.45l1.068-2.127A2 2 0 0 0 4 15.526V7a2 2 0 0 1 2-2z"/><path d="M20.054 15.987H3.946"/></svg>複数のパソコン</li><li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 5H3"/><path d="M12 19H3"/><path d="M14 3v4"/><path d="M16 17v4"/><path d="M21 12h-9"/><path d="M21 19h-5"/><path d="M21 5h-7"/><path d="M8 10v4"/><path d="M8 12H3"/></svg>透明度と演出オフ</li></ul></div></div>
+<p class="more">全部のリストはアプリのトレイメニューの <b>機能一覧…</b> で見られます。</p>
+        
+</section>
+
+      <section class="s" id="download">
+        <h2>自分の画面にも連れてくる</h2>
+        <p class="lead">無料で使えます。アップロードできるキャラとアイテムの数には上限があります。招待コードをもらうか、新しいグループを作ります。</p>
+        <div class="dlgrid">
+          <div class="dlc" data-os="mac">
+            <h3 data-mac-label>Mac(Apple シリコン)</h3>
+            <small>macOS 13 以上</small>
+            <p><a class="cta" data-download="mac-arm64" href="https://github.com/Zaehyeon2/huggybugi/releases/latest/download/Huggybugi-mac-arm64.dmg">ダウンロード</a></p>
+            <small><a data-download="mac-x64" href="https://github.com/Zaehyeon2/huggybugi/releases/latest/download/Huggybugi-mac-x64.dmg">Intel Mac はこちら</a></small>
+            <small class="hash" data-hash hidden></small>
+          </div>
+          <div class="dlc" data-os="win">
+            <h3>Windows</h3>
+            <small>Windows 10 以上 · x64</small>
+            <p><a class="cta" data-download="win" href="https://github.com/Zaehyeon2/huggybugi/releases/latest/download/Huggybugi-setup.exe">ダウンロード</a></p>
+            <small class="hash" data-hash hidden></small>
+          </div>
+          <div class="dlc" data-os="phone">
+            <h3>スマホ</h3>
+            <small>インストールなしでブラウザから</small>
+            <p><a class="cta" href="../chat">ウェブでチャット</a></p>
+          </div>
+        </div>
+      </section>
+
+      <section class="s" id="faq">
+        <h2>よくある質問</h2>
+        <details open><summary>本当に無料ですか?</summary><p>無料で使えます。アップロードできるキャラとアイテムの数には上限があります。</p></details>
+        <details><summary>会社のパソコンで使っても内容が見えますか?</summary><p>言葉と写真はロックして送るので、社内ネットワークのような途中の経路では内容が見えません。24時間後には消えます。</p></details>
+        <details><summary>スマホでも使えますか?</summary><p>スマホではウェブで同じ部屋に入ります。キャラで遊ぶのはパソコンのアプリです。</p></details>
+        <details><summary>自分でキャラを作れますか?</summary><p>はい。絵をアップロードするか AI に頼んで作れます。<a href="./guide.html">作り方</a> のページを見てください。</p></details>
+        <details><summary>ダウンロードしたファイルが本物か確認したい</summary><p>ダウンロード欄の下にある SHA-256 と見比べてください。Windows は PowerShell で <code>Get-FileHash &lt;パス&gt;</code>、Mac はターミナルで <code>shasum -a 256 &lt;パス&gt;</code> で確認できます。</p></details>
+        <details><summary>初めて開くときに「未確認の開発元」と出ます</summary><p>Mac はシステム設定 &gt; プライバシーとセキュリティで「このまま開く」、Windows は「詳細情報」&gt;「実行」を押してください。</p></details>
+      </section>
+    </main>
+
+    <footer>
+      <div class="links">
+        <span>Huggybugi</span>
+        <a class="privacy" href="./privacy.html">プライバシーポリシー</a>
+        <a href="./terms.html">利用規約</a>
+        
+        <a href="mailto:support@hammerturtle.xyz">support@hammerturtle.xyz</a>
+      </div>
+      <p class="biz">Hammer Turtle Lab · 代表 キム・ジェヒョン · 事業者登録番号 794-02-03917</p>
+      <p class="biz">115 Cheonhodae-ro 110-gil, Gwangjin-gu, Seoul, Republic of Korea</p>
+      <p class="biz">電話 070-5275-5737</p>
+      <p class="biz">ホスティング GitHub, Inc. · サーバー Cloudflare, Inc.</p>
+    </footer>
+  </body>
+</html>
