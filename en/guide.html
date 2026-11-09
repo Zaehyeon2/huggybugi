@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>How to make characters and items - Huggybugi</title>
+    <meta name="description" content="How to upload your own characters, items and emotes to Huggybugi, and the specs they need" />
+    <meta name="theme-color" content="#dff1ff" />
+    <link rel="icon" type="image/png" href="../assets/favicon.png" />
+    <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://huggybugi.hammerturtle.xyz/en/guide" />
+    <meta property="og:title" content="How to make characters and items - Huggybugi" />
+    <meta property="og:description" content="How to upload your own characters, items and emotes to Huggybugi, and the specs they need" />
+    <meta property="og:image" content="https://huggybugi.hammerturtle.xyz/assets/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="en_US" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="stylesheet" href="../site.css" />
+    <script type="module" src="../guide.js"></script>
+  <link rel="alternate" hreflang="ko" href="https://huggybugi.hammerturtle.xyz/guide.html" />
+    <link rel="alternate" hreflang="en" href="https://huggybugi.hammerturtle.xyz/en/guide.html" />
+    <link rel="alternate" hreflang="ja" href="https://huggybugi.hammerturtle.xyz/ja/guide.html" />
+    <link rel="alternate" hreflang="zh-Hans" href="https://huggybugi.hammerturtle.xyz/zh-hans/guide.html" />
+    <link rel="alternate" hreflang="zh-Hant" href="https://huggybugi.hammerturtle.xyz/zh-hant/guide.html" />
+    <link rel="alternate" hreflang="es" href="https://huggybugi.hammerturtle.xyz/es/guide.html" />
+    <link rel="alternate" hreflang="pt-BR" href="https://huggybugi.hammerturtle.xyz/pt/guide.html" />
+    <link rel="alternate" hreflang="x-default" href="https://huggybugi.hammerturtle.xyz/guide.html" />
+    </head>
+  <body class="bg-sky font-sans text-ink">
+    <header class="top">
+      <a class="logo" href="./">Huggybugi</a>
+      <a href="./guide.html">How to make one</a>
+      <a href="./cut.html">From one picture</a>
+      <a class="dl" href="./#download">Download</a>
+      <details class="langs"><summary><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="m22 22-5-10-5 10"/><path d="M14 18h6"/></svg><span>English</span></summary><nav class="langmenu"><a href="/guide.html">한국어</a><a href="/en/guide.html" aria-current="page">English<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></a><a href="/ja/guide.html">日本語</a><a href="/zh-hans/guide.html">简体中文</a><a href="/zh-hant/guide.html">繁體中文</a><a href="/es/guide.html">Español</a><a href="/pt/guide.html">Português (Brasil)</a></nav></details>
+    </header>
+    <div class="pg-phero"><h1>How to make characters and items</h1><p>Make it easily with an image AI, or draw and upload it yourself.</p></div>
+    <div class="pg-doc">
+      <details class="pg-toc"><summary>Contents</summary><ol><li><a href="#s0">Make with an image AI</a></li><li><a href="#draw">Draw it yourself</a></li><li><a href="#s1">Uploading</a></li><li><a href="#s2">Add them all at once</a></li><li><a href="#skill">Make with the Claude or Codex skill</a></li></ol></details>
+      <main class="pg-body">
+      <div class="pg-paths">
+        <div class="pg-path main">
+          <p class="pg-pt">Make with an image AI <span class="font-normal text-dim">· Easiest</span></p>
+          <p>Cut one picture from an image AI into one picture per action.</p>
+          <a href="./cut.html" class="btnp">Get started</a>
+        </div>
+        <div class="pg-path">
+          <p class="pg-pt">Draw it yourself</p>
+          <p>Draw one PNG per action in a tool like Piskel.</p>
+          <a href="#draw" class="btns">See the spec and template</a>
+        </div>
+      </div>
+      <p class="text-sm text-dim">If you use Claude or Codex, you can also <a href="#skill">make it with the skill</a>.</p>
+
+      <h2 id="s0">Make with an image AI</h2>
+      <ol>
+        <li>Copy the prompt from <a href="./cut.html">Make from one picture</a>.</li>
+        <li>Paste it into an image AI like ChatGPT or Gemini. Add a photo of your character too, if you have one.</li>
+        <li>Approve the base look, then pick actions or say "You decide".</li>
+        <li>Upload the picture you got to that page and it gets cut per action.</li>
+        <li>Compare with Ddeoggi for size, tidy up, and download the zip.</li>
+        <li>Drag the zip into the app Create window.</li>
+      </ol>
+      <p>You can upload once you have idle, walk and sleep.</p>
+
+      <h2 id="draw">Draw it yourself</h2>
+      <p>One PNG per action, with the frames laid out side by side.</p>
+      <h3>Specs</h3>
+      <ul>
+        <li>48×48 frames, up to 8 frames per action (4 frames makes 192×48)</li>
+        <li>Transparent background, 200KB or less per file (the app re-saves bigger ones to shrink them)</li>
+        <li>Sound effect wav: 50KB or less</li>
+        <li>Facing front with the face turned slightly right, or facing right (the app flips it for left)</li>
+        <li>Character and poop touch the bottom row, centered horizontally</li>
+        <li>Throwables and food go in the center of the frame</li>
+        <li>Character size: 800 to 1200 painted pixels, 30 to 46 pixels tall (bigger if the body is thin)</li>
+        <li>The app doesn't scale up, so a small drawing looks tiny next to friends' characters</li>
+      </ul>
+
+      <h3>Character actions</h3>
+      <p>You only need <code>idle</code>, <code>walk</code>, and <code>sleep</code>. The "If missing" actions cover the rest.</p>
+      <table>
+        <thead><tr><th>Action</th><th>When</th><th>Suggested</th><th>If missing</th></tr></thead>
+        <tbody>
+          <tr><td><code>idle</code> required</td><td>Standing still</td><td>2 frames, 2fps</td><td></td></tr>
+          <tr><td><code>walk</code> required</td><td>Walking</td><td>4 frames, 6fps</td><td></td></tr>
+          <tr><td><code>sleep</code> required</td><td>Away for 30 minutes or screen locked (the app draws the Zzz)</td><td>2 frames, 1fps</td><td></td></tr>
+          <tr><td><code>poked</code></td><td>Poked</td><td>2 frames, 8fps</td><td><code>idle</code></td></tr>
+          <tr><td><code>throw</code></td><td>Throwing</td><td>3 frames, 10fps</td><td><code>idle</code></td></tr>
+          <tr><td><code>hit</code></td><td>Getting hit</td><td>2 frames, 8fps</td><td><code>poked</code></td></tr>
+          <tr><td><code>jump</code></td><td>Dodging, jump action</td><td>2 frames, 8fps</td><td><code>idle</code></td></tr>
+          <tr><td><code>eat</code></td><td>Being fed, yum action</td><td>3 frames, 6fps</td><td><code>happy</code></td></tr>
+          <tr><td><code>wave</code></td><td>Greeting a friend who came online, hi action</td><td>3 frames, 6fps</td><td><code>happy</code></td></tr>
+          <tr><td><code>happy</code></td><td>Being petted, happy action</td><td>2 frames, 4fps</td><td><code>idle</code></td></tr>
+          <tr><td><code>offline</code></td><td>Offline (knocked out)</td><td>1 frame, 1fps</td><td>Stone</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Item actions</h3>
+      <table>
+        <thead><tr><th>Action</th><th>When</th><th>Suggested</th><th>If missing</th></tr></thead>
+        <tbody>
+          <tr><td><code>fly</code> required</td><td>While flying. For poop, how it looks on the floor</td><td>1 frame for throwables, 1 to 4 for food, 12fps (1 frame for poop)</td><td></td></tr>
+          <tr><td><code>impact</code></td><td>The moment it hits (throwables only, food is eaten on arrival)</td><td>3 frames, 12fps</td><td>The star burst the app draws</td></tr>
+        </tbody>
+      </table>
+      <ul>
+        <li>The app spins it when you turn on "Spin while flying" (it's off for new ones)</li>
+        <li>A throwable with it off flies facing its direction. Draw it facing right</li>
+        <li>Food with it off flies as drawn. Draw it standing upright</li>
+        <li>If it looks still, add motion with frames (bouncing, sparkles)</li>
+        <li>The sound plays on impact (for poop, when it lands)</li>
+        <li>With no sound, throwables and food are silent, and poop makes a "poot" sound</li>
+      </ul>
+      <h3>Example: toy hammer</h3>
+      <p>One of the built-in items. <code>fly</code> is a single frame, but it spins while flying (food does not).</p>
+      <table class="[&_img]:[image-rendering:pixelated]">
+        <thead><tr><th>Action</th><th>Motion</th><th>What you upload (4x)</th></tr></thead>
+        <tbody>
+          <tr><td><code>fly</code><br><span class="text-dim">While it flies</span></td><td><img src="../assets/guide/hammer-fly.png" alt="Toy hammer fly" width="96" /></td><td><img src="../assets/guide/hammer-fly-strip-x4.png" alt="fly 1 frame" /></td></tr>
+          <tr><td><code>impact</code><br><span class="text-dim">The moment it hits</span></td><td><img src="../assets/guide/hammer-impact.png" alt="Toy hammer impact" width="96" /></td><td><img src="../assets/guide/hammer-impact-strip-x4.png" alt="impact 3 frames" /></td></tr>
+        </tbody>
+      </table>
+      <p>Download at real size: <a href="../assets/guide/hammer-fly-strip.png" download>fly</a>, <a href="../assets/guide/hammer-impact-strip.png" download>impact</a>, <a href="../assets/guide/hammer.zip" download>Download all (zip)</a></p>
+      <h3>Poop</h3>
+      <ul>
+        <li>One <code>fly</code> picture is enough. Draw it as it lies on the floor, with no rotation</li>
+        <li>The app doesn't shrink it and draws the full 48×48 cells</li>
+        <li>Draw it small at the bottom center of the frame and leave the top empty</li>
+        <li>The default poop is 17 wide and 12 tall</li>
+        <li>It doesn't have to be poop. A mini pumpkin, a coffin, or a ball of yarn works too</li>
+        <li>Keep it inside the bottom center 24×24</li>
+      </ul>
+      <table class="[&_img]:[image-rendering:pixelated]">
+        <thead><tr><th>Action</th><th>Motion</th><th>What you upload (4x)</th></tr></thead>
+        <tbody>
+          <tr><td><code>fly</code><br><span class="text-dim">Lying on the floor</span></td><td><img src="../assets/guide/poop-fly.png" alt="Default poop fly" width="96" /></td><td><img src="../assets/guide/poop-fly-strip-x4.png" alt="fly 1 frame" /></td></tr>
+        </tbody>
+      </table>
+      <p>Download at real size: <a href="../assets/guide/poop-fly-strip.png" download>fly</a></p>
+
+      <h3>Example: Ddeoggi</h3>
+      <ul>
+        <li>Every action of Ddeoggi, made from a penguin doll</li>
+        <li>Same body with only the pose changed, so the actions stay consistent, with the recommended frame counts</li>
+      </ul>
+      <details>
+        <summary class="cursor-pointer font-bold">See all Ddeoggi actions</summary>
+        <table class="[&_img]:[image-rendering:pixelated]">
+        <thead><tr><th>Action</th><th>Motion</th><th>What you upload (4x)</th></tr></thead>
+        <tbody>
+          <tr><td><code>idle</code><br><span class="text-dim">Standing still</span></td><td><img src="../assets/guide/ddeoggi-idle.png" alt="Ddeoggi idle" width="96" /></td><td><img src="../assets/guide/ddeoggi-idle-strip-x4.png" alt="idle 2 frames" /></td></tr>
+          <tr><td><code>walk</code><br><span class="text-dim">Walking</span></td><td><img src="../assets/guide/ddeoggi-walk.png" alt="Ddeoggi walk" width="96" /></td><td><img src="../assets/guide/ddeoggi-walk-strip-x4.png" alt="walk 4 frames" /></td></tr>
+          <tr><td><code>sleep</code><br><span class="text-dim">Asleep</span></td><td><img src="../assets/guide/ddeoggi-sleep.png" alt="Ddeoggi sleep" width="96" /></td><td><img src="../assets/guide/ddeoggi-sleep-strip-x4.png" alt="sleep 2 frames" /></td></tr>
+          <tr><td><code>poked</code><br><span class="text-dim">Poked</span></td><td><img src="../assets/guide/ddeoggi-poked.png" alt="Ddeoggi poked" width="96" /></td><td><img src="../assets/guide/ddeoggi-poked-strip-x4.png" alt="poked 2 frames" /></td></tr>
+          <tr><td><code>throw</code><br><span class="text-dim">Throwing</span></td><td><img src="../assets/guide/ddeoggi-throw.png" alt="Ddeoggi throw" width="96" /></td><td><img src="../assets/guide/ddeoggi-throw-strip-x4.png" alt="throw 3 frames" /></td></tr>
+          <tr><td><code>hit</code><br><span class="text-dim">Getting hit</span></td><td><img src="../assets/guide/ddeoggi-hit.png" alt="Ddeoggi hit" width="96" /></td><td><img src="../assets/guide/ddeoggi-hit-strip-x4.png" alt="hit 2 frames" /></td></tr>
+          <tr><td><code>jump</code><br><span class="text-dim">Dodging, jumping</span></td><td><img src="../assets/guide/ddeoggi-jump.png" alt="Ddeoggi jump" width="96" /></td><td><img src="../assets/guide/ddeoggi-jump-strip-x4.png" alt="jump 2 frames" /></td></tr>
+          <tr><td><code>eat</code><br><span class="text-dim">Being fed</span></td><td><img src="../assets/guide/ddeoggi-eat.png" alt="Ddeoggi eat" width="96" /></td><td><img src="../assets/guide/ddeoggi-eat-strip-x4.png" alt="eat 3 frames" /></td></tr>
+          <tr><td><code>wave</code><br><span class="text-dim">Greeting</span></td><td><img src="../assets/guide/ddeoggi-wave.png" alt="Ddeoggi wave" width="96" /></td><td><img src="../assets/guide/ddeoggi-wave-strip-x4.png" alt="wave 3 frames" /></td></tr>
+          <tr><td><code>happy</code><br><span class="text-dim">Petting</span></td><td><img src="../assets/guide/ddeoggi-happy.png" alt="Ddeoggi happy" width="96" /></td><td><img src="../assets/guide/ddeoggi-happy-strip-x4.png" alt="happy 2 frames" /></td></tr>
+          <tr><td><code>offline</code><br><span class="text-dim">Offline</span></td><td><img src="../assets/guide/ddeoggi-offline.png" alt="Ddeoggi offline" width="96" /></td><td><img src="../assets/guide/ddeoggi-offline-strip-x4.png" alt="offline 1 frame" /></td></tr>
+        </tbody>
+      </table>
+        <p>Download at real size: <a href="../assets/guide/ddeoggi-idle-strip.png" download>idle</a>, <a href="../assets/guide/ddeoggi-walk-strip.png" download>walk</a>, <a href="../assets/guide/ddeoggi-sleep-strip.png" download>sleep</a>, <a href="../assets/guide/ddeoggi-poked-strip.png" download>poked</a>, <a href="../assets/guide/ddeoggi-throw-strip.png" download>throw</a>, <a href="../assets/guide/ddeoggi-hit-strip.png" download>hit</a>, <a href="../assets/guide/ddeoggi-jump-strip.png" download>jump</a>, <a href="../assets/guide/ddeoggi-eat-strip.png" download>eat</a>, <a href="../assets/guide/ddeoggi-wave-strip.png" download>wave</a>, <a href="../assets/guide/ddeoggi-happy-strip.png" download>happy</a>, <a href="../assets/guide/ddeoggi-offline-strip.png" download>offline</a>, <a href="../assets/guide/ddeoggi.zip" download>Download all (zip)</a></p>
+      </details>
+
+      <h3>Templates</h3>
+      <ul>
+        <li>Get a template with an example for each action from "Get template" in the Create window (the app hamster, an acorn for items)</li>
+        <li>Blank templates: <a href="../assets/guide/template-2frames.png" download>2 frames</a>, <a href="../assets/guide/template-4frames.png" download>4 frames</a>, <a href="../assets/guide/template-8frames.png" download>8 frames</a>, <a href="../assets/guide/templates.zip" download>Download all (zip)</a></li>
+        <li>Draw on a layer below it, then <strong>turn off the template layer and save</strong></li>
+        <li>The red line is the foot baseline</li>
+        <li>Drawing tools: <a href="https://www.piskelapp.com/">Piskel</a>(web, free), <a href="https://libresprite.github.io/">LibreSprite</a>(free), <a href="https://www.aseprite.org/">Aseprite</a>(paid)</li>
+      </ul>
+
+      <h3>Check before uploading</h3>
+      <ul class="list-none! pl-0! [&_li]:before:mr-2 [&_li]:before:content-['☐']">
+        <li>48 tall, a multiple of 48 wide, 8 frames or fewer</li>
+        <li>Transparent background, no template lines left</li>
+        <li>Not all four corners of a frame are filled (if they are, it is treated as a leftover background and rejected)</li>
+        <li>Facing right, feet on the bottom row, same position in every frame</li>
+      </ul>
+
+      <h2 id="s1">Uploading</h2>
+      <ol>
+        <li>In the tray menu "Character > Create…", pick the Characters, Items, or Emotes tab.</li>
+        <li>Press "+ New" and enter a name (up to 20 characters).</li>
+        <li>Pick a PNG for each action, or drag one onto its slot.</li>
+        <li>Save it and it shows up in your list. Edit or delete it from the same place.</li>
+      </ol>
+      <ul>
+        <li>The recommended fps is already filled in</li>
+        <li>For items, also pick the kind (throwable, food, poop) and a sound effect wav</li>
+        <li>You can also open it with the <b>+</b> card at the start of the change character, item, and emote windows</li>
+        <li>The character you pick shows right away</li>
+        <li>On friends' screens it shows up when they open the tray "Character > Change…" window or click "Get new characters and items"</li>
+      </ul>
+      <h3>Using food and poop</h3>
+      <ul>
+        <li>Food: right-click a friend, pick one under "Food", then click the friend</li>
+        <li>Every click feeds them until you pick "Throwable" again</li>
+        <li>Poop: the <code>fly</code> picture is drawn as poop lying on the floor (it isn't thrown or used as food)</li>
+        <li>Your character poops the one you picked when it's full</li>
+        <li>Poop a friend hasn't received yet shows as the default poop until they get it</li>
+      </ul>
+
+      <h3>Emotes</h3>
+      <ul>
+        <li>In the "Emotes" tab, pick a GIF, WebP, APNG, PNG, or JPG</li>
+        <li>The app shrinks it to 64px and saves it at its original speed</li>
+        <li>Only friends in the same group see it</li>
+      </ul>
+      <table>
+        <thead><tr><th>Where</th><th>How</th></tr></thead>
+        <tbody>
+          <tr><td>Above head</td><td>Your character menu "Emotes" (⌃⌥⌘E, Ctrl+Alt+E on Windows)</td></tr>
+          <tr><td>Speech bubble</td><td>Type <code>:</code> in a message and pick a name, and it goes in as <code>:name:</code></td></tr>
+          <tr><td>Status</td><td>The emoji button in the "Status" tab of the status and nickname window</td></tr>
+          <tr><td>Reaction</td><td>Attach it to a message in the chat history</td></tr>
+        </tbody>
+      </table>
+      <details>
+        <summary class="cursor-pointer font-bold">Details</summary>
+        <ul>
+          <li>Pick up to 16 frames and save</li>
+          <li>Original up to 20MB, up to 2048px wide and tall</li>
+          <li>Names go up to 20 characters and can't repeat within a group</li>
+          <li>You can't use <code>:</code> or spaces, because they break <code>:name:</code> in a message</li>
+          <li>You also can't use default emote names (heart, question, exclamation, angry, lol, note, 쪽지)</li>
+        </ul>
+      </details>
+
+      <h2 id="s2">Add them all at once</h2>
+      <ul>
+        <li>Zip your PNGs into one file and drag it onto the Create window</li>
+        <li>You can also pick a zip file or folder from "Add in bulk"</li>
+        <li>It shows which slot each file goes to before adding</li>
+        <li>For files whose names don't match, pick the slot yourself</li>
+        <li>The "Download all" zip above uses these names too, so you can try adding it as is</li>
+      </ul>
+      <p>File names are <strong>exactly the action names</strong> (case doesn't matter, folders inside the zip are fine).</p>
+      <ul>
+        <li>Characters: <code>idle.png</code> <code>walk.png</code> <code>sleep.png</code> <code>poked.png</code> <code>throw.png</code> <code>hit.png</code> <code>jump.png</code> <code>eat.png</code> <code>wave.png</code> <code>happy.png</code> <code>offline.png</code></li>
+        <li>Items: <code>fly.png</code> <code>impact.png</code>, sound <code>sound.wav</code> (just <code>fly.png</code> for poop)</li>
+      </ul>
+
+      <h2 id="skill">Make with the Claude or Codex skill</h2>
+      <ul>
+        <li>Install the <b>Claude Code or Codex</b> plugin from a terminal (paste the commands below)</li>
+        <li>Send a photo and say "Make me a Huggybugi character"</li>
+        <li>It draws 11 actions (poop, throwable, and food too if you want) and gives you a zip to add as in "Add them all at once" above</li>
+        <li>New versions come along with plugin updates</li>
+      </ul>
+      <pre># Claude Code
+claude plugin marketplace add Zaehyeon2/huggybugi
+claude plugin install huggybugi@huggybugi
+
+# Codex
+codex plugin marketplace add Zaehyeon2/huggybugi
+codex plugin add huggybugi@huggybugi</pre>
+      </main>
+    </div>
+    <footer>
+      <div class="links">
+        <span>Huggybugi</span>
+        <a class="privacy" href="./privacy.html">Privacy Policy</a>
+        <a href="./terms.html">Terms of Service</a>
+        
+        <a href="mailto:support@hammerturtle.xyz">support@hammerturtle.xyz</a>
+      </div>
+      <p class="biz">Hammer Turtle Lab · Kim Jaehyeon · Business registration 794-02-03917</p>
+      <p class="biz">115 Cheonhodae-ro 110-gil, Gwangjin-gu, Seoul, Republic of Korea</p>
+      <p class="biz">Phone 070-5275-5737</p>
+      <p class="biz">Hosting GitHub, Inc. · Server Cloudflare, Inc.</p>
+    </footer>
+    <script>if(innerWidth>900)document.querySelector('.pg-toc').open=true;</script>
+  </body>
+</html>
