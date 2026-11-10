@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <title>Google login - Huggybugi</title>
+    <meta name="theme-color" content="#dff1ff" />
+    <link rel="icon" type="image/png" href="../assets/favicon.png" />
+    <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png" />
+    <link rel="stylesheet" href="../site.css" />
+  <link rel="alternate" hreflang="ko" href="https://huggybugi.hammerturtle.xyz/oauth.html" />
+    <link rel="alternate" hreflang="en" href="https://huggybugi.hammerturtle.xyz/en/oauth.html" />
+    <link rel="alternate" hreflang="ja" href="https://huggybugi.hammerturtle.xyz/ja/oauth.html" />
+    <link rel="alternate" hreflang="zh-Hans" href="https://huggybugi.hammerturtle.xyz/zh-hans/oauth.html" />
+    <link rel="alternate" hreflang="zh-Hant" href="https://huggybugi.hammerturtle.xyz/zh-hant/oauth.html" />
+    <link rel="alternate" hreflang="es" href="https://huggybugi.hammerturtle.xyz/es/oauth.html" />
+    <link rel="alternate" hreflang="pt-BR" href="https://huggybugi.hammerturtle.xyz/pt/oauth.html" />
+    <link rel="alternate" hreflang="x-default" href="https://huggybugi.hammerturtle.xyz/oauth.html" />
+    </head>
+  <body class="bg-sky font-sans text-ink">
+    <div class="pg-scene">
+      <div class="pg-card" data-state="code" hidden>
+        <img class="pg-card-sprite" src="../assets/guide/ddeoggi-happy-strip.png" alt="" />
+        <h1>You are logged in</h1>
+        <p>Going back to the app. If it does not open, tap below.</p>
+        <a data-app href="./" class="pg-card-btn">Open the app</a>
+        <p class="pg-card-note">You can close this window.</p>
+      </div>
+      <div class="pg-card" data-state="linked" hidden>
+        <img class="pg-card-sprite" src="../assets/guide/ddeoggi-happy-strip.png" alt="" />
+        <h1>Google is linked</h1>
+        <p>You can now log in with Google too.</p>
+        <a data-app href="./" class="pg-card-btn">Open the app</a>
+        <p class="pg-card-note">You can close this window.</p>
+      </div>
+      <div class="pg-card" data-state="signup_disabled" hidden>
+        <img class="pg-card-sprite" src="../assets/guide/ddeoggi-hit-strip.png" alt="" />
+        <h1>Couldn't log in</h1>
+        <p>No account uses this Google account yet.</p>
+        <p class="pg-card-dim">In the app, open the Sign up tab, accept the terms, then choose Sign up with Google.</p>
+        <a data-app href="./" class="pg-card-btn pg-card-btn-line">Back to the app</a>
+      </div>
+      <div class="pg-card" data-state="account_not_linked" hidden>
+        <img class="pg-card-sprite" src="../assets/guide/ddeoggi-hit-strip.png" alt="" />
+        <h1>Couldn't log in</h1>
+        <p>This email has a sign-up that was never verified.</p>
+        <p class="pg-card-dim">Open the verification link in your email, then try again.</p>
+        <a data-app href="./" class="pg-card-btn pg-card-btn-line">Back to the app</a>
+      </div>
+      <div class="pg-card" data-state="account_already_linked_to_different_user" hidden>
+        <img class="pg-card-sprite" src="../assets/guide/ddeoggi-hit-strip.png" alt="" />
+        <h1>Couldn't link</h1>
+        <p>This Google account is linked to another Huggybugi account.</p>
+        <p class="pg-card-dim">Unlink it there or delete that account, then try again.</p>
+        <a data-app href="./" class="pg-card-btn pg-card-btn-line">Back to the app</a>
+      </div>
+      <div class="pg-card" data-state="failed" hidden>
+        <img class="pg-card-sprite" src="../assets/guide/ddeoggi-sleep-strip.png" alt="" />
+        <h1>Couldn't log in</h1>
+        <p>The time ran out or something went wrong.</p>
+        <p class="pg-card-dim">Press the Google button in the app again.</p>
+        <a data-app href="./" class="pg-card-btn pg-card-btn-line">Back to the app</a>
+      </div>
+    </div>
+    <script type="module" src="../oauth.js"></script>
+  </body>
+</html>
