@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Criar com uma só imagem - Huggybugi</title>
+    <meta name="description" content="Corte por ação uma imagem de uma IA e transforme em arquivos para colocar no Huggybugi." />
+    <meta name="theme-color" content="#dff1ff" />
+    <link rel="icon" type="image/png" href="../assets/favicon.png" />
+    <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://huggybugi.hammerturtle.xyz/pt/cut.html" />
+    <meta property="og:title" content="Criar com uma só imagem - Huggybugi" />
+    <meta property="og:description" content="Corte por ação uma imagem de uma IA e transforme em arquivos para colocar no Huggybugi." />
+    <meta property="og:image" content="https://huggybugi.hammerturtle.xyz/assets/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="stylesheet" href="../site.css" />
+    <script type="module" src="../cut.js"></script>
+  <link rel="alternate" hreflang="ko" href="https://huggybugi.hammerturtle.xyz/cut.html" />
+    <link rel="alternate" hreflang="en" href="https://huggybugi.hammerturtle.xyz/en/cut.html" />
+    <link rel="alternate" hreflang="ja" href="https://huggybugi.hammerturtle.xyz/ja/cut.html" />
+    <link rel="alternate" hreflang="zh-Hans" href="https://huggybugi.hammerturtle.xyz/zh-hans/cut.html" />
+    <link rel="alternate" hreflang="zh-Hant" href="https://huggybugi.hammerturtle.xyz/zh-hant/cut.html" />
+    <link rel="alternate" hreflang="es" href="https://huggybugi.hammerturtle.xyz/es/cut.html" />
+    <link rel="alternate" hreflang="pt-BR" href="https://huggybugi.hammerturtle.xyz/pt/cut.html" />
+    <link rel="alternate" hreflang="x-default" href="https://huggybugi.hammerturtle.xyz/cut.html" />
+    </head>
+  <body class="bg-sky font-sans text-ink">
+    <header class="top">
+      <a class="logo" href="./">Huggybugi</a>
+      <a href="./guide.html">Como criar</a>
+      <a href="./cut.html">Com uma só imagem</a>
+      <a class="dl" href="./#download">Baixar</a>
+      <details class="langs"><summary><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="m22 22-5-10-5 10"/><path d="M14 18h6"/></svg><span>Português (Brasil)</span></summary><nav class="langmenu"><a href="/cut.html">한국어</a><a href="/en/cut.html">English</a><a href="/ja/cut.html">日本語</a><a href="/zh-hans/cut.html">简体中文</a><a href="/zh-hant/cut.html">繁體中文</a><a href="/es/cut.html">Español</a><a href="/pt/cut.html" aria-current="page">Português (Brasil)<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></a></nav></details>
+    </header>
+    <div class="pg-phero"><h1>Criar com uma só imagem</h1><p>Receba uma imagem de uma IA e envie, e ela corta por ação em arquivos para o app.</p></div>
+    <main class="mx-auto max-w-5xl px-4 pt-5 pb-8">
+            <nav class="flex gap-1 rounded-full border border-line bg-white p-1" aria-label="Etapa">
+        <button type="button" data-go="1" class="flex-1 rounded-full min-h-11 px-3 py-2 text-sm font-semibold">1 Prompt</button>
+        <button type="button" data-go="2" class="flex-1 rounded-full min-h-11 px-3 py-2 text-sm font-semibold">2 Enviar</button>
+        <button id="tab3" type="button" data-go="3" class="flex-1 rounded-full min-h-11 px-3 py-2 text-sm font-semibold disabled:opacity-40" disabled>3 Ajustar</button>
+      </nav>
+
+      <section data-step="1" class="mt-5 rounded-3xl border border-line bg-white p-5">
+        <h2 class="font-pixel text-2xl">Pedir para a IA</h2>
+        <fieldset class="mt-3 grid grid-cols-4 gap-1 rounded-2xl bg-sky p-1" aria-label="Tipo a criar">
+          <button type="button" data-kind="char" class="rounded-xl px-2 py-2 text-sm font-semibold">Personagem</button>
+          <button type="button" data-kind="throw" class="rounded-xl px-2 py-2 text-sm font-semibold">Para jogar</button>
+          <button type="button" data-kind="food" class="rounded-xl px-2 py-2 text-sm font-semibold">Comida</button>
+          <button type="button" data-kind="poop" class="rounded-xl px-2 py-2 text-sm font-semibold">Cocô</button>
+        </fieldset>
+        <ol class="mt-3 list-decimal space-y-1 pl-5 text-sm text-dim">
+          <li>Copie o prompt e cole no Gemini ou ChatGPT.</li>
+          <li id="kindhint"></li>
+          <li id="kindhint2"></li>
+        </ol>
+        <button id="copy" type="button" class="mt-4 w-full rounded-2xl border-2 border-ink bg-sun px-4 py-3 font-pixel text-lg sm:w-auto">Copiar prompt</button>
+        <details class="mt-4">
+          <summary class="cursor-pointer text-sm font-semibold">Ver o prompt</summary>
+          <pre id="prompt" class="mt-2 max-h-72 overflow-auto rounded-xl bg-sky p-3 text-xs whitespace-pre-wrap"></pre>
+        </details>
+        <button type="button" data-next="2" class="mt-4 block text-sm font-semibold text-sea underline">Já tenho a imagem, próximo</button>
+      </section>
+
+      <section data-step="2" hidden class="mt-5 rounded-3xl border border-line bg-white p-5">
+        <h2 class="font-pixel text-2xl">Enviar a imagem</h2>
+        <p id="kindnow" class="mt-2 text-sm text-dim"></p>
+        <label id="drop" class="mt-3 flex cursor-pointer flex-col items-center gap-3 rounded-2xl border-2 border-dashed border-line p-6 text-center">
+          <img id="inimg" class="hidden h-48 max-w-full rounded-lg border border-line object-contain" alt="Imagem enviada" />
+          <span class="text-sm font-semibold">Clique para escolher ou arraste e solte (PNG ou JPG)</span>
+          <span class="text-xs text-dim">A imagem é processada só neste dispositivo e não é enviada a nenhum servidor.</span>
+          <input id="file" type="file" accept="image/png,image/jpeg" class="sr-only" />
+        </label>
+        <p id="uperror" role="alert" class="mt-2 hidden text-sm font-semibold text-red-600"></p>
+        <button id="cut" type="button" class="mt-4 hidden w-full rounded-2xl border-2 border-ink bg-sun px-4 py-3 font-pixel text-lg disabled:opacity-40 sm:w-auto">Cortar</button>
+      </section>
+
+      <div data-step="3" hidden class="mt-5 lg:grid lg:grid-cols-[320px_1fr] lg:items-start lg:gap-5">
+        <aside class="rounded-3xl border border-line bg-white p-4 lg:sticky lg:top-4">
+          <div class="flex items-center justify-between gap-2">
+            <p id="count" class="text-sm"></p>
+            <button id="undo" type="button" class="rounded-lg border border-line bg-white px-2 py-1.5 text-xs font-semibold disabled:opacity-30">Desfazer</button>
+          </div>
+          <div id="charTips" class="mt-3 rounded-2xl bg-sky p-3">
+            <p class="text-sm font-semibold">Confira antes de baixar</p>
+            <ul class="mt-2 space-y-2 text-xs leading-relaxed text-dim">
+              <li><b class="text-ink">As ações estão certas?</b> A IA pode ter mudado a ordem. Toque em uma imagem para movê-lo para a ação certa (no PC também dá para arrastar), ou escolha uma ação na lista se a linha inteira estiver errada.</li>
+              <li><b class="text-ink">Está olhando para a direita?</b> Deve olhar para a frente ou para a direita. Se olhar para a esquerda, toque em Inverter nessa linha.</li>
+              <li><b class="text-ink">O tamanho está bom?</b> Compare com o Ddeoggi em cada linha e ajuste com o controle deslizante. Um corpo cortado fica marcado em vermelho.</li>
+            </ul>
+          </div>
+          <div id="itemTips" class="mt-3 hidden rounded-2xl bg-sky p-3">
+            <p class="text-sm font-semibold">Confira antes de baixar</p>
+            <ul class="mt-2 space-y-2 text-xs leading-relaxed text-dim">
+              <li><b class="text-ink">A direção está certa?</b> O que tem direção, como uma flecha, deve apontar para a direita. Ajuste com Inverter ou Girar 90°.</li>
+              <li><b class="text-ink">O tamanho está bom?</b> Compare com o item padrão e ajuste com o controle deslizante. O que for cortado fica marcado em vermelho.</li>
+              <li><b class="text-ink">O movimento está bom?</b> Veja como ele voa com "Ver girando". O giro de verdade é escolhido na janela Criar do app.</li>
+            </ul>
+          </div>
+          <details class="mt-3" open>
+            <summary class="cursor-pointer text-sm font-semibold">Ajustes gerais</summary>
+            <div class="mt-2 space-y-2 text-xs font-semibold">
+              <label class="flex items-center gap-2"><span class="w-9 shrink-0">Tamanho</span><input id="zoom" type="range" min="100" max="150" step="25" value="100" class="min-w-0 flex-1 accent-sea" /><span id="zv" class="w-10 text-right">100%</span></label>
+              <label class="flex items-center gap-2"><span class="w-9 shrink-0">Brilho</span><input id="bri" type="range" min="70" max="130" step="5" value="100" class="min-w-0 flex-1 accent-sea" /><span id="briv" class="w-10 text-right">100%</span></label>
+              <label class="flex items-center gap-2"><span class="w-9 shrink-0">Saturação</span><input id="sat" type="range" min="0" max="200" step="10" value="100" class="min-w-0 flex-1 accent-sea" /><span id="satv" class="w-10 text-right">100%</span></label>
+              <label class="flex items-center gap-2"><span class="w-9 shrink-0">Cores</span><input id="col" type="range" min="0" max="2" step="1" value="1" class="min-w-0 flex-1 accent-sea" /><span id="colv" class="w-10 text-right">32</span></label>
+              <div class="flex flex-wrap gap-x-4 gap-y-1 pt-1">
+                <label class="flex items-center gap-1.5"><input id="fringe" type="checkbox" checked />Tirar borrado</label>
+                <label class="flex items-center gap-1.5"><input id="junk" type="checkbox" checked />Tirar manchinhas</label>
+              </div>
+            </div>
+          </details>
+          <p id="clipmsg" class="mt-2 hidden text-xs font-semibold text-red-600">Imagens com o corpo cortado aparecem em vermelho. Tente diminuir o tamanho.</p>
+          <div id="trash" class="mt-3 hidden rounded-xl border-2 border-dashed border-line p-2 text-center text-xs text-dim lg:block">Arraste aqui as imagens que não precisa</div>
+          <button type="button" class="zipb mt-3 hidden w-full rounded-2xl border-2 border-ink bg-sun px-4 py-3 font-pixel text-lg disabled:opacity-40 lg:block">Baixar zip</button>
+          <p id="ziperror" role="alert" class="fixed inset-x-3 bottom-20 z-20 hidden rounded-lg bg-white p-2 text-xs font-semibold text-red-600 shadow lg:static lg:mt-2 lg:p-0 lg:shadow-none"></p>
+          <p id="emptymsg" class="mt-2 hidden text-xs font-semibold text-red-600">Parado, andar e dormir são obrigatórios.</p>
+          <p class="mt-2 hidden text-xs text-dim lg:block">Arraste para a janela Criar do app e cada ação entra no lugar.</p>
+          <p class="mt-2 text-xs text-dim lg:hidden">Se baixou no celular, coloque na janela Criar do app de PC.</p>
+        </aside>
+        <div class="mt-4 min-w-0 space-y-3 lg:mt-0">
+          <section id="removed" class="hidden rounded-2xl border border-dashed border-line bg-white p-3">
+            <p class="text-sm font-semibold">Imagem removida <span class="font-normal text-dim">Clique para voltar à ação original.</span></p>
+            <div id="removedList" class="mt-2 flex flex-wrap gap-1.5"></div>
+          </section>
+          <div id="rows" class="space-y-3"></div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="links">
+        <span>Huggybugi</span>
+        <a class="privacy" href="./privacy.html">Política de Privacidade</a>
+        <a href="./terms.html">Termos de Uso</a>
+        
+        <a href="mailto:support@hammerturtle.xyz">support@hammerturtle.xyz</a>
+      </div>
+      <p class="biz">Hammer Turtle Lab · Kim Jaehyeon · Registro 794-02-03917</p>
+      <p class="biz">115 Cheonhodae-ro 110-gil, Gwangjin-gu, Seoul, Republic of Korea</p>
+      <p class="biz">Telefone 070-5275-5737</p>
+      <p class="biz">Hospedagem GitHub, Inc. · Servidor Cloudflare, Inc.</p>
+    </footer>
+    <div id="action" class="fixed inset-x-0 bottom-0 z-20 hidden border-t border-line bg-white p-3 shadow-2xl">
+      <div class="mx-auto flex max-w-5xl flex-wrap items-center gap-2">
+        <p id="actname" class="w-full text-sm font-semibold sm:w-auto"></p>
+        <select id="actmove" class="min-w-0 flex-1 rounded-lg border border-line bg-white p-2 text-sm sm:flex-none" aria-label="Ação de destino"></select>
+        <button id="actleft" type="button" class="rounded-lg border border-line px-3 py-2 text-sm disabled:opacity-30" aria-label="Mover para antes">←</button>
+        <button id="actright" type="button" class="rounded-lg border border-line px-3 py-2 text-sm disabled:opacity-30" aria-label="Mover para depois">→</button>
+        <span id="actflip" class="contents"></span>
+        <button id="actdel" type="button" class="rounded-lg border border-line px-3 py-2 text-sm text-red-600">Tirar</button>
+        <button id="actundo" type="button" class="rounded-lg border border-line px-3 py-2 text-sm disabled:opacity-30">Desfazer</button>
+        <button id="actclose" type="button" class="ml-auto rounded-lg px-3 py-2 text-sm text-dim">Fechar</button>
+      </div>
+    </div>
+    <div data-step="3" hidden class="fixed inset-x-0 bottom-0 z-10 border-t border-line bg-white p-3 lg:hidden">
+      <button type="button" class="zipb w-full rounded-2xl border-2 border-ink bg-sun px-4 py-3 font-pixel text-lg disabled:opacity-40">Baixar zip</button>
+    </div>
+  </body>
+</html>
