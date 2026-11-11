@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>キャラとアイテムの作り方 - Huggybugi</title>
+    <meta name="description" content="Huggybugi に自分のキャラ・アイテム・エモートをアップロードする方法と仕様" />
+    <meta name="theme-color" content="#dff1ff" />
+    <link rel="icon" type="image/png" href="../assets/favicon.png" />
+    <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://huggybugi.hammerturtle.xyz/ja/guide" />
+    <meta property="og:title" content="キャラとアイテムの作り方 - Huggybugi" />
+    <meta property="og:description" content="Huggybugi に自分のキャラ・アイテム・エモートをアップロードする方法と仕様" />
+    <meta property="og:image" content="https://huggybugi.hammerturtle.xyz/assets/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="ja_JP" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="stylesheet" href="../site.css" />
+    <script type="module" src="../guide.js"></script>
+  <link rel="alternate" hreflang="ko" href="https://huggybugi.hammerturtle.xyz/guide.html" />
+    <link rel="alternate" hreflang="en" href="https://huggybugi.hammerturtle.xyz/en/guide.html" />
+    <link rel="alternate" hreflang="ja" href="https://huggybugi.hammerturtle.xyz/ja/guide.html" />
+    <link rel="alternate" hreflang="zh-Hans" href="https://huggybugi.hammerturtle.xyz/zh-hans/guide.html" />
+    <link rel="alternate" hreflang="zh-Hant" href="https://huggybugi.hammerturtle.xyz/zh-hant/guide.html" />
+    <link rel="alternate" hreflang="es" href="https://huggybugi.hammerturtle.xyz/es/guide.html" />
+    <link rel="alternate" hreflang="pt-BR" href="https://huggybugi.hammerturtle.xyz/pt/guide.html" />
+    <link rel="alternate" hreflang="x-default" href="https://huggybugi.hammerturtle.xyz/guide.html" />
+    <style>:root{--body:"Gowun Dodum",Pretendard,"Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo,sans-serif;--font-sans:Pretendard,"Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo,system-ui,sans-serif}body{font-family:Pretendard,"Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo,sans-serif;word-break:normal}</style>
+    </head>
+  <body class="bg-sky font-sans text-ink">
+    <header class="top">
+      <a class="logo" href="./">Huggybugi</a>
+      <a href="./guide.html">作り方</a>
+      <a href="./cut.html">1枚の絵から</a>
+      <a class="dl" href="./#download">ダウンロード</a>
+      <details class="langs"><summary><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="m22 22-5-10-5 10"/><path d="M14 18h6"/></svg><span>日本語</span></summary><nav class="langmenu"><a href="/guide.html">한국어</a><a href="/en/guide.html">English</a><a href="/ja/guide.html" aria-current="page">日本語<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></a><a href="/zh-hans/guide.html">简体中文</a><a href="/zh-hant/guide.html">繁體中文</a><a href="/es/guide.html">Español</a><a href="/pt/guide.html">Português (Brasil)</a></nav></details>
+    </header>
+    <div class="pg-phero"><h1>キャラとアイテムの作り方</h1><p>画像AIで手軽に作るか、自分で描いてアップロードします。</p></div>
+    <div class="pg-doc">
+      <details class="pg-toc"><summary>目次</summary><ol><li><a href="#s0">画像AIで作る</a></li><li><a href="#draw">自分で描く</a></li><li><a href="#s1">アップロード</a></li><li><a href="#s2">まとめてアップロード</a></li><li><a href="#skill">Claude・Codex スキルで作る</a></li></ol></details>
+      <main class="pg-body">
+      <div class="pg-paths">
+        <div class="pg-path main">
+          <p class="pg-pt">画像AIで作る <span class="font-normal text-dim">· いちばん簡単です</span></p>
+          <p>画像AI からもらった絵 1枚を、動作ごとに切り分けます。</p>
+          <a href="./cut.html" class="btnp">はじめる</a>
+        </div>
+        <div class="pg-path">
+          <p class="pg-pt">自分で描く</p>
+          <p>Piskel のようなツールで、動作ごとに PNG を 1枚ずつ描きます。</p>
+          <a href="#draw" class="btns">仕様とテンプレートを見る</a>
+        </div>
+      </div>
+      <p class="text-sm text-dim">Claude・Codex を使うなら<a href="#skill">スキルで作る</a>方法もあります。</p>
+
+      <h2 id="s0">画像AIで作る</h2>
+      <ol>
+        <li><a href="./cut.html">1枚の絵から作る</a>でプロンプトをコピーします。</li>
+        <li>ChatGPT や Gemini などの画像AI に貼り付けます。キャラクターの写真があれば一緒に送ります。</li>
+        <li>基本の姿を承認して、動作を選ぶか「おまかせで」と言います。</li>
+        <li>もらった絵をそのページにアップすると、動作ごとに切り分けます。</li>
+        <li>トッギと大きさを比べて整え、zip をダウンロードします。</li>
+        <li>アプリの作成ウィンドウに zip をドラッグ&ドロップします。</li>
+      </ol>
+      <p>じっとする・歩く・寝るがあればアップロードできます。</p>
+
+      <h2 id="draw">自分で描く</h2>
+      <p>動作ごとに PNG 1枚。フレームを横に並べてつなげます。</p>
+      <h3>仕様</h3>
+      <ul>
+        <li>キャラのフレームは 96×48、アイテムは 48×48。動作ごとに最大8フレーム(キャラ4フレームなら 384×48)</li>
+        <li>キャラは96マスの真ん中に描きます。横に長いキャラは幅いっぱいに使ってもOK</li>
+        <li>背景は透明、1ファイル 200KB 以下(超えるとアプリが保存し直して小さくします)</li>
+        <li>効果音の wav は 50KB 以下</li>
+        <li>正面で顔だけ少し右向き、または右向き(左向きはアプリが反転します)</li>
+        <li>キャラクターとうんちは一番下の行に接して、横は中央</li>
+        <li>投げるもの・ごはんはフレームの中央</li>
+        <li>キャラクターの大きさ: 塗ったマスが 800〜1200個、高さ 30〜46マス(体が細いならもっと大きく)</li>
+        <li>アプリは拡大しないので、小さく描くと友だちのキャラクターの横で小さく見えます</li>
+      </ul>
+
+      <h3>キャラの動作</h3>
+      <p><code>idle</code>、<code>walk</code>、<code>sleep</code> だけあれば OK です。残りは「無いとき」の欄の動作で代わりにします。</p>
+      <table>
+        <thead><tr><th>動作</th><th>いつ</th><th>おすすめ</th><th>無いとき</th></tr></thead>
+        <tbody>
+          <tr><td><code>idle</code> 必須</td><td>じっとする</td><td>2枚、2fps</td><td></td></tr>
+          <tr><td><code>walk</code> 必須</td><td>歩くとき</td><td>4枚、6fps</td><td></td></tr>
+          <tr><td><code>sleep</code> 必須</td><td>30分の離席、または画面ロック(Zzz はアプリが描きます)</td><td>2枚、1fps</td><td></td></tr>
+          <tr><td><code>poked</code></td><td>つつかれたとき</td><td>2枚、8fps</td><td><code>idle</code></td></tr>
+          <tr><td><code>throw</code></td><td>投げるとき</td><td>3枚、10fps</td><td><code>idle</code></td></tr>
+          <tr><td><code>hit</code></td><td>当たったとき</td><td>2枚、8fps</td><td><code>poked</code></td></tr>
+          <tr><td><code>jump</code></td><td>よけるとき、ジャンプの動作</td><td>2枚、8fps</td><td><code>idle</code></td></tr>
+          <tr><td><code>eat</code></td><td>ごはんをもらうとき、もぐもぐの動作</td><td>3枚、6fps</td><td><code>happy</code></td></tr>
+          <tr><td><code>wave</code></td><td>友だちが来たときのあいさつ、あいさつの動作</td><td>3枚、6fps</td><td><code>happy</code></td></tr>
+          <tr><td><code>happy</code></td><td>なでられたとき、うれしいの動作</td><td>2枚、4fps</td><td><code>idle</code></td></tr>
+          <tr><td><code>offline</code></td><td>オフライン(倒れた姿)</td><td>1枚、1fps</td><td>石</td></tr>
+        </tbody>
+      </table>
+
+      <h3>アイテムの動作</h3>
+      <table>
+        <thead><tr><th>動作</th><th>いつ</th><th>おすすめ</th><th>無いとき</th></tr></thead>
+        <tbody>
+          <tr><td><code>fly</code> 必須</td><td>飛んでいる間。うんちは床に置かれた姿</td><td>投げるものは1枚、ごはんは1~4枚、12fps(うんちは1枚)</td><td></td></tr>
+          <tr><td><code>impact</code></td><td>当たる瞬間(投げるものだけ、ごはんはすぐ食べます)</td><td>3枚、12fps</td><td>アプリが描く星のはじける演出</td></tr>
+        </tbody>
+      </table>
+      <ul>
+        <li>「飛ぶときに回す」をオンにするとアプリが回します(新しく作るとオフです)</li>
+        <li>オフの投げるものは進む方向を向いて飛びます。右向きに描きます</li>
+        <li>オフのごはんは描いたままの向きで飛びます。まっすぐ立った姿で描きます</li>
+        <li>止まって見えるときは、フレームで動きをつけます(ぽよぽよ、きらきら)</li>
+        <li>効果音は当たった瞬間に鳴ります(うんちは落ちたとき)</li>
+        <li>効果音がないと、投げるもの・ごはんは無音で、うんちは「ぷー」と鳴ります</li>
+      </ul>
+      <h3>例: おもちゃのハンマー</h3>
+      <p>標準のアイテムです。<code>fly</code> は1枚だけですが、飛んでいる間は回ります(ごはんは回りません)。</p>
+      <table class="[&_img]:[image-rendering:pixelated]">
+        <thead><tr><th>動作</th><th>動き</th><th>アップロードする形(4倍)</th></tr></thead>
+        <tbody>
+          <tr><td><code>fly</code><br><span class="text-dim">飛んでいる間</span></td><td><img src="../assets/guide/hammer-fly.png" alt="おもちゃのハンマー fly" width="96" /></td><td><img src="../assets/guide/hammer-fly-strip-x4.png" alt="fly 1フレーム" /></td></tr>
+          <tr><td><code>impact</code><br><span class="text-dim">当たる瞬間</span></td><td><img src="../assets/guide/hammer-impact.png" alt="おもちゃのハンマー impact" width="96" /></td><td><img src="../assets/guide/hammer-impact-strip-x4.png" alt="impact 3フレーム" /></td></tr>
+        </tbody>
+      </table>
+      <p>実際の大きさでダウンロード: <a href="../assets/guide/hammer-fly-strip.png" download>fly</a>, <a href="../assets/guide/hammer-impact-strip.png" download>impact</a>, <a href="../assets/guide/hammer.zip" download>まとめてダウンロード(zip)</a></p>
+      <h3>うんち</h3>
+      <ul>
+        <li><code>fly</code> 1枚で OK です。床に置かれた姿で描き、回転はしません</li>
+        <li>アプリは縮小せず、48×48マスのまま描きます</li>
+        <li>フレームの下の中央に小さく描いて、上は空けておきます</li>
+        <li>基本のうんちは幅 17・高さ 12マスです</li>
+        <li>うんちの形でなくても OK です。ミニかぼちゃ、棺、毛糸玉などの小物もいいですよ</li>
+        <li>下の中央の 24×24 の中に収めます</li>
+      </ul>
+      <table class="[&_img]:[image-rendering:pixelated]">
+        <thead><tr><th>動作</th><th>動き</th><th>アップロードする形(4倍)</th></tr></thead>
+        <tbody>
+          <tr><td><code>fly</code><br><span class="text-dim">床に置かれた姿</span></td><td><img src="../assets/guide/poop-fly.png" alt="標準のうんち fly" width="96" /></td><td><img src="../assets/guide/poop-fly-strip-x4.png" alt="fly 1フレーム" /></td></tr>
+        </tbody>
+      </table>
+      <p>実際の大きさでダウンロード: <a href="../assets/guide/poop-fly-strip.png" download>fly</a></p>
+
+      <h3>例: トッギ</h3>
+      <ul>
+        <li>ペンギンのぬいぐるみをもとに作ったトッギの全動作です</li>
+        <li>おすすめの枚数のまま、同じ体でポーズだけ変えているので、動作どうしがずれません</li>
+      </ul>
+      <details>
+        <summary class="cursor-pointer font-bold">トッギの全動作を見る</summary>
+        <table class="[&_img]:[image-rendering:pixelated]">
+        <thead><tr><th>動作</th><th>動き</th><th>アップロードする形(4倍)</th></tr></thead>
+        <tbody>
+          <tr><td><code>idle</code><br><span class="text-dim">じっとする</span></td><td><img src="../assets/guide/ddeoggi-idle.png" alt="トッギ idle" width="96" /></td><td><img src="../assets/guide/ddeoggi-idle-strip-x4.png" alt="idle 2フレーム" /></td></tr>
+          <tr><td><code>walk</code><br><span class="text-dim">歩くとき</span></td><td><img src="../assets/guide/ddeoggi-walk.png" alt="トッギ walk" width="96" /></td><td><img src="../assets/guide/ddeoggi-walk-strip-x4.png" alt="walk 4フレーム" /></td></tr>
+          <tr><td><code>sleep</code><br><span class="text-dim">ねむり</span></td><td><img src="../assets/guide/ddeoggi-sleep.png" alt="トッギ sleep" width="96" /></td><td><img src="../assets/guide/ddeoggi-sleep-strip-x4.png" alt="sleep 2フレーム" /></td></tr>
+          <tr><td><code>poked</code><br><span class="text-dim">つつかれたとき</span></td><td><img src="../assets/guide/ddeoggi-poked.png" alt="トッギ poked" width="96" /></td><td><img src="../assets/guide/ddeoggi-poked-strip-x4.png" alt="poked 2フレーム" /></td></tr>
+          <tr><td><code>throw</code><br><span class="text-dim">投げるとき</span></td><td><img src="../assets/guide/ddeoggi-throw.png" alt="トッギ throw" width="96" /></td><td><img src="../assets/guide/ddeoggi-throw-strip-x4.png" alt="throw 3フレーム" /></td></tr>
+          <tr><td><code>hit</code><br><span class="text-dim">当たったとき</span></td><td><img src="../assets/guide/ddeoggi-hit.png" alt="トッギ hit" width="96" /></td><td><img src="../assets/guide/ddeoggi-hit-strip-x4.png" alt="hit 2フレーム" /></td></tr>
+          <tr><td><code>jump</code><br><span class="text-dim">よける・ジャンプ</span></td><td><img src="../assets/guide/ddeoggi-jump.png" alt="トッギ jump" width="96" /></td><td><img src="../assets/guide/ddeoggi-jump-strip-x4.png" alt="jump 2フレーム" /></td></tr>
+          <tr><td><code>eat</code><br><span class="text-dim">ごはんをもらうとき</span></td><td><img src="../assets/guide/ddeoggi-eat.png" alt="トッギ eat" width="96" /></td><td><img src="../assets/guide/ddeoggi-eat-strip-x4.png" alt="eat 3フレーム" /></td></tr>
+          <tr><td><code>wave</code><br><span class="text-dim">あいさつ</span></td><td><img src="../assets/guide/ddeoggi-wave.png" alt="トッギ wave" width="96" /></td><td><img src="../assets/guide/ddeoggi-wave-strip-x4.png" alt="wave 3フレーム" /></td></tr>
+          <tr><td><code>happy</code><br><span class="text-dim">なでる</span></td><td><img src="../assets/guide/ddeoggi-happy.png" alt="トッギ happy" width="96" /></td><td><img src="../assets/guide/ddeoggi-happy-strip-x4.png" alt="happy 2フレーム" /></td></tr>
+          <tr><td><code>offline</code><br><span class="text-dim">オフライン</span></td><td><img src="../assets/guide/ddeoggi-offline.png" alt="トッギ offline" width="96" /></td><td><img src="../assets/guide/ddeoggi-offline-strip-x4.png" alt="offline 1フレーム" /></td></tr>
+        </tbody>
+      </table>
+        <p>実際の大きさでダウンロード: <a href="../assets/guide/ddeoggi-idle-wide.png" download>idle</a>, <a href="../assets/guide/ddeoggi-walk-wide.png" download>walk</a>, <a href="../assets/guide/ddeoggi-sleep-wide.png" download>sleep</a>, <a href="../assets/guide/ddeoggi-poked-wide.png" download>poked</a>, <a href="../assets/guide/ddeoggi-throw-wide.png" download>throw</a>, <a href="../assets/guide/ddeoggi-hit-wide.png" download>hit</a>, <a href="../assets/guide/ddeoggi-jump-wide.png" download>jump</a>, <a href="../assets/guide/ddeoggi-eat-wide.png" download>eat</a>, <a href="../assets/guide/ddeoggi-wave-wide.png" download>wave</a>, <a href="../assets/guide/ddeoggi-happy-wide.png" download>happy</a>, <a href="../assets/guide/ddeoggi-offline-wide.png" download>offline</a>, <a href="../assets/guide/ddeoggi.zip" download>まとめてダウンロード(zip)</a></p>
+      </details>
+
+      <h3>テンプレート</h3>
+      <ul>
+        <li>作成ウィンドウの「テンプレート取得」で、動作ごとに例が入ったテンプレートをもらえます(アプリのハムスター、アイテムはどんぐり)</li>
+        <li>空のテンプレート: <a href="../assets/guide/template-2frames.png" download>2フレーム</a>、<a href="../assets/guide/template-4frames.png" download>4フレーム</a>、<a href="../assets/guide/template-8frames.png" download>8フレーム</a>、<a href="../assets/guide/templates.zip" download>まとめてダウンロード(zip)</a></li>
+        <li>下のレイヤーに敷いて描いたら、<strong>テンプレートのレイヤーはオフにして保存</strong>します</li>
+        <li>赤い線が足元の基準線です</li>
+        <li>お絵かきツール: <a href="https://www.piskelapp.com/">Piskel</a>(ウェブ、無料), <a href="https://libresprite.github.io/">LibreSprite</a>(無料), <a href="https://www.aseprite.org/">Aseprite</a>(有料)</li>
+      </ul>
+
+      <h3>アップロード前のチェック</h3>
+      <ul class="list-none! pl-0! [&_li]:before:mr-2 [&_li]:before:content-['☐']">
+        <li>高さ48、幅はキャラなら96・アイテムなら48の倍数、8フレーム以下</li>
+        <li>背景は透明、テンプレートの線なし</li>
+        <li>フレームの四隅が全部塗られていない(全部塗られていると、背景が残っていると見なして弾きます)</li>
+        <li>右を向いて、足はいちばん下、フレームごとに位置が同じ</li>
+      </ul>
+
+      <h2 id="s1">アップロード</h2>
+      <ol>
+        <li>トレイメニュー「キャラクター > 作成…」で、キャラクター・アイテム・エモートのタブを選びます。</li>
+        <li>「+ 新しく作る」を押して、名前(20文字まで)を入力します。</li>
+        <li>動作ごとに PNG を選ぶか、その欄にドラッグ&ドロップします。</li>
+        <li>保存すると自分の一覧に入ります。同じ場所で直したり削除したりできます。</li>
+      </ol>
+      <ul>
+        <li>fps はおすすめの値が入っています</li>
+        <li>アイテムは種類(投げるもの・ごはん・うんち)と効果音の wav も選びます</li>
+        <li>キャラクター変更・アイテム・エモートを選ぶウィンドウの先頭にある <b>+</b> カードからも開けます</li>
+        <li>自分で選んだキャラクターはすぐ表示されます</li>
+        <li>友だちの画面には、友だちがトレイ「キャラクター > 変更…」ウィンドウを開くか「新しいキャラクター・アイテムを取得」を押したときに入ります</li>
+      </ul>
+      <h3>ごはん・うんちの使い方</h3>
+      <ul>
+        <li>ごはん: 友だちを右クリックして「ごはん」から選び、友だちをクリックします</li>
+        <li>もう一度「投げるもの」を選ぶまで、クリックのたびにごはんをあげます</li>
+        <li>うんち: <code>fly</code> の絵が、床に落ちたうんちとして描かれます(投げたりごはんにしたりはしません)</li>
+        <li>選んだうんちを、お腹いっぱいになった自分のキャラクターがします</li>
+        <li>友だちがまだ受け取っていないうんちは、受け取るまで基本のうんちで表示されます</li>
+      </ul>
+
+      <h3>エモート</h3>
+      <ul>
+        <li>「エモート」タブで GIF・WebP・APNG・PNG・JPG を選びます</li>
+        <li>アプリが 64px に縮小して、元の速さのまま保存します</li>
+        <li>同じグループの友だちにだけ見えます</li>
+      </ul>
+      <table>
+        <thead><tr><th>どこで</th><th>どうやって</th></tr></thead>
+        <tbody>
+          <tr><td>頭の上</td><td>自分のキャラクターメニュー「エモート」(⌃⌥⌘E、Windows は Ctrl+Alt+E)</td></tr>
+          <tr><td>吹き出し</td><td>メッセージに <code>:</code> を入力して名前を選ぶと、<code>:名前:</code> の形で入ります</td></tr>
+          <tr><td>ステータス</td><td>ステータス・ニックネームウィンドウの「ステータス」タブにある絵文字ボタン</td></tr>
+          <tr><td>リアクション</td><td>チャット履歴で、発言に付けます</td></tr>
+        </tbody>
+      </table>
+      <details>
+        <summary class="cursor-pointer font-bold">詳しく</summary>
+        <ul>
+          <li>16フレームまで選んで保存します</li>
+          <li>元ファイルは 20MB、縦横 2048px まで</li>
+          <li>名前は 20文字まで、グループ内で重複できません</li>
+          <li><code>:</code> と空白は、メッセージ内の <code>:名前:</code> が途切れてしまうので使えません</li>
+          <li>基本のエモート名(heart・question・exclamation・angry・lol・note・쪽지)も使えません</li>
+        </ul>
+      </details>
+
+      <h2 id="s2">まとめてアップロード</h2>
+      <ul>
+        <li>PNG を 1つの zip にまとめて、作成ウィンドウにドラッグ&ドロップします</li>
+        <li>「まとめて入れる」で zip ファイルやフォルダを選んでもOKです</li>
+        <li>入れる前に、ファイルごとに入る欄を表示します</li>
+        <li>名前が合わないファイルは、自分で欄を選びます</li>
+        <li>上の「まとめてダウンロード」の zip もこの名前なので、そのまま入れて試せます</li>
+      </ul>
+      <p>ファイル名は<strong>動作名そのまま</strong>です(大文字小文字は問わず、zip 内のフォルダもOK)。</p>
+      <ul>
+        <li>キャラ: <code>idle.png</code> <code>walk.png</code> <code>sleep.png</code> <code>poked.png</code> <code>throw.png</code> <code>hit.png</code> <code>jump.png</code> <code>eat.png</code> <code>wave.png</code> <code>happy.png</code> <code>offline.png</code></li>
+        <li>アイテム: <code>fly.png</code> <code>impact.png</code>、効果音 <code>sound.wav</code>(うんちは <code>fly.png</code> だけ)</li>
+      </ul>
+
+      <h2 id="skill">Claude・Codex スキルで作る</h2>
+      <ul>
+        <li>ターミナルで <b>Claude Code・Codex</b> のプラグインをインストールします(下のコマンドを貼り付け)</li>
+        <li>写真を送って「Huggybugi のキャラクターを作って」と言います</li>
+        <li>動作を11個描いて(希望ならうんち・投げるもの・ごはんも)、上の「まとめてアップロード」で入れる zip を渡してくれます</li>
+        <li>新しいバージョンはプラグインのアップデートで一緒に変わります</li>
+      </ul>
+      <pre># Claude Code
+claude plugin marketplace add Zaehyeon2/huggybugi
+claude plugin install huggybugi@huggybugi
+
+# Codex
+codex plugin marketplace add Zaehyeon2/huggybugi
+codex plugin add huggybugi@huggybugi</pre>
+      </main>
+    </div>
+    <footer>
+      <div class="links">
+        <span>Huggybugi</span>
+        <a class="privacy" href="./privacy.html">プライバシーポリシー</a>
+        <a href="./terms.html">利用規約</a>
+        
+        <a href="mailto:support@hammerturtle.xyz">support@hammerturtle.xyz</a>
+      </div>
+      <p class="biz">Hammer Turtle Lab · 代表 キム・ジェヒョン · 事業者登録番号 794-02-03917</p>
+      <p class="biz">115 Cheonhodae-ro 110-gil, Gwangjin-gu, Seoul, Republic of Korea</p>
+      <p class="biz">電話 070-5275-5737</p>
+      <p class="biz">ホスティング GitHub, Inc. · サーバー Cloudflare, Inc.</p>
+    </footer>
+    <script>if(innerWidth>900)document.querySelector('.pg-toc').open=true;</script>
+  </body>
+</html>

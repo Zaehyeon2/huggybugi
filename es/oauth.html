@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <title>Inicio con Google - Huggybugi</title>
+    <meta name="theme-color" content="#dff1ff" />
+    <link rel="icon" type="image/png" href="../assets/favicon.png" />
+    <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png" />
+    <link rel="stylesheet" href="../site.css" />
+  <link rel="alternate" hreflang="ko" href="https://huggybugi.hammerturtle.xyz/oauth.html" />
+    <link rel="alternate" hreflang="en" href="https://huggybugi.hammerturtle.xyz/en/oauth.html" />
+    <link rel="alternate" hreflang="ja" href="https://huggybugi.hammerturtle.xyz/ja/oauth.html" />
+    <link rel="alternate" hreflang="zh-Hans" href="https://huggybugi.hammerturtle.xyz/zh-hans/oauth.html" />
+    <link rel="alternate" hreflang="zh-Hant" href="https://huggybugi.hammerturtle.xyz/zh-hant/oauth.html" />
+    <link rel="alternate" hreflang="es" href="https://huggybugi.hammerturtle.xyz/es/oauth.html" />
+    <link rel="alternate" hreflang="pt-BR" href="https://huggybugi.hammerturtle.xyz/pt/oauth.html" />
+    <link rel="alternate" hreflang="x-default" href="https://huggybugi.hammerturtle.xyz/oauth.html" />
+    </head>
+  <body class="bg-sky font-sans text-ink">
+    <div class="pg-scene">
+      <div class="pg-card" data-state="code" hidden>
+        <img class="pg-card-sprite" src="../assets/guide/ddeoggi-happy-strip.png" alt="" />
+        <h1>Has iniciado sesión</h1>
+        <p>Volviendo a la app. Si no se abre, pulsa abajo.</p>
+        <a data-app href="./" class="pg-card-btn">Abrir la app</a>
+        <p class="pg-card-note">Puedes cerrar esta ventana.</p>
+      </div>
+      <div class="pg-card" data-state="linked" hidden>
+        <img class="pg-card-sprite" src="../assets/guide/ddeoggi-happy-strip.png" alt="" />
+        <h1>Google está vinculado</h1>
+        <p>Ahora también puedes iniciar sesión con Google.</p>
+        <a data-app href="./" class="pg-card-btn">Abrir la app</a>
+        <p class="pg-card-note">Puedes cerrar esta ventana.</p>
+      </div>
+      <div class="pg-card" data-state="signup_disabled" hidden>
+        <img class="pg-card-sprite" src="../assets/guide/ddeoggi-hit-strip.png" alt="" />
+        <h1>No se pudo iniciar sesión</h1>
+        <p>Esta cuenta de Google aún no está registrada.</p>
+        <p class="pg-card-dim">En la app, abre la pestaña de registro, acepta los términos y elige Registrarse con Google.</p>
+        <a data-app href="./" class="pg-card-btn pg-card-btn-line">Volver a la app</a>
+      </div>
+      <div class="pg-card" data-state="account_not_linked" hidden>
+        <img class="pg-card-sprite" src="../assets/guide/ddeoggi-hit-strip.png" alt="" />
+        <h1>No se pudo iniciar sesión</h1>
+        <p>Este correo tiene un registro sin verificar.</p>
+        <p class="pg-card-dim">Abre el enlace de verificación de tu correo y vuelve a intentarlo.</p>
+        <a data-app href="./" class="pg-card-btn pg-card-btn-line">Volver a la app</a>
+      </div>
+      <div class="pg-card" data-state="account_already_linked_to_different_user" hidden>
+        <img class="pg-card-sprite" src="../assets/guide/ddeoggi-hit-strip.png" alt="" />
+        <h1>No se pudo vincular</h1>
+        <p>Esta cuenta de Google está vinculada a otra cuenta de Huggybugi.</p>
+        <p class="pg-card-dim">Desvincúlala allí o borra esa cuenta y vuelve a intentarlo.</p>
+        <a data-app href="./" class="pg-card-btn pg-card-btn-line">Volver a la app</a>
+      </div>
+      <div class="pg-card" data-state="failed" hidden>
+        <img class="pg-card-sprite" src="../assets/guide/ddeoggi-sleep-strip.png" alt="" />
+        <h1>No se pudo iniciar sesión</h1>
+        <p>Se acabó el tiempo o hubo un problema.</p>
+        <p class="pg-card-dim">Pulsa de nuevo el botón de Google en la app.</p>
+        <a data-app href="./" class="pg-card-btn pg-card-btn-line">Volver a la app</a>
+      </div>
+    </div>
+    <script type="module" src="../oauth.js"></script>
+  </body>
+</html>
