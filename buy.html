@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>칸 추가 - 허기부기</title>
+    <meta name="description" content="허기부기 칸을 더할 수 있어요." />
+    <link rel="icon" type="image/png" href="./assets/favicon.png" />
+    <style>
+      @font-face { font-family: Pretendard; src: url(./assets/fonts/Pretendard-Regular.woff2); font-weight: 400; font-display: swap; }
+      @font-face { font-family: Pretendard; src: url(./assets/fonts/Pretendard-SemiBold.woff2); font-weight: 600; font-display: swap; }
+      @font-face { font-family: Pretendard; src: url(./assets/fonts/Pretendard-Bold.woff2); font-weight: 700; font-display: swap; }
+      * { box-sizing: border-box; margin: 0; }
+      html, body { height: 100%; }
+      body { font-family: Pretendard, sans-serif; color: #2b2233; background: #e9ebef; -webkit-font-smoothing: antialiased; }
+      .screen { position: relative; display: flex; flex-direction: column; width: min(100%, 430px); min-height: 100dvh; margin: 0 auto; background: #fff; }
+      .screen[hidden] { display: none; }
+      .body { flex: 1; padding: 40px 24px 16px; }
+      h1 { font-size: 26px; line-height: 1.35; font-weight: 700; letter-spacing: -0.4px; }
+      h2 { font-size: 21px; line-height: 1.35; font-weight: 700; }
+      a { color: inherit; }
+      .sub { font-size: 15px; line-height: 1.5; color: #6b6f7b; margin-top: 8px; }
+      .pic { display: block; width: 96px; height: 96px; margin: 16px auto; object-fit: cover; object-position: left; image-rendering: pixelated; }
+      .pic.big { width: 144px; height: 144px; margin-top: 40px; }
+      .item { display: flex; justify-content: space-between; width: 100%; padding: 13px 0; border: 0; border-bottom: 1px solid #eef0f3; border-radius: 0; background: none; color: inherit; font: 400 17px Pretendard, sans-serif; }
+      .item span { color: #6b6f7b; }
+      .item[aria-pressed='true'] span { color: #1a6bc7; font-weight: 600; }
+      .item:disabled { background: none; cursor: default; }
+      .item small { font-size: 11px; font-weight: 700; color: #fff; background: #1a6bc7; border-radius: 6px; padding: 2px 6px; margin-left: 6px; vertical-align: 2px; }
+      .grp { margin-top: 14px; background: #f7f8fa; border-radius: 12px; padding: 12px 14px; }
+      .grp p { font-size: 12px; font-weight: 600; color: #6b6f7b; margin-bottom: 6px; }
+      .grp .opt { display: flex; justify-content: space-between; width: 100%; padding: 9px 0; border: 0; border-bottom: 1px solid #eef0f3; border-radius: 0; background: none; color: inherit; font: 400 15px Pretendard, sans-serif; text-align: left; }
+      .grp .opt:last-child { border-bottom: 0; }
+      .grp .opt[aria-pressed='true'] { color: #1a6bc7; font-weight: 600; }
+      .grp .opt[aria-pressed='true'] span::before { content: '✓ '; }
+      .grp .opt:disabled { color: #b0b5bd; cursor: default; }
+      .grp .opt em { font-style: normal; font-size: 13px; color: #8b8f99; }
+      .once { font-size: 13px; color: #6b6f7b; margin-top: 10px; }
+      .refund { background: #f2f7fd; border-radius: 12px; padding: 12px 14px; margin-top: 12px; font-size: 13px; line-height: 1.5; color: #6b6f7b; }
+      .refund b { display: block; font-weight: 600; color: #2b2233; }
+      .refund ul { margin-top: 6px; padding-left: 16px; font-size: 12px; }
+      .refund li + li { margin-top: 4px; }
+      .refund ul ul { margin-top: 4px; }
+      .biz { font-size: 11px; line-height: 1.6; color: #8b8f99; margin-top: 14px; }
+      .cta { position: sticky; bottom: 0; padding: 12px 20px calc(20px + env(safe-area-inset-bottom)); background: #fff; }
+      .note { font-size: 12px; line-height: 1.45; color: #8b8f99; text-align: center; margin-bottom: 10px; }
+      button:not(.item), .btn { display: block; width: 100%; border: 0; border-radius: 16px; padding: 16px; background: #1a6bc7; color: #fff; font: 600 17px Pretendard, sans-serif; text-align: center; text-decoration: none; cursor: pointer; }
+      button:disabled { background: #d1d6db; cursor: default; }
+      button.ghost, .btn.ghost { background: #f2f4f6; color: #2b2233; }
+      :focus-visible { outline: 3px solid #1a6bc780; outline-offset: 2px; }
+      .check { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%; background: #e8f3ff; color: #1a6bc7; font-size: 22px; font-weight: 700; margin-bottom: 18px; }
+      .center { text-align: center; padding-top: 56px; }
+      .center h1 { font-size: 22px; }
+      dialog { position: fixed; inset: auto 0 0; width: min(100%, 430px); max-width: none; margin: 0 auto; border: 0; border-radius: 24px 24px 0 0; padding: 24px 20px calc(20px + env(safe-area-inset-bottom)); color: inherit; }
+      dialog::backdrop { background: #0006; }
+      label { display: block; font-size: 13px; font-weight: 600; color: #6b6f7b; margin-top: 20px; }
+      label:focus-within { color: #1a6bc7; }
+      input { display: block; width: 100%; border: 0; border-bottom: 2px solid #e5e8eb; border-radius: 0; padding: 6px 0 8px; font: 600 20px Pretendard, sans-serif; color: inherit; background: none; outline: none; }
+      input:focus { border-color: #1a6bc7; }
+      dialog .note { margin: 18px 0 10px; }
+      /* 웹 대화와 같은 틀: 넓은 창에선 가운데 폰 모양 판, 그보다 작으면 꽉 찬 화면. */
+      @media (min-width: 520px) and (min-height: 640px) {
+        body { background: #0e1230; overflow: hidden; }
+        .screen { height: min(900px, calc(100dvh - 48px)); min-height: 0; margin: max(24px, calc((100dvh - 900px) / 2)) auto 0; border-radius: 36px; overflow: auto; box-shadow: 0 0 0 1px rgb(255 255 255 / 0.08), 0 24px 70px rgb(0 0 0 / 0.55); }
+        dialog { bottom: max(24px, calc((100dvh - 900px) / 2)); border-radius: 28px 28px 36px 36px; }
+      }
+      @media (prefers-reduced-motion: no-preference) { dialog[open] { animation: up 0.2s ease-out; } @keyframes up { from { transform: translateY(40px); opacity: 0; } } }
+    </style>
+  </head>
+  <body>
+    <main id="product" class="screen">
+      <div class="body">
+        <h1 id="headline">불러오는 중이에요</h1>
+        <img class="pic" src="./assets/guide/ddeoggi-happy-strip.png" alt="" />
+        <div id="items"></div>
+        <div id="groups" class="grp" hidden></div>
+        <p id="once" class="once"></p>
+        <p id="account" class="once" hidden></p>
+        <div class="refund">
+          <b>제공·교환·환불 안내</b>
+          <ul>
+            <li>제공기간: 결제가 확인되면 즉시 계정(그룹 인원은 고른 그룹)에 반영됩니다. 배송은 없고 사용 기간 제한이 없습니다.</li>
+            <li>교환: 디지털 이용권이라 다른 상품으로 교환하지 않습니다. 필요하면 환불 뒤 다시 구매해 주세요.</li>
+            <li>취소: 결제 전에는 결제창을 닫으면 취소됩니다. 결제 뒤에는 아래 환불 기준에 따라 취소(환불)합니다.</li>
+            <li>
+              환불: 결제 후 7일 안에 support@hammerturtle.xyz 로 요청하면 전액 환불합니다. 환불은 결제한 수단으로 돌려드리며 카드사 사정에 따라 3~7영업일 걸릴 수 있습니다. 다음 경우는 환불되지 않습니다.
+              <ul>
+                <li>칸 추가: 결제 뒤 산 종류를 새로 추가했다면(그룹은 만들거나 들어갔다면) 지워도 환불되지 않습니다.</li>
+                <li>그룹 인원: 늘린 뒤 그 그룹에 한 명이라도 들어온 경우</li>
+                <li>Plus 평생: 무료 한도를 넘겨 새로 추가한 경우</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <p class="biz">
+          해머터틀랩 · 대표 김재현 · 사업자등록번호 794-02-03917 · 통신판매업 신고 2026-서울광진-1836<br />
+          서울특별시 광진구 천호대로110길 115 · 070-5275-5737<br />
+          호스팅 GitHub, Inc. · 서버 Cloudflare, Inc.<br />
+          <a href="mailto:support@hammerturtle.xyz">support@hammerturtle.xyz</a> · <a href="./terms.html">이용약관</a> · <a href="./privacy.html">개인정보처리방침</a>
+        </p>
+      </div>
+      <div class="cta">
+        <p class="note">결제하면 이용약관과 환불 규정에 동의하는 거예요</p>
+        <button id="pay" type="button" disabled>결제하기</button>
+      </div>
+    </main>
+
+    <dialog id="sheet" aria-labelledby="sheet-title">
+      <form id="payer" method="dialog">
+        <h2 id="sheet-title">결제하는 분을<br />알려 주세요</h2>
+        <label>이름<input id="name" autocomplete="name" maxlength="30" required /></label>
+        <label>휴대폰 번호<input id="phone" type="tel" inputmode="numeric" autocomplete="tel" placeholder="010-0000-0000" required /></label>
+        <p class="note">결제창에만 쓰고 저장하지 않아요</p>
+        <button id="next" type="submit" disabled>다음</button>
+      </form>
+    </dialog>
+
+    <main id="done" class="screen" hidden>
+      <div class="body">
+        <div class="check" aria-hidden="true">✓</div>
+        <h1 id="done-title">칸이 늘었어요</h1>
+        <p id="done-sub" class="sub">앱의 만들기 창에서 바로 쓸 수 있어요</p>
+        <img class="pic big" src="./assets/guide/ddeoggi-happy-strip.png" alt="" />
+      </div>
+      <div class="cta">
+        <p class="note">주문번호 <span id="order"></span></p>
+        <a class="btn" href="./">확인</a>
+      </div>
+    </main>
+
+    <main id="state" class="screen" hidden>
+      <div class="body center">
+        <h1 id="state-title">결제</h1>
+        <p id="state-sub" class="sub"></p>
+      </div>
+      <div class="cta"><button id="state-act" type="button"></button></div>
+    </main>
+    <script type="module" src="./buy.js"></script>
+  </body>
+</html>
