@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <title>Google 登录 - Huggybugi</title>
+    <meta name="theme-color" content="#dff1ff" />
+    <link rel="icon" type="image/png" href="../assets/favicon.png" />
+    <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png" />
+    <link rel="stylesheet" href="../site.css" />
+  <link rel="alternate" hreflang="ko" href="https://huggybugi.hammerturtle.xyz/oauth.html" />
+    <link rel="alternate" hreflang="en" href="https://huggybugi.hammerturtle.xyz/en/oauth.html" />
+    <link rel="alternate" hreflang="ja" href="https://huggybugi.hammerturtle.xyz/ja/oauth.html" />
+    <link rel="alternate" hreflang="zh-Hans" href="https://huggybugi.hammerturtle.xyz/zh-hans/oauth.html" />
+    <link rel="alternate" hreflang="zh-Hant" href="https://huggybugi.hammerturtle.xyz/zh-hant/oauth.html" />
+    <link rel="alternate" hreflang="es" href="https://huggybugi.hammerturtle.xyz/es/oauth.html" />
+    <link rel="alternate" hreflang="pt-BR" href="https://huggybugi.hammerturtle.xyz/pt/oauth.html" />
+    <link rel="alternate" hreflang="x-default" href="https://huggybugi.hammerturtle.xyz/oauth.html" />
+    <style>:root{--body:"Gowun Dodum",Pretendard,"PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",sans-serif;--font-sans:Pretendard,"PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",system-ui,sans-serif}body{font-family:Pretendard,"PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",sans-serif;word-break:normal}</style>
+    </head>
+  <body class="bg-sky font-sans text-ink">
+    <div class="pg-scene">
+      <div class="pg-card" data-state="code" hidden>
+        <img class="pg-card-sprite" src="../assets/guide/ddeoggi-happy-strip.png" alt="" />
+        <h1>已登录</h1>
+        <p>正在返回应用。如果没有打开，请点下方按钮。</p>
+        <a data-app href="./" class="pg-card-btn">打开应用</a>
+        <p class="pg-card-note">可以关闭这个窗口了。</p>
+      </div>
+      <div class="pg-card" data-state="linked" hidden>
+        <img class="pg-card-sprite" src="../assets/guide/ddeoggi-happy-strip.png" alt="" />
+        <h1>已关联 Google</h1>
+        <p>现在也可以用 Google 登录了。</p>
+        <a data-app href="./" class="pg-card-btn">打开应用</a>
+        <p class="pg-card-note">可以关闭这个窗口了。</p>
+      </div>
+      <div class="pg-card" data-state="signup_disabled" hidden>
+        <img class="pg-card-sprite" src="../assets/guide/ddeoggi-hit-strip.png" alt="" />
+        <h1>未能登录</h1>
+        <p>这个 Google 账号还没有注册。</p>
+        <p class="pg-card-dim">请在应用的注册标签同意条款，然后选择使用 Google 注册。</p>
+        <a data-app href="./" class="pg-card-btn pg-card-btn-line">返回应用</a>
+      </div>
+      <div class="pg-card" data-state="account_not_linked" hidden>
+        <img class="pg-card-sprite" src="../assets/guide/ddeoggi-hit-strip.png" alt="" />
+        <h1>未能登录</h1>
+        <p>这个邮箱有一个尚未验证的注册。</p>
+        <p class="pg-card-dim">请打开邮件中的验证链接后再试。</p>
+        <a data-app href="./" class="pg-card-btn pg-card-btn-line">返回应用</a>
+      </div>
+      <div class="pg-card" data-state="account_already_linked_to_different_user" hidden>
+        <img class="pg-card-sprite" src="../assets/guide/ddeoggi-hit-strip.png" alt="" />
+        <h1>未能关联</h1>
+        <p>这个 Google 账号已关联到另一个 Huggybugi 账号。</p>
+        <p class="pg-card-dim">请在那边解除关联或删除该账号后再关联。</p>
+        <a data-app href="./" class="pg-card-btn pg-card-btn-line">返回应用</a>
+      </div>
+      <div class="pg-card" data-state="failed" hidden>
+        <img class="pg-card-sprite" src="../assets/guide/ddeoggi-sleep-strip.png" alt="" />
+        <h1>未能登录</h1>
+        <p>已超时或出现了问题。</p>
+        <p class="pg-card-dim">请在应用中再次点击 Google 按钮。</p>
+        <a data-app href="./" class="pg-card-btn pg-card-btn-line">返回应用</a>
+      </div>
+    </div>
+    <script type="module" src="../oauth.js"></script>
+  </body>
+</html>
