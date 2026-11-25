@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <title>Entrar com o Google - Huggybugi</title>
+    <meta name="theme-color" content="#dff1ff" />
+    <link rel="icon" type="image/png" href="../assets/favicon.png" />
+    <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png" />
+    <link rel="stylesheet" href="../site.css" />
+  <link rel="alternate" hreflang="ko" href="https://huggybugi.hammerturtle.xyz/oauth.html" />
+    <link rel="alternate" hreflang="en" href="https://huggybugi.hammerturtle.xyz/en/oauth.html" />
+    <link rel="alternate" hreflang="ja" href="https://huggybugi.hammerturtle.xyz/ja/oauth.html" />
+    <link rel="alternate" hreflang="zh-Hans" href="https://huggybugi.hammerturtle.xyz/zh-hans/oauth.html" />
+    <link rel="alternate" hreflang="zh-Hant" href="https://huggybugi.hammerturtle.xyz/zh-hant/oauth.html" />
+    <link rel="alternate" hreflang="es" href="https://huggybugi.hammerturtle.xyz/es/oauth.html" />
+    <link rel="alternate" hreflang="pt-BR" href="https://huggybugi.hammerturtle.xyz/pt/oauth.html" />
+    <link rel="alternate" hreflang="x-default" href="https://huggybugi.hammerturtle.xyz/oauth.html" />
+    </head>
+  <body class="bg-sky font-sans text-ink">
+    <div class="pg-scene">
+      <div class="pg-card" data-state="code" hidden>
+        <img class="pg-card-sprite" src="../assets/guide/ddeoggi-happy-strip.png" alt="" />
+        <h1>Você entrou</h1>
+        <p>Voltando para o app. Se não abrir, toque abaixo.</p>
+        <a data-app href="./" class="pg-card-btn">Abrir o app</a>
+        <p class="pg-card-note">Pode fechar esta janela.</p>
+      </div>
+      <div class="pg-card" data-state="linked" hidden>
+        <img class="pg-card-sprite" src="../assets/guide/ddeoggi-happy-strip.png" alt="" />
+        <h1>Google conectado</h1>
+        <p>Agora você também pode entrar com o Google.</p>
+        <a data-app href="./" class="pg-card-btn">Abrir o app</a>
+        <p class="pg-card-note">Pode fechar esta janela.</p>
+      </div>
+      <div class="pg-card" data-state="signup_disabled" hidden>
+        <img class="pg-card-sprite" src="../assets/guide/ddeoggi-hit-strip.png" alt="" />
+        <h1>Não foi possível entrar</h1>
+        <p>Esta conta Google ainda não está cadastrada.</p>
+        <p class="pg-card-dim">No app, abra a aba de cadastro, aceite os termos e escolha Cadastrar com o Google.</p>
+        <a data-app href="./" class="pg-card-btn pg-card-btn-line">Voltar para o app</a>
+      </div>
+      <div class="pg-card" data-state="account_not_linked" hidden>
+        <img class="pg-card-sprite" src="../assets/guide/ddeoggi-hit-strip.png" alt="" />
+        <h1>Não foi possível entrar</h1>
+        <p>Este e-mail tem um cadastro não verificado.</p>
+        <p class="pg-card-dim">Abra o link de verificação no e-mail e tente de novo.</p>
+        <a data-app href="./" class="pg-card-btn pg-card-btn-line">Voltar para o app</a>
+      </div>
+      <div class="pg-card" data-state="account_already_linked_to_different_user" hidden>
+        <img class="pg-card-sprite" src="../assets/guide/ddeoggi-hit-strip.png" alt="" />
+        <h1>Não foi possível conectar</h1>
+        <p>Esta conta Google está conectada a outra conta do Huggybugi.</p>
+        <p class="pg-card-dim">Desconecte por lá ou apague essa conta e tente de novo.</p>
+        <a data-app href="./" class="pg-card-btn pg-card-btn-line">Voltar para o app</a>
+      </div>
+      <div class="pg-card" data-state="failed" hidden>
+        <img class="pg-card-sprite" src="../assets/guide/ddeoggi-sleep-strip.png" alt="" />
+        <h1>Não foi possível entrar</h1>
+        <p>O tempo acabou ou houve um problema.</p>
+        <p class="pg-card-dim">Toque de novo no botão do Google no app.</p>
+        <a data-app href="./" class="pg-card-btn pg-card-btn-line">Voltar para o app</a>
+      </div>
+    </div>
+    <script type="module" src="../oauth.js"></script>
+  </body>
+</html>

@@ -1,0 +1,12 @@
+{
+  "name": "huggybugi",
+  "plugins": [
+    {
+      "name": "huggybugi",
+      "source": {
+        "source": "local",
+        "path": "./plugin"
+      }
+    }
+  ]
+}
