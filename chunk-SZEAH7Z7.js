@@ -1,0 +1,1 @@
+function n(t){let s=t.replace(/['"]+$/,""),r=s.charCodeAt(s.length-1)-44032;return r>=0&&r<11172?r%28:0}var c=t=>`${t}${n(t)?"\uC774":"\uAC00"}`,o=t=>`${t}${n(t)?"\uC744":"\uB97C"}`,g=t=>`${t}${n(t)?"\uC740":"\uB294"}`;export{n as a,c as b,o as c,g as d};

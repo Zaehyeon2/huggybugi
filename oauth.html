@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <title>구글 로그인 - 허기부기</title>
+    <meta name="theme-color" content="#dff1ff" />
+    <link rel="icon" type="image/png" href="./assets/favicon.png" />
+    <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png" />
+    <link rel="stylesheet" href="./site.css" />
+  <link rel="alternate" hreflang="ko" href="https://huggybugi.hammerturtle.xyz/oauth.html" />
+    <link rel="alternate" hreflang="en" href="https://huggybugi.hammerturtle.xyz/en/oauth.html" />
+    <link rel="alternate" hreflang="ja" href="https://huggybugi.hammerturtle.xyz/ja/oauth.html" />
+    <link rel="alternate" hreflang="zh-Hans" href="https://huggybugi.hammerturtle.xyz/zh-hans/oauth.html" />
+    <link rel="alternate" hreflang="zh-Hant" href="https://huggybugi.hammerturtle.xyz/zh-hant/oauth.html" />
+    <link rel="alternate" hreflang="es" href="https://huggybugi.hammerturtle.xyz/es/oauth.html" />
+    <link rel="alternate" hreflang="pt-BR" href="https://huggybugi.hammerturtle.xyz/pt/oauth.html" />
+    <link rel="alternate" hreflang="x-default" href="https://huggybugi.hammerturtle.xyz/oauth.html" />
+  </head>
+  <body class="bg-sky font-sans text-ink">
+    <div class="pg-scene">
+      <div class="pg-card" data-state="code" hidden>
+        <img class="pg-card-sprite" src="./assets/guide/ddeoggi-happy-strip.png" alt="" />
+        <h1>로그인했어요</h1>
+        <p>앱으로 돌아가요. 안 열리면 아래 버튼을 눌러 주세요.</p>
+        <a data-app href="./" class="pg-card-btn">앱 열기</a>
+        <p class="pg-card-note">이 창은 닫아도 돼요.</p>
+      </div>
+      <div class="pg-card" data-state="linked" hidden>
+        <img class="pg-card-sprite" src="./assets/guide/ddeoggi-happy-strip.png" alt="" />
+        <h1>구글을 연결했어요</h1>
+        <p>이제 구글로도 로그인할 수 있어요.</p>
+        <a data-app href="./" class="pg-card-btn">앱 열기</a>
+        <p class="pg-card-note">이 창은 닫아도 돼요.</p>
+      </div>
+      <div class="pg-card" data-state="signup_disabled" hidden>
+        <img class="pg-card-sprite" src="./assets/guide/ddeoggi-hit-strip.png" alt="" />
+        <h1>로그인하지 못했어요</h1>
+        <p>이 구글 계정으로 가입한 적이 없어요.</p>
+        <p class="pg-card-dim">앱의 가입 탭에서 약관에 동의한 뒤 Google로 가입을 눌러 주세요.</p>
+        <a data-app href="./" class="pg-card-btn pg-card-btn-line">앱으로 돌아가기</a>
+      </div>
+      <div class="pg-card" data-state="account_not_linked" hidden>
+        <img class="pg-card-sprite" src="./assets/guide/ddeoggi-hit-strip.png" alt="" />
+        <h1>로그인하지 못했어요</h1>
+        <p>이 메일로 인증을 마치지 않은 가입이 있어요.</p>
+        <p class="pg-card-dim">메일함의 인증 링크를 누른 뒤 다시 해 주세요.</p>
+        <a data-app href="./" class="pg-card-btn pg-card-btn-line">앱으로 돌아가기</a>
+      </div>
+      <div class="pg-card" data-state="account_already_linked_to_different_user" hidden>
+        <img class="pg-card-sprite" src="./assets/guide/ddeoggi-hit-strip.png" alt="" />
+        <h1>연결하지 못했어요</h1>
+        <p>이 구글 계정은 다른 허기부기 계정에 연결돼 있어요.</p>
+        <p class="pg-card-dim">그 계정에서 해제하거나 계정을 지운 뒤 연결해 주세요.</p>
+        <a data-app href="./" class="pg-card-btn pg-card-btn-line">앱으로 돌아가기</a>
+      </div>
+      <div class="pg-card" data-state="failed" hidden>
+        <img class="pg-card-sprite" src="./assets/guide/ddeoggi-sleep-strip.png" alt="" />
+        <h1>로그인하지 못했어요</h1>
+        <p>시간이 지났거나 문제가 생겼어요.</p>
+        <p class="pg-card-dim">앱에서 Google 버튼을 다시 눌러 주세요.</p>
+        <a data-app href="./" class="pg-card-btn pg-card-btn-line">앱으로 돌아가기</a>
+      </div>
+    </div>
+    <script type="module" src="./oauth.js"></script>
+  </body>
+</html>
