@@ -194,23 +194,37 @@
       button#charge-back:not([hidden]) { display: inline-flex; align-items: center; gap: 4px; width: auto; min-height: 44px; margin: -12px 0 0 -4px; padding: 0 4px; border-radius: 8px; background: none; color: #1a6bc7; font: 600 15px Pretendard, sans-serif; }
       /* 솔방울: 지갑 줄·사고 남는 양·모자람·충전 묶음. 아이콘은 1배(30×30)만 도트 그대로, 반(15×15)은 레티나 원본 픽셀. */
       .cone { flex: none; width: 30px; height: 30px; image-rendering: pixelated; }
-      .cone.s { width: 15px; height: 15px; image-rendering: auto; }
+      .cone.s { width: 15px; height: 15px; image-rendering: auto; transform: translateY(-1px); }
       .ac { display: inline-flex; align-items: center; gap: 4px; }
       .wal { display: flex; align-items: center; gap: 10px; margin-top: 16px; padding: 12px 14px; border-radius: 14px; background: #f6f1e7; box-shadow: inset 0 0 0 1px #e6d6b8; }
       .wal .wt { flex: 1; }
-      #wal-n { display: flex; align-items: center; gap: 5px; font-size: 17px; font-variant-numeric: tabular-nums; }
+      .wal > .cone { width: 40px; height: 40px; }
+      #wal-n { font-size: 20px; font-weight: 700; letter-spacing: -0.2px; font-variant-numeric: tabular-nums; }
       .wal .wt small { display: block; font-size: 12px; color: #7a6a50; margin-top: 2px; }
+      .wal .wt small:empty { display: none; }
+      .wal .wt small.soon { color: #b4441f; font-weight: 600; }
+      #wal-more { margin-top: 2px; }
+      #wal-more summary { display: inline-flex; align-items: center; gap: 3px; min-height: 24px; padding: 2px 0; border-radius: 6px; list-style: none; cursor: pointer; font-size: 13px; color: #7a6a50; }
+      #wal-more summary:focus-visible { outline: 2px solid #1a6bc7; outline-offset: 2px; }
+      #wal-more summary::-webkit-details-marker { display: none; }
+      #wal-more summary::after { content: ''; width: 6px; height: 6px; border: solid #7a6a50; border-width: 0 1.5px 1.5px 0; transform: rotate(45deg) translateY(-2px); margin-left: 3px; }
+      #wal-more[open] summary::after { transform: rotate(-135deg); }
+      #wal-more[open] .shut, #wal-more:not([open]) .open { display: none; }
+      .wal dl { display: grid; grid-template-columns: 1fr auto; gap: 3px 10px; margin-top: 6px; font-size: 12.5px; color: #5c4d36; font-variant-numeric: tabular-nums; }
+      .wal dd { text-align: right; font-weight: 600; }
+      .wal:has(#wal-more[open]) { align-items: flex-start; }
       .wal button.mini { flex: none; width: auto; min-height: 44px; border-radius: 10px; padding: 8px 11px; background: #5a3a1e; color: #ffe8c2; font: 700 13px Pretendard, sans-serif; }
       .after { display: flex; justify-content: space-between; font-size: 13px; color: #6b6f7b; padding: 6px 4px 0; font-variant-numeric: tabular-nums; }
       .short { margin-top: 12px; padding: 12px 14px; border-radius: 14px; background: #fff8ee; box-shadow: inset 0 0 0 2px #f0a24a; font-size: 13.5px; line-height: 1.5; color: #8a4b00; }
       #short b { color: #2b2233; }
       .packs { display: grid; gap: 8px; margin-top: 14px; }
-      .packs button.pk { display: flex; align-items: center; gap: 10px; padding: 13px 14px; border-radius: 14px; background: #f6f7f9; box-shadow: inset 0 0 0 1px #e5e8eb; color: inherit; font: 400 15px Pretendard, sans-serif; text-align: left; }
+      .packs button.pk { display: flex; align-items: center; gap: 10px; min-height: 66px; padding: 13px 14px; border-radius: 14px; background: #f6f7f9; box-shadow: inset 0 0 0 1px #e5e8eb; color: inherit; font: 400 15px Pretendard, sans-serif; text-align: left; }
       .packs button.pk[aria-pressed='true'] { background: #eef5fd; box-shadow: 0 0 0 2px #1a6bc7; }
       .pk .n { flex: 1; display: flex; align-items: center; gap: 6px; font-weight: 700; font-size: 16px; font-variant-numeric: tabular-nums; }
-      .pk .w { font-weight: 600; font-variant-numeric: tabular-nums; }
-      .pk .tag { font-size: 11px; font-weight: 700; color: #1a6bc7; background: #dceafb; border-radius: 6px; padding: 2px 6px; }
-      .pk .off { font-size: 11px; font-weight: 700; color: #fff; background: #2f8a3a; border-radius: 6px; padding: 2px 6px; }
+      .pk .w { font-weight: 600; font-variant-numeric: tabular-nums; text-align: right; }
+      .pk .was { display: block; font-size: 12px; font-weight: 400; color: #666c79; }
+      .pk .pct { font-size: 13px; font-weight: 700; color: #c62828; }
+      .pk .tag { font-size: 11px; font-weight: 700; color: #1559a8; background: #dceafb; border-radius: 6px; padding: 2px 6px; }
       .nw { white-space: nowrap; }
       #pay { display: flex; justify-content: center; align-items: center; gap: 6px; }
       .spin { width: 28px; height: 28px; margin: 0 0 14px; border-radius: 50%; border: 3px solid #e5e8eb; border-top-color: #1a6bc7; }
@@ -229,7 +243,21 @@
           <p class="sub">한 번만 결제해요. 자동 결제는 없어요</p>
         </div>
         <div id="wallet" class="wal" hidden>
-          <div class="wt"><b id="wal-n"></b><small id="wal-sub"></small></div>
+          <img class="cone" src="./assets/pinecone.png" alt="" />
+          <div class="wt">
+            <div id="wal-n"></div>
+            <small id="wal-sub"></small>
+            <small id="wal-soon" class="soon"></small>
+            <details id="wal-more">
+              <summary><span class="shut">자세히</span><span class="open">접기</span></summary>
+              <dl>
+                <dt>내가 산 것</dt>
+                <dd id="wal-paid"></dd>
+                <dt>선물·이벤트로 받은 것</dt>
+                <dd id="wal-free"></dd>
+              </dl>
+            </details>
+          </div>
           <button id="wal-charge" type="button" class="mini">충전</button>
         </div>
         <div id="single">
@@ -250,15 +278,15 @@
             <p class="sub">앱 효과 창에서 효과를 담아 주세요</p>
           </div>
         </div>
-        <div id="after" class="after" hidden><span>사고 나면</span><span id="after-n"></span></div>
+        <div id="after" class="after" hidden><span>사면</span><span id="after-n"></span></div>
         <p id="short" class="short" hidden></p>
         <div id="packs" class="packs" hidden></div>
         <p id="account" class="once" hidden></p>
         <details id="charge-refund" class="refund" hidden>
-          <summary><span><b>환불</b> 7일 안, 하나도 안 썼으면 전액. 그 뒤엔 남은 충전분에서 10%(최소 1,000원)를 빼고 돌려 드려요. 충전한 솔방울은 5년 동안 써요.</span></summary>
+          <summary><span><b>환불</b> 7일 안에 하나도 안 썼으면 전부 돌려 드려요. 그 뒤엔 산 솔방울 중 남은 것의 값에서 10%(최소 1,000원)를 빼고 돌려 드려요. 산 솔방울은 5년 동안 쓸 수 있어요.</span></summary>
           <ul>
             <li>제공: 결제가 확인되면 바로 계정에 들어가요. 배송은 없어요.</li>
-            <li>사용 기간: 충전한 솔방울은 충전한 날부터 5년, 이벤트로 받은 솔방울은 90일, 선물로 받은 솔방울은 1년 동안 써요. 받은 솔방울부터, 빨리 끝나는 것부터 써요.</li>
+            <li>사용 기간: 충전한 솔방울은 충전한 날부터 5년, 이벤트로 받은 솔방울은 90일, 선물로 받은 솔방울은 1년 동안 써요. 쓸 땐 받은 것부터, 그다음엔 빨리 사라지는 것부터 나가요.</li>
             <li>
               환불: support@hammerturtle.xyz 로 요청해 주세요. 결제한 수단으로 3~7영업일 걸릴 수 있어요.
               <ul>
