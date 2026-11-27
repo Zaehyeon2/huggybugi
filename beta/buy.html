@@ -146,6 +146,7 @@
       details.refund summary { display: flex; justify-content: space-between; align-items: center; gap: 8px; min-height: 24px; list-style: none; cursor: pointer; }
       details.refund summary::-webkit-details-marker { display: none; }
       details.refund summary b { display: inline; }
+      details.refund .chev { flex: none; }
       details[open] .chev { transform: rotate(180deg); }
       /* 웹 대화와 같은 틀: 넓은 창에선 가운데 폰 모양 판, 그보다 작으면 꽉 찬 화면. */
       @media (min-width: 520px) and (min-height: 640px) {
@@ -160,6 +161,11 @@
       .up .ut b { display: block; color: #7a5400; font-size: 13.5px; line-height: 1.35; word-break: keep-all; }
       .up .ut small { display: block; margin-top: 2px; color: #6b6f7b; font-size: 12px; font-variant-numeric: tabular-nums; }
       .up button.upbtn { flex: none; width: auto; padding: 8px 11px; border-radius: 10px; background: #3a2f17; color: #ffd98a; font: 700 13px Pretendard, sans-serif; }
+      .up .uic { flex: none; color: #d99a00; }
+      .up.mana { background: linear-gradient(110deg, #ece2ff, #f6f7f9 75%); box-shadow: inset 0 0 0 1px #b07cff88; }
+      .up.mana .uic { color: #8f5bff; }
+      .up.mana .ut b { color: #5a2fa8; }
+      .up.mana button.upbtn { background: #2a1a4d; color: #d9c6ff; }
       .up::after { content: ''; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(100deg, transparent 30%, #ffffff8c 50%, transparent 70%) no-repeat -160% 0 / 60% 100%; }
       @media (prefers-reduced-motion: no-preference) {
         .up::after { animation: sheen 1.6s ease-in-out 0.4s 1 both; }
@@ -185,6 +191,30 @@
       .count { margin-top: 4px; text-align: right; font-size: 12px; color: #5f6370; }
       #gift-sheet .note { margin: 4px 0 14px; text-align: left; }
       #gift-sheet button.ghost { margin-top: 8px; }
+      button#charge-back:not([hidden]) { display: inline-flex; align-items: center; gap: 4px; width: auto; min-height: 44px; margin: -12px 0 0 -4px; padding: 0 4px; border-radius: 8px; background: none; color: #1a6bc7; font: 600 15px Pretendard, sans-serif; }
+      /* 솔방울: 지갑 줄·사고 남는 양·모자람·충전 묶음. 아이콘은 1배(30×30)만 도트 그대로, 반(15×15)은 레티나 원본 픽셀. */
+      .cone { flex: none; width: 30px; height: 30px; image-rendering: pixelated; }
+      .cone.s { width: 15px; height: 15px; image-rendering: auto; }
+      .ac { display: inline-flex; align-items: center; gap: 4px; }
+      .wal { display: flex; align-items: center; gap: 10px; margin-top: 16px; padding: 12px 14px; border-radius: 14px; background: #f6f1e7; box-shadow: inset 0 0 0 1px #e6d6b8; }
+      .wal .wt { flex: 1; }
+      #wal-n { display: flex; align-items: center; gap: 5px; font-size: 17px; font-variant-numeric: tabular-nums; }
+      .wal .wt small { display: block; font-size: 12px; color: #7a6a50; margin-top: 2px; }
+      .wal button.mini { flex: none; width: auto; min-height: 44px; border-radius: 10px; padding: 8px 11px; background: #5a3a1e; color: #ffe8c2; font: 700 13px Pretendard, sans-serif; }
+      .after { display: flex; justify-content: space-between; font-size: 13px; color: #6b6f7b; padding: 6px 4px 0; font-variant-numeric: tabular-nums; }
+      .short { margin-top: 12px; padding: 12px 14px; border-radius: 14px; background: #fff8ee; box-shadow: inset 0 0 0 2px #f0a24a; font-size: 13.5px; line-height: 1.5; color: #8a4b00; }
+      #short b { color: #2b2233; }
+      .packs { display: grid; gap: 8px; margin-top: 14px; }
+      .packs button.pk { display: flex; align-items: center; gap: 10px; padding: 13px 14px; border-radius: 14px; background: #f6f7f9; box-shadow: inset 0 0 0 1px #e5e8eb; color: inherit; font: 400 15px Pretendard, sans-serif; text-align: left; }
+      .packs button.pk[aria-pressed='true'] { background: #eef5fd; box-shadow: 0 0 0 2px #1a6bc7; }
+      .pk .n { flex: 1; display: flex; align-items: center; gap: 6px; font-weight: 700; font-size: 16px; font-variant-numeric: tabular-nums; }
+      .pk .w { font-weight: 600; font-variant-numeric: tabular-nums; }
+      .pk .tag { font-size: 11px; font-weight: 700; color: #1a6bc7; background: #dceafb; border-radius: 6px; padding: 2px 6px; }
+      .pk .off { font-size: 11px; font-weight: 700; color: #fff; background: #2f8a3a; border-radius: 6px; padding: 2px 6px; }
+      .nw { white-space: nowrap; }
+      #pay { display: flex; justify-content: center; align-items: center; gap: 6px; }
+      .spin { width: 28px; height: 28px; margin: 0 0 14px; border-radius: 50%; border: 3px solid #e5e8eb; border-top-color: #1a6bc7; }
+      @media (prefers-reduced-motion: no-preference) { .spin { animation: spin 0.8s linear infinite; } @keyframes spin { to { transform: rotate(360deg); } } }
       /* display 를 정한 규칙보다 뒤에 둬야 hidden 이 이긴다. */
       [hidden], button[hidden] { display: none; }
     </style>
@@ -192,7 +222,16 @@
   <body>
     <main id="product" class="screen">
       <div class="body">
+        <div id="spin" class="spin" aria-hidden="true"></div>
+        <button id="charge-back" type="button" hidden>담은 것</button>
         <h1 id="headline">불러오는 중이에요</h1>
+        <div id="charge" hidden>
+          <p class="sub">한 번만 결제해요. 자동 결제는 없어요</p>
+        </div>
+        <div id="wallet" class="wal" hidden>
+          <div class="wt"><b id="wal-n"></b><small id="wal-sub"></small></div>
+          <button id="wal-charge" type="button" class="mini">충전</button>
+        </div>
         <div id="single">
           <p class="sub">한 번만 결제해요. 자동 결제는 없어요</p>
           <div id="items" class="items"></div>
@@ -211,7 +250,27 @@
             <p class="sub">앱 효과 창에서 효과를 담아 주세요</p>
           </div>
         </div>
+        <div id="after" class="after" hidden><span>사고 나면</span><span id="after-n"></span></div>
+        <p id="short" class="short" hidden></p>
+        <div id="packs" class="packs" hidden></div>
         <p id="account" class="once" hidden></p>
+        <details id="charge-refund" class="refund" hidden>
+          <summary><span><b>환불</b> 7일 안, 하나도 안 썼으면 전액. 그 뒤엔 남은 충전분에서 10%(최소 1,000원)를 빼고 돌려 드려요. 충전한 솔방울은 5년 동안 써요.</span></summary>
+          <ul>
+            <li>제공: 결제가 확인되면 바로 계정에 들어가요. 배송은 없어요.</li>
+            <li>사용 기간: 충전한 솔방울은 충전한 날부터 5년, 이벤트로 받은 솔방울은 90일, 선물로 받은 솔방울은 1년 동안 써요. 받은 솔방울부터, 빨리 끝나는 것부터 써요.</li>
+            <li>
+              환불: support@hammerturtle.xyz 로 요청해 주세요. 결제한 수단으로 3~7영업일 걸릴 수 있어요.
+              <ul>
+                <li>결제 후 7일 안이고 하나도 쓰지 않았으면 전액 돌려 드려요.</li>
+                <li>그 밖엔 남은 충전분에서 10%(최소 1,000원)를 빼고 돌려 드려요. 돌려 드릴 돈이 1,000원 이하면 환불이 없어요. 저희 잘못이면 빼지 않아요.</li>
+              </ul>
+            </li>
+            <li>솔방울로 산 것은 되돌리지 않아요. 이벤트·선물로 받은 솔방울은 환불하지 않아요.</li>
+            <li>미성년자: 만 19세 미만이 법정대리인 동의 없이 한 결제는 본인 또는 법정대리인이 취소할 수 있습니다. 성년이라고 속였거나 법정대리인이 허락한 범위의 결제는 취소되지 않을 수 있습니다.</li>
+            <li>자세한 기준: <a href="./products.html">상품과 환불 안내</a></li>
+          </ul>
+        </details>
         <details id="cart-refund" class="refund" hidden>
           <summary><span><b>환불</b> 7일 안, 쓰지 않았으면 돌려 드려요</span></summary>
           <ul>
@@ -263,9 +322,13 @@
         </p>
       </div>
       <div class="cta">
+        <div id="up-fx" class="up mana" hidden>
+          <span class="ut"><b>효과마니면 모든 효과를 마음껏</b><small></small></span>
+          <button type="button" class="upbtn" aria-label="효과마니로 바꾸기">바꾸기</button>
+        </div>
         <div id="up" class="up" hidden>
-          <span class="ut"><b>카니마니면 모든 칸이 끝없이</b><small id="up-sub"></small></span>
-          <button id="up-btn" type="button" class="upbtn" aria-label="카니마니로 바꾸기">바꾸기</button>
+          <span class="ut"><b>카니마니면 모든 칸이 끝없이</b><small></small></span>
+          <button type="button" class="upbtn" aria-label="카니마니로 바꾸기">바꾸기</button>
         </div>
         <p id="agree" class="note">결제하면 이용약관과 상품 안내에 동의하는 거예요</p>
         <p id="reason" class="reason" role="status" hidden></p>
@@ -307,7 +370,7 @@
       </div>
       <div class="cta">
         <p class="note">주문번호 <span id="order"></span></p>
-        <a class="btn" href="./">확인</a>
+        <a id="done-ok" class="btn" href="./">확인</a>
       </div>
     </main>
 
