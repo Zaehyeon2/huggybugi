@@ -48,8 +48,16 @@
         alt="Huggybugi"
         class="mx-auto mt-8 size-24 object-cover object-left [image-rendering:pixelated]"
       />
-      <p class="mt-3 text-sm">在桌面上和朋友的角色一起玩的应用。</p>
+      <p id="sub" class="mt-3 text-sm">在桌面上和朋友的角色一起玩的应用。</p>
+      <p id="phone-sub" hidden class="mt-3 text-sm">和朋友聊天，在电脑上还能用桌面角色一起玩。</p>
       <div class="mt-6 grid gap-3">
+        <a
+          id="web-top"
+          hidden
+          href="../chat.html"
+          class="block rounded-2xl border-2 border-ink bg-white px-4 py-3 font-bold"
+          >在网页上加入</a
+        >
         <a
           id="open"
           href="./"
@@ -67,9 +75,15 @@
           <a href="./" data-os="mac-x64" class="underline">Mac (Intel)</a>
           <a href="./" data-os="win" class="underline">Windows</a>
         </div>
+        <a
+          id="web"
+          href="../chat.html"
+          class="mt-2 block rounded-2xl border-2 border-dashed border-ink/40 px-4 py-3 text-sm"
+          >不用 App，<b>在网页上加入</b></a
+        >
       </div>
       <p id="phone" hidden class="mt-6 rounded-2xl border-2 border-ink bg-white p-4 text-sm">
-        Huggybugi 是电脑应用,请在电脑上打开此链接。
+        桌面角色是电脑 App。之后在电脑上打开这个链接，也能用 App 加入。
       </p>
       <p id="bad" hidden class="mt-6 rounded-2xl border-2 border-ink bg-white p-4 text-sm">
         邀请链接已更改或不存在,请向朋友索取新链接。

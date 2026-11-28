@@ -74,6 +74,7 @@
       .nm { flex: 1; min-width: 0; }
       .nm b { display: block; font-size: 15px; }
       .nm small { display: block; font-size: 12.5px; color: #6b6f7b; word-break: keep-all; }
+      .nm small.warn { color: #8a4b00; }
       .pr { font-size: 15px; font-weight: 700; white-space: nowrap; font-variant-numeric: tabular-nums; }
       .line button.x { position: relative; z-index: 1; display: grid; place-items: center; flex: none; width: 28px; height: 28px; padding: 0; border-radius: 8px; background: #e6e8ec; color: #6b6f7b; }
       /* 보이는 크기는 그대로, 누르는 칸만 44px. */
@@ -141,6 +142,8 @@
       .rc small { display: block; margin-top: 2px; color: #6b6f7b; font-size: 12px; }
       .rc .no small { color: #8a4b00; }
       .rc s { color: #6b6f7b; }
+      .rc .ac2 { display: inline-flex; align-items: center; gap: 6px; }
+      .rc .ac2 small { margin: 0; }
       .pic.small { width: 72px; height: 72px; margin-top: 22px; }
       /* 환불 안내 접기. */
       details.refund summary { display: flex; justify-content: space-between; align-items: center; gap: 8px; min-height: 24px; list-style: none; cursor: pointer; }
@@ -191,7 +194,7 @@
       .count { margin-top: 4px; text-align: right; font-size: 12px; color: #5f6370; }
       #gift-sheet .note { margin: 4px 0 14px; text-align: left; }
       #gift-sheet button.ghost { margin-top: 8px; }
-      button#charge-back:not([hidden]) { display: inline-flex; align-items: center; gap: 4px; width: auto; min-height: 44px; margin: -12px 0 0 -4px; padding: 0 4px; border-radius: 8px; background: none; color: #1a6bc7; font: 600 15px Pretendard, sans-serif; }
+      button#leave:not([hidden]), button#charge-back:not([hidden]) { display: inline-flex; align-items: center; gap: 4px; width: auto; min-height: 44px; margin: -12px 0 0 -4px; padding: 0 4px; border-radius: 8px; background: none; color: #1a6bc7; font: 600 15px Pretendard, sans-serif; }
       /* 솔방울: 지갑 줄·사고 남는 양·모자람·충전 묶음. 아이콘은 1배(30×30)만 도트 그대로, 반(15×15)은 레티나 원본 픽셀. */
       .cone { flex: none; width: 30px; height: 30px; image-rendering: pixelated; }
       .cone.s { width: 15px; height: 15px; image-rendering: auto; transform: translateY(-1px); }
@@ -215,6 +218,17 @@
       .wal:has(#wal-more[open]) { align-items: flex-start; }
       .wal button.mini { flex: none; width: auto; min-height: 44px; border-radius: 10px; padding: 8px 11px; background: #5a3a1e; color: #ffe8c2; font: 700 13px Pretendard, sans-serif; }
       .after { display: flex; justify-content: space-between; font-size: 13px; color: #6b6f7b; padding: 6px 4px 0; font-variant-numeric: tabular-nums; }
+      .seg { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; margin-top: 14px; padding: 4px; border-radius: 14px; background: #f2f4f6; }
+      .seg button.t { display: flex; align-items: center; justify-content: center; gap: 6px; min-height: 44px; padding: 10px; border-radius: 11px; background: none; color: #6b6f7b; font: 600 15px Pretendard, sans-serif; }
+      .seg button.t[aria-pressed='true'] { background: #fff; color: #2b2233; box-shadow: 0 1px 3px #0002; }
+      button.glink:not(.item) { display: flex; align-items: center; justify-content: space-between; margin-top: 14px; padding: 12px 14px; border-radius: 14px; background: #fff4f6; box-shadow: inset 0 0 0 1px #f6c4cf; color: #2b2233; font: 600 14.5px Pretendard, sans-serif; text-align: left; }
+      .glink span { display: inline-flex; align-items: center; gap: 6px; }
+      .glink svg.g { color: #d6456f; }
+      button.pick:not(.item) { display: flex; align-items: center; justify-content: space-between; margin-top: 12px; padding: 13px 14px; border-radius: 14px; background: #f6f7f9; box-shadow: inset 0 0 0 1px #e5e8eb; color: #2b2233; font: 400 15px Pretendard, sans-serif; }
+      .pick b { display: inline-flex; align-items: center; gap: 2px; color: #1a6bc7; font-weight: 600; }
+      .gnote { display: flex; gap: 8px; margin-top: 12px; padding: 11px 13px; border-radius: 12px; background: #f2f7fd; font-size: 12.5px; line-height: 1.5; color: #4a4f5c; }
+      .gnote svg { flex: none; margin-top: 2px; color: #1a6bc7; }
+      .gnote b { color: #2b2233; font-weight: 600; }
       .short { margin-top: 12px; padding: 12px 14px; border-radius: 14px; background: #fff8ee; box-shadow: inset 0 0 0 2px #f0a24a; font-size: 13.5px; line-height: 1.5; color: #8a4b00; }
       #short b { color: #2b2233; }
       .packs { display: grid; gap: 8px; margin-top: 14px; }
@@ -230,13 +244,14 @@
       .spin { width: 28px; height: 28px; margin: 0 0 14px; border-radius: 50%; border: 3px solid #e5e8eb; border-top-color: #1a6bc7; }
       @media (prefers-reduced-motion: no-preference) { .spin { animation: spin 0.8s linear infinite; } @keyframes spin { to { transform: rotate(360deg); } } }
       /* display 를 정한 규칙보다 뒤에 둬야 hidden 이 이긴다. */
-      [hidden], button[hidden] { display: none; }
+      [hidden], button[hidden], button.glink[hidden], button.pick[hidden] { display: none; }
     </style>
   </head>
   <body>
     <main id="product" class="screen">
       <div class="body">
         <div id="spin" class="spin" aria-hidden="true"></div>
+        <button id="leave" type="button" hidden>돌아가기</button>
         <button id="charge-back" type="button" hidden>담은 것</button>
         <h1 id="headline">불러오는 중이에요</h1>
         <div id="charge" hidden>
@@ -251,7 +266,7 @@
             <details id="wal-more">
               <summary><span class="shut">자세히</span><span class="open">접기</span></summary>
               <dl>
-                <dt>내가 산 것</dt>
+                <dt>내가 구매한 것</dt>
                 <dd id="wal-paid"></dd>
                 <dt>선물·이벤트로 받은 것</dt>
                 <dd id="wal-free"></dd>
@@ -260,6 +275,14 @@
           </div>
           <button id="wal-charge" type="button" class="mini">충전</button>
         </div>
+        <div id="charge-tabs" class="seg" hidden>
+          <button id="tab-me" type="button" class="t" aria-pressed="true">내게 충전</button>
+          <button id="tab-gift" type="button" class="t" aria-pressed="false">선물하기</button>
+        </div>
+        <button id="gift-link" type="button" class="glink" hidden><span>친구에게 솔방울 선물하기</span></button>
+        <button id="gift-pick" type="button" class="pick" hidden><span>받는 사람</span><b>고르기</b></button>
+        <div id="charge-gift" class="line gift" hidden></div>
+        <p id="gift-miss" class="short" hidden>고른 사람에게는 지금 솔방울을 선물할 수 없어요. 다른 사람을 골라 주세요</p>
         <div id="single">
           <p class="sub">한 번만 결제해요. 자동 결제는 없어요</p>
           <div id="items" class="items"></div>
@@ -281,20 +304,24 @@
         <div id="after" class="after" hidden><span>사면</span><span id="after-n"></span></div>
         <p id="short" class="short" hidden></p>
         <div id="packs" class="packs" hidden></div>
+        <p id="gift-gnote" class="gnote" hidden><span><b>선물한 솔방울은 받은 사람이 5년 동안 써요.</b> 받은 사람이 쓰기 시작하면 환불되지 않아요.</span></p>
         <p id="account" class="once" hidden></p>
         <details id="charge-refund" class="refund" hidden>
-          <summary><span><b>환불</b> 7일 안에 하나도 안 썼으면 전부 돌려 드려요. 그 뒤엔 산 솔방울 중 남은 것의 값에서 10%(최소 1,000원)를 빼고 돌려 드려요. 산 솔방울은 5년 동안 쓸 수 있어요.</span></summary>
+          <summary><span><b>환불</b> 7일 안엔 구매한 솔방울 중 남은 것의 값을 빼지 않고 돌려 드려요. 그 뒤엔 그 값에서 10%(최소 1,000원)를 빼고 돌려 드려요. 구매한 솔방울은 5년 동안 쓸 수 있어요.</span></summary>
           <ul>
             <li>제공: 결제가 확인되면 바로 계정에 들어가요. 배송은 없어요.</li>
-            <li>사용 기간: 충전한 솔방울은 충전한 날부터 5년, 이벤트로 받은 솔방울은 90일, 선물로 받은 솔방울은 1년 동안 써요. 쓸 땐 받은 것부터, 그다음엔 빨리 사라지는 것부터 나가요.</li>
+            <li>사용 기간: 충전한 솔방울은 충전한 날부터 5년, 운영자 지급·이벤트로 받은 솔방울은 받은 날부터 90일 동안 써요. 쓸 땐 받은 것부터, 그다음엔 빨리 사라지는 것부터 나가요.</li>
             <li>
               환불: support@hammerturtle.xyz 로 요청해 주세요. 결제한 수단으로 3~7영업일 걸릴 수 있어요.
               <ul>
-                <li>결제 후 7일 안이고 하나도 쓰지 않았으면 전액 돌려 드려요.</li>
-                <li>그 밖엔 남은 충전분에서 10%(최소 1,000원)를 빼고 돌려 드려요. 돌려 드릴 돈이 1,000원 이하면 환불이 없어요. 저희 잘못이면 빼지 않아요.</li>
+                <li>결제 후 7일 안엔 남은 충전분을 빼지 않고 돌려 드려요. 하나도 안 썼으면 전액이에요.</li>
+                <li>7일이 지나면 남은 충전분에서 10%(최소 1,000원)를 빼고 돌려 드려요. 돌려 드릴 돈이 1,000원 미만이면 환불이 없어요. 저희 잘못이면 빼지 않아요.</li>
               </ul>
             </li>
-            <li>솔방울로 산 것은 되돌리지 않아요. 이벤트·선물로 받은 솔방울은 환불하지 않아요.</li>
+            <li>솔방울로 산 것은 7일 안이고 쓰기 전이면 문의로 솔방울로 되돌릴 수 있어요. 돈으로는 돌려 드리지 않아요. 운영자 지급·이벤트로 받은 솔방울은 환불하지 않아요.</li>
+            <li data-gift-charge hidden>솔방울 선물: 결제 후 7일 안이고 받은 사람이 하나도 안 썼으면 전액 돌려 드려요. 그 밖엔 환불이 없어요. 받은 사람은 환불을 받을 수 없어요.</li>
+            <li data-gift-charge hidden>선물한 솔방울은 받은 날부터 5년 동안 쓸 수 있어요.</li>
+            <li data-gift-charge hidden>결제가 카드사나 결제 대행사에서 취소되면 그 결제로 받은 솔방울 중 받은 사람이 아직 안 쓴 것은 회수돼요.</li>
             <li>미성년자: 만 19세 미만이 법정대리인 동의 없이 한 결제는 본인 또는 법정대리인이 취소할 수 있습니다. 성년이라고 속였거나 법정대리인이 허락한 범위의 결제는 취소되지 않을 수 있습니다.</li>
             <li>자세한 기준: <a href="./products.html">상품과 환불 안내</a></li>
           </ul>

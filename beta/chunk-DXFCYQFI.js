@@ -1,0 +1,1 @@
+function r(t){let n=t.replace(/['"]+$/,""),s=n.charCodeAt(n.length-1)-44032;return s>=0&&s<11172?s%28:0}var o=t=>`${t}${r(t)?"\uC774":"\uAC00"}`,c=t=>`${t}${r(t)?"\uC744":"\uB97C"}`,i=t=>`${t}${r(t)?"\uC740":"\uB294"}`,g=t=>`${t}${[0,8].includes(r(t))?"\uB85C":"\uC73C\uB85C"}`;export{r as a,o as b,c,i as d,g as e};

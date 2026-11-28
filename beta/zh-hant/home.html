@@ -12,6 +12,16 @@
     <meta name="theme-color" content="#dff1ff" />
     <link rel="icon" type="image/png" href="../assets/favicon.png" />
     <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png" />
+    <!-- 옛 home.html#id 링크용 공통 카드. 방마다 카드는 공유 링크 /h/<id>(Worker). 카카오톡 등은 상대 경로 이미지를 못 읽는다. -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://huggybugi.hammerturtle.xyz/zh-hant/home.html" />
+    <meta property="og:title" content="祕密基地 - Huggybugi" />
+    <meta property="og:description" content="來逛逛 Huggybugi 好友布置的祕密基地吧。" />
+    <meta property="og:image" content="https://huggybugi.hammerturtle.xyz/assets/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="zh_TW" />
+    <meta name="twitter:card" content="summary_large_image" />
     <!-- 앱 부품 테두리 색이 사이트 preflight 에 덮이지 않게 ui.css 를 뒤에. -->
     <link rel="stylesheet" href="../site.css" />
     <link rel="stylesheet" href="../ui.css" />
@@ -26,18 +36,13 @@
     <style>:root{--body:"Gowun Dodum",Pretendard,"PingFang TC", "Microsoft JhengHei",sans-serif;--font-sans:Pretendard,"PingFang TC", "Microsoft JhengHei",system-ui,sans-serif}body{font-family:Pretendard,"PingFang TC", "Microsoft JhengHei",sans-serif;word-break:normal}</style>
     </head>
   <body class="light bg-sky font-sans text-ink">
-    <header class="top">
+    <!-- 폭은 방 카드(760)에 맞춘다. home-page.tsx 가 下載 뒤에 노란 단추(로그인하면 '내 祕密基地', 아니면 '가입하기')를 붙인다. -->
+    <header class="top" style="max-width: 792px; padding-left: 16px; padding-right: 16px">
       <a class="logo" href="./">Huggybugi</a>
-      <a href="./guide.html">製作方法</a>
-      <a href="./cut.html">一張圖做好</a>
-      <a class="dl" href="./#download">下載</a>
+      <a id="get" class="dl" href="./#download">下載</a>
       <details class="langs"><summary><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="m22 22-5-10-5 10"/><path d="M14 18h6"/></svg><span>繁體中文</span></summary><nav class="langmenu"><a href="/home.html">한국어</a><a href="/en/home.html">English</a><a href="/ja/home.html">日本語</a><a href="/zh-hans/home.html">简体中文</a><a href="/zh-hant/home.html" aria-current="page">繁體中文<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></a><a href="/es/home.html">Español</a><a href="/pt/home.html">Português (Brasil)</a></nav></details>
     </header>
-    <div class="pg-phero">
-      <h1 id="title">祕密基地</h1>
-      <p id="sub"></p>
-    </div>
-    <main class="mx-auto max-w-[760px] px-4 pt-5 pb-8">
+    <main class="mx-auto max-w-[760px] px-4 pt-4 pb-8">
       <div id="root"></div>
       <noscript>
         <p class="rounded-2xl border-2 border-ink bg-white p-4 text-sm">請開啟 JavaScript 才能查看祕密基地。</p>

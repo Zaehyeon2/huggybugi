@@ -1,0 +1,1 @@
+var e="https://huggybugi.hammerturtle.xyz/";var i=t=>`${e}h/${t}`;var o=(t,n)=>`home:${t.match(/^\/(?:beta\/)?([a-z-]+\/)?/)?.[1]??""}home.html${n}`;function h(t=!1){sessionStorage.setItem("hd:after-login",o(location.pathname,location.hash)),location.href=t?"/chat.html#signup":"/chat.html"}var p=7*864e5;export{i as a,h as b};

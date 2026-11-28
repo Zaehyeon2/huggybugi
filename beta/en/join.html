@@ -47,8 +47,16 @@
         alt="Huggybugi"
         class="mx-auto mt-8 size-24 object-cover object-left [image-rendering:pixelated]"
       />
-      <p class="mt-3 text-sm">An app where your friends' characters hang out on your desktop.</p>
+      <p id="sub" class="mt-3 text-sm">An app where your friends' characters hang out on your desktop.</p>
+      <p id="phone-sub" hidden class="mt-3 text-sm">Chat with friends, and play together with desktop characters on a computer.</p>
       <div class="mt-6 grid gap-3">
+        <a
+          id="web-top"
+          hidden
+          href="../chat.html"
+          class="block rounded-2xl border-2 border-ink bg-white px-4 py-3 font-bold"
+          >Join on the web</a
+        >
         <a
           id="open"
           href="./"
@@ -66,9 +74,15 @@
           <a href="./" data-os="mac-x64" class="underline">Mac (Intel)</a>
           <a href="./" data-os="win" class="underline">Windows</a>
         </div>
+        <a
+          id="web"
+          href="../chat.html"
+          class="mt-2 block rounded-2xl border-2 border-dashed border-ink/40 px-4 py-3 text-sm"
+          >No app? <b>Join on the web</b></a
+        >
       </div>
       <p id="phone" hidden class="mt-6 rounded-2xl border-2 border-ink bg-white p-4 text-sm">
-        Huggybugi is a computer app. Please open this link on a computer.
+        The desktop characters are a computer app. Open this link on a computer later to join in the app too.
       </p>
       <p id="bad" hidden class="mt-6 rounded-2xl border-2 border-ink bg-white p-4 text-sm">
         This invite link changed or no longer exists. Ask your friend for a new one.

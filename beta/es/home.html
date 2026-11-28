@@ -12,6 +12,16 @@
     <meta name="theme-color" content="#dff1ff" />
     <link rel="icon" type="image/png" href="../assets/favicon.png" />
     <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png" />
+    <!-- 옛 home.html#id 링크용 공통 카드. 방마다 카드는 공유 링크 /h/<id>(Worker). 카카오톡 등은 상대 경로 이미지를 못 읽는다. -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://huggybugi.hammerturtle.xyz/es/home.html" />
+    <meta property="og:title" content="Guarida - Huggybugi" />
+    <meta property="og:description" content="Echa un vistazo a la guarida que decoró un amigo en Huggybugi." />
+    <meta property="og:image" content="https://huggybugi.hammerturtle.xyz/assets/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="es_LA" />
+    <meta name="twitter:card" content="summary_large_image" />
     <!-- 앱 부품 테두리 색이 사이트 preflight 에 덮이지 않게 ui.css 를 뒤에. -->
     <link rel="stylesheet" href="../site.css" />
     <link rel="stylesheet" href="../ui.css" />
@@ -25,18 +35,13 @@
     <link rel="alternate" hreflang="x-default" href="https://huggybugi.hammerturtle.xyz/home.html" />
     </head>
   <body class="light bg-sky font-sans text-ink">
-    <header class="top">
+    <!-- 폭은 방 카드(760)에 맞춘다. home-page.tsx 가 Descargar 뒤에 노란 단추(로그인하면 '내 Guarida', 아니면 '가입하기')를 붙인다. -->
+    <header class="top" style="max-width: 792px; padding-left: 16px; padding-right: 16px">
       <a class="logo" href="./">Huggybugi</a>
-      <a href="./guide.html">Cómo crear</a>
-      <a href="./cut.html">Con una sola imagen</a>
-      <a class="dl" href="./#download">Descargar</a>
+      <a id="get" class="dl" href="./#download">Descargar</a>
       <details class="langs"><summary><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="m22 22-5-10-5 10"/><path d="M14 18h6"/></svg><span>Español</span></summary><nav class="langmenu"><a href="/home.html">한국어</a><a href="/en/home.html">English</a><a href="/ja/home.html">日本語</a><a href="/zh-hans/home.html">简体中文</a><a href="/zh-hant/home.html">繁體中文</a><a href="/es/home.html" aria-current="page">Español<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></a><a href="/pt/home.html">Português (Brasil)</a></nav></details>
     </header>
-    <div class="pg-phero">
-      <h1 id="title">Guarida</h1>
-      <p id="sub"></p>
-    </div>
-    <main class="mx-auto max-w-[760px] px-4 pt-5 pb-8">
+    <main class="mx-auto max-w-[760px] px-4 pt-4 pb-8">
       <div id="root"></div>
       <noscript>
         <p class="rounded-2xl border-2 border-ink bg-white p-4 text-sm">Activa JavaScript para ver la guarida.</p>
